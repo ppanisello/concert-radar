@@ -1,8 +1,8 @@
 ---
-name: Helloween
-bandsintown_id: Helloween
+name: Avantasia
+bandsintown_id: Avantasia
 active: true
-priority: alta
+priority: media
 genres: []
 regions_of_interest:
   - Europe
@@ -12,11 +12,11 @@ notes: ""
 last_updated: 2026-03-17
 ---
 
-# Helloween
+# Avantasia
 
 ## Tours vistos
 | Año | Tour | Ciudad | Venue |
 |-----|------|--------|-------|
 
 ## Links de referencia
-- [Bandsintown](https://www.bandsintown.com/a/Helloween)
+- [Bandsintown](https://www.bandsintown.com/a/Avantasia)

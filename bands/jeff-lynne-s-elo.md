@@ -1,8 +1,8 @@
 ---
-name: Helloween
-bandsintown_id: Helloween
+name: Jeff Lynne's ELO
+bandsintown_id: Jeff%20Lynne%27s%20ELO
 active: true
-priority: alta
+priority: baja
 genres: []
 regions_of_interest:
   - Europe
@@ -12,11 +12,11 @@ notes: ""
 last_updated: 2026-03-17
 ---
 
-# Helloween
+# Jeff Lynne's ELO
 
 ## Tours vistos
 | Año | Tour | Ciudad | Venue |
 |-----|------|--------|-------|
 
 ## Links de referencia
-- [Bandsintown](https://www.bandsintown.com/a/Helloween)
+- [Bandsintown](https://www.bandsintown.com/a/Jeff%20Lynne%27s%20ELO)

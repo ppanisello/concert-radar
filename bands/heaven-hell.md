@@ -1,8 +1,8 @@
 ---
-name: Helloween
-bandsintown_id: Helloween
+name: Heaven & Hell
+bandsintown_id: Heaven%20%26%20Hell
 active: true
-priority: alta
+priority: baja
 genres: []
 regions_of_interest:
   - Europe
@@ -12,11 +12,11 @@ notes: ""
 last_updated: 2026-03-17
 ---
 
-# Helloween
+# Heaven & Hell
 
 ## Tours vistos
 | Año | Tour | Ciudad | Venue |
 |-----|------|--------|-------|
 
 ## Links de referencia
-- [Bandsintown](https://www.bandsintown.com/a/Helloween)
+- [Bandsintown](https://www.bandsintown.com/a/Heaven%20%26%20Hell)

@@ -1,8 +1,8 @@
 ---
-name: Helloween
-bandsintown_id: Helloween
+name: Mike + the Mechanics
+bandsintown_id: Mike%20%2B%20the%20Mechanics
 active: true
-priority: alta
+priority: baja
 genres: []
 regions_of_interest:
   - Europe
@@ -12,11 +12,11 @@ notes: ""
 last_updated: 2026-03-17
 ---
 
-# Helloween
+# Mike + the Mechanics
 
 ## Tours vistos
 | Año | Tour | Ciudad | Venue |
 |-----|------|--------|-------|
 
 ## Links de referencia
-- [Bandsintown](https://www.bandsintown.com/a/Helloween)
+- [Bandsintown](https://www.bandsintown.com/a/Mike%20%2B%20the%20Mechanics)

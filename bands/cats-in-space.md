@@ -1,8 +1,8 @@
 ---
-name: Helloween
-bandsintown_id: Helloween
+name: Cats in Space
+bandsintown_id: Cats%20in%20Space
 active: true
-priority: alta
+priority: baja
 genres: []
 regions_of_interest:
   - Europe
@@ -12,11 +12,11 @@ notes: ""
 last_updated: 2026-03-17
 ---
 
-# Helloween
+# Cats in Space
 
 ## Tours vistos
 | Año | Tour | Ciudad | Venue |
 |-----|------|--------|-------|
 
 ## Links de referencia
-- [Bandsintown](https://www.bandsintown.com/a/Helloween)
+- [Bandsintown](https://www.bandsintown.com/a/Cats%20in%20Space)

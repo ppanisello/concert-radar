@@ -1,6 +1,6 @@
 ---
-name: Helloween
-bandsintown_id: Helloween
+name: Glenn Hughes
+bandsintown_id: Glenn%20Hughes
 active: true
 priority: alta
 genres: []
@@ -12,11 +12,11 @@ notes: ""
 last_updated: 2026-03-17
 ---
 
-# Helloween
+# Glenn Hughes
 
 ## Tours vistos
 | Año | Tour | Ciudad | Venue |
 |-----|------|--------|-------|
 
 ## Links de referencia
-- [Bandsintown](https://www.bandsintown.com/a/Helloween)
+- [Bandsintown](https://www.bandsintown.com/a/Glenn%20Hughes)

@@ -1,6 +1,6 @@
 ---
-name: Helloween
-bandsintown_id: Helloween
+name: Phil Collins
+bandsintown_id: Phil%20Collins
 active: true
 priority: alta
 genres: []
@@ -12,11 +12,11 @@ notes: ""
 last_updated: 2026-03-17
 ---
 
-# Helloween
+# Phil Collins
 
 ## Tours vistos
 | Año | Tour | Ciudad | Venue |
 |-----|------|--------|-------|
 
 ## Links de referencia
-- [Bandsintown](https://www.bandsintown.com/a/Helloween)
+- [Bandsintown](https://www.bandsintown.com/a/Phil%20Collins)

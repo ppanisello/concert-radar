@@ -1,6 +1,6 @@
 ---
-name: Helloween
-bandsintown_id: Helloween
+name: Eric Clapton
+bandsintown_id: Eric%20Clapton
 active: true
 priority: alta
 genres: []
@@ -12,11 +12,11 @@ notes: ""
 last_updated: 2026-03-17
 ---
 
-# Helloween
+# Eric Clapton
 
 ## Tours vistos
 | Año | Tour | Ciudad | Venue |
 |-----|------|--------|-------|
 
 ## Links de referencia
-- [Bandsintown](https://www.bandsintown.com/a/Helloween)
+- [Bandsintown](https://www.bandsintown.com/a/Eric%20Clapton)
