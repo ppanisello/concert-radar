@@ -3,7 +3,10 @@ name: Elton John
 bandsintown_id: Elton%20John
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop Rock
+  - Piano Rock
+  - Glam Rock
 regions_of_interest:
   - Europe
   - UK

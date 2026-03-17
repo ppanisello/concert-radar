@@ -3,7 +3,10 @@ name: Ian Paice
 bandsintown_id: Ian%20Paice
 active: true
 priority: baja
-genres: []
+genres:
+  - Hard Rock
+  - Blues Rock
+  - Heavy Metal
 regions_of_interest:
   - Europe
   - UK

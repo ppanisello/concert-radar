@@ -3,7 +3,10 @@ name: Duran Duran
 bandsintown_id: Duran%20Duran
 active: true
 priority: baja
-genres: []
+genres:
+  - New Wave
+  - Synthpop
+  - Pop Rock
 regions_of_interest:
   - Europe
   - UK

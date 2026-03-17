@@ -3,7 +3,9 @@ name: Black Star Riders
 bandsintown_id: Black%20Star%20Riders
 active: true
 priority: baja
-genres: []
+genres:
+  - Hard Rock
+  - Classic Rock
 regions_of_interest:
   - Europe
   - UK

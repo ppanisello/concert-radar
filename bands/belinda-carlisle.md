@@ -3,7 +3,10 @@ name: Belinda Carlisle
 bandsintown_id: Belinda%20Carlisle
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop
+  - Pop Rock
+  - New Wave
 regions_of_interest:
   - Europe
   - UK

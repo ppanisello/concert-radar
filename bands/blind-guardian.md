@@ -3,7 +3,9 @@ name: Blind Guardian
 bandsintown_id: Blind%20Guardian
 active: true
 priority: baja
-genres: []
+genres:
+  - Power Metal
+  - Speed Metal
 regions_of_interest:
   - Europe
   - UK

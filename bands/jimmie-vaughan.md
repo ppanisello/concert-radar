@@ -3,7 +3,9 @@ name: Jimmie Vaughan
 bandsintown_id: Jimmie%20Vaughan
 active: true
 priority: baja
-genres: []
+genres:
+  - Blues
+  - Blues Rock
 regions_of_interest:
   - Europe
   - UK

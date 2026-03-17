@@ -3,7 +3,10 @@ name: Alice in Chains
 bandsintown_id: Alice%20in%20Chains
 active: true
 priority: baja
-genres: []
+genres:
+  - Grunge
+  - Alternative Metal
+  - Heavy Metal
 regions_of_interest:
   - Europe
   - UK

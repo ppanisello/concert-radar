@@ -3,7 +3,9 @@ name: Praying Mantis
 bandsintown_id: Praying%20Mantis
 active: true
 priority: baja
-genres: []
+genres:
+  - NWOBHM
+  - Heavy Metal
 regions_of_interest:
   - Europe
   - UK

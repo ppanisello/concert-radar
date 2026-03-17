@@ -3,7 +3,9 @@ name: Dream Theater
 bandsintown_id: Dream%20Theater
 active: true
 priority: baja
-genres: []
+genres:
+  - Progressive Metal
+  - Progressive Rock
 regions_of_interest:
   - Europe
   - UK

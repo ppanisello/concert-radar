@@ -3,7 +3,9 @@ name: Royal Philharmonic Orchestra
 bandsintown_id: Royal%20Philharmonic%20Orchestra
 active: true
 priority: baja
-genres: []
+genres:
+  - Classical
+  - Orchestral
 regions_of_interest:
   - Europe
   - UK

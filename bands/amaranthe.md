@@ -3,7 +3,10 @@ name: Amaranthe
 bandsintown_id: Amaranthe
 active: true
 priority: baja
-genres: []
+genres:
+  - Melodic Death Metal
+  - Power Metal
+  - Metalcore
 regions_of_interest:
   - Europe
   - UK

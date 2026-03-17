@@ -3,7 +3,9 @@ name: The HU
 bandsintown_id: The%20HU
 active: true
 priority: baja
-genres: []
+genres:
+  - Folk Metal
+  - Mongolian Rock
 regions_of_interest:
   - Europe
   - UK

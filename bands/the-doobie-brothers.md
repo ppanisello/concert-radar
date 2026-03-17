@@ -3,7 +3,10 @@ name: The Doobie Brothers
 bandsintown_id: The%20Doobie%20Brothers
 active: true
 priority: baja
-genres: []
+genres:
+  - Classic Rock
+  - Blue-Eyed Soul
+  - Rgenres: []B
 regions_of_interest:
   - Europe
   - UK

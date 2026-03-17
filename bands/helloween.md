@@ -3,7 +3,9 @@ name: Helloween
 bandsintown_id: Helloween
 active: true
 priority: alta
-genres: []
+genres:
+  - Power Metal
+  - Heavy Metal
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,9 @@ name: Accept
 bandsintown_id: Accept
 active: true
 priority: baja
-genres: []
+genres:
+  - Heavy Metal
+  - Speed Metal
 regions_of_interest:
   - Europe
   - UK

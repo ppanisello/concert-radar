@@ -3,7 +3,10 @@ name: Rod Stewart
 bandsintown_id: Rod%20Stewart
 active: true
 priority: baja
-genres: []
+genres:
+  - Rock
+  - Pop Rock
+  - Blues Rock
 regions_of_interest:
   - Europe
   - UK

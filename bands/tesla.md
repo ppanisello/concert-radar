@@ -3,7 +3,10 @@ name: Tesla
 bandsintown_id: Tesla
 active: true
 priority: baja
-genres: []
+genres:
+  - Hard Rock
+  - Heavy Metal
+  - Acoustic Rock
 regions_of_interest:
   - Europe
   - UK

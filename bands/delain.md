@@ -3,7 +3,9 @@ name: Delain
 bandsintown_id: Delain
 active: true
 priority: media
-genres: []
+genres:
+  - Symphonic Metal
+  - Gothic Metal
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,10 @@ name: Seasick Steve
 bandsintown_id: Seasick%20Steve
 active: true
 priority: baja
-genres: []
+genres:
+  - Blues
+  - Country Blues
+  - Punk Blues
 regions_of_interest:
   - Europe
   - UK

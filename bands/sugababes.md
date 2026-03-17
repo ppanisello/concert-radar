@@ -3,7 +3,10 @@ name: Sugababes
 bandsintown_id: Sugababes
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop
+  - Rgenres: []B
+  - Dance Pop
 regions_of_interest:
   - Europe
   - UK

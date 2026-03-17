@@ -3,7 +3,9 @@ name: Heaven & Hell
 bandsintown_id: Heaven%20%26%20Hell
 active: true
 priority: baja
-genres: []
+genres:
+  - Heavy Metal
+  - Hard Rock
 regions_of_interest:
   - Europe
   - UK

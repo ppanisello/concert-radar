@@ -3,7 +3,9 @@ name: O'Connor
 bandsintown_id: O%27Connor
 active: true
 priority: baja
-genres: []
+genres:
+  - Rock Nacional
+  - Pop Rock
 regions_of_interest:
   - Europe
   - UK

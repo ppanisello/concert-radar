@@ -3,7 +3,10 @@ name: Deep Purple
 bandsintown_id: Deep%20Purple
 active: true
 priority: media
-genres: []
+genres:
+  - Hard Rock
+  - Heavy Metal
+  - Blues Rock
 regions_of_interest:
   - Europe
   - UK

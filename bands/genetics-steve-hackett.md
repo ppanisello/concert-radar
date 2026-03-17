@@ -3,7 +3,9 @@ name: Genetics & Steve Hackett
 bandsintown_id: Genetics%20%26%20Steve%20Hackett
 active: true
 priority: baja
-genres: []
+genres:
+  - Progressive Rock
+  - Art Rock
 regions_of_interest:
   - Europe
   - UK

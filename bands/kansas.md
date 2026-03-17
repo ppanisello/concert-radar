@@ -3,7 +3,10 @@ name: Kansas
 bandsintown_id: Kansas
 active: true
 priority: baja
-genres: []
+genres:
+  - Progressive Rock
+  - Classic Rock
+  - AOR
 regions_of_interest:
   - Europe
   - UK

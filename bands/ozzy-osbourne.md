@@ -3,7 +3,9 @@ name: Ozzy Osbourne
 bandsintown_id: Ozzy%20Osbourne
 active: true
 priority: media
-genres: []
+genres:
+  - Heavy Metal
+  - Hard Rock
 regions_of_interest:
   - Europe
   - UK

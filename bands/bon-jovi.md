@@ -3,7 +3,10 @@ name: Bon Jovi
 bandsintown_id: Bon%20Jovi
 active: true
 priority: baja
-genres: []
+genres:
+  - Hard Rock
+  - Pop Rock
+  - Glam Metal
 regions_of_interest:
   - Europe
   - UK

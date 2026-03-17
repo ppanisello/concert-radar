@@ -3,7 +3,10 @@ name: Whitesnake
 bandsintown_id: Whitesnake
 active: true
 priority: media
-genres: []
+genres:
+  - Hard Rock
+  - Blues Rock
+  - Heavy Metal
 regions_of_interest:
   - Europe
   - UK

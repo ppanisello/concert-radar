@@ -3,7 +3,9 @@ name: HammerFall
 bandsintown_id: HammerFall
 active: true
 priority: baja
-genres: []
+genres:
+  - Power Metal
+  - Heavy Metal
 regions_of_interest:
   - Europe
   - UK

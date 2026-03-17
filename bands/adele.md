@@ -3,7 +3,10 @@ name: Adele
 bandsintown_id: Adele
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop
+  - Soul
+  - Blues
 regions_of_interest:
   - Europe
   - UK

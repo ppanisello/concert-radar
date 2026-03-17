@@ -3,7 +3,10 @@ name: Foreigner
 bandsintown_id: Foreigner
 active: true
 priority: media
-genres: []
+genres:
+  - Classic Rock
+  - Hard Rock
+  - AOR
 regions_of_interest:
   - Europe
   - UK

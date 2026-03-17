@@ -3,7 +3,10 @@ name: Nile Rodgers & Chic
 bandsintown_id: Nile%20Rodgers%20%26%20Chic
 active: true
 priority: media
-genres: []
+genres:
+  - Disco
+  - Funk
+  - Rgenres: []B
 regions_of_interest:
   - Europe
   - UK

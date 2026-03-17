@@ -3,7 +3,10 @@ name: Beverley Knight
 bandsintown_id: Beverley%20Knight
 active: true
 priority: baja
-genres: []
+genres:
+  - Soul
+  - Rgenres: []B
+  - Gospel
 regions_of_interest:
   - Europe
   - UK

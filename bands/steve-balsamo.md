@@ -3,7 +3,9 @@ name: Steve Balsamo
 bandsintown_id: Steve%20Balsamo
 active: true
 priority: baja
-genres: []
+genres:
+  - Rock
+  - Musical Theatre
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,10 @@ name: Rainbow
 bandsintown_id: Rainbow
 active: true
 priority: baja
-genres: []
+genres:
+  - Hard Rock
+  - Heavy Metal
+  - Neoclassical Metal
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,9 @@ name: Nito Mestre
 bandsintown_id: Nito%20Mestre
 active: true
 priority: media
-genres: []
+genres:
+  - Rock Nacional
+  - Pop Rock
 regions_of_interest:
   - Europe
   - UK

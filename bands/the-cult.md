@@ -3,7 +3,10 @@ name: The Cult
 bandsintown_id: The%20Cult
 active: true
 priority: alta
-genres: []
+genres:
+  - Hard Rock
+  - Gothic Rock
+  - Post-Punk
 regions_of_interest:
   - Europe
   - UK

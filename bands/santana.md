@@ -3,7 +3,10 @@ name: Santana
 bandsintown_id: Santana
 active: true
 priority: alta
-genres: []
+genres:
+  - Latin Rock
+  - Blues Rock
+  - Jazz Fusion
 regions_of_interest:
   - Europe
   - UK

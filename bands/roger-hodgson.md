@@ -3,7 +3,9 @@ name: Roger Hodgson
 bandsintown_id: Roger%20Hodgson
 active: true
 priority: media
-genres: []
+genres:
+  - Progressive Rock
+  - Pop Rock
 regions_of_interest:
   - Europe
   - UK

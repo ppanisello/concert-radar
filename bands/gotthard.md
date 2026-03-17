@@ -3,7 +3,9 @@ name: Gotthard
 bandsintown_id: Gotthard
 active: true
 priority: baja
-genres: []
+genres:
+  - Hard Rock
+  - AOR
 regions_of_interest:
   - Europe
   - UK

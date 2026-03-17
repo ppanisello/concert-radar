@@ -3,7 +3,10 @@ name: Paul Weller
 bandsintown_id: Paul%20Weller
 active: true
 priority: baja
-genres: []
+genres:
+  - Mod Revival
+  - Britpop
+  - Rock
 regions_of_interest:
   - Europe
   - UK

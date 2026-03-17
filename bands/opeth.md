@@ -3,7 +3,10 @@ name: Opeth
 bandsintown_id: Opeth
 active: true
 priority: baja
-genres: []
+genres:
+  - Progressive Metal
+  - Progressive Rock
+  - Death Metal
 regions_of_interest:
   - Europe
   - UK

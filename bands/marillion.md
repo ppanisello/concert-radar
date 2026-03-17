@@ -3,7 +3,9 @@ name: Marillion
 bandsintown_id: Marillion
 active: true
 priority: baja
-genres: []
+genres:
+  - Progressive Rock
+  - Neo-Prog
 regions_of_interest:
   - Europe
   - UK

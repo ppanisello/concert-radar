@@ -3,7 +3,10 @@ name: Toto
 bandsintown_id: Toto
 active: true
 priority: alta
-genres: []
+genres:
+  - Rock
+  - Pop Rock
+  - Progressive Rock
 regions_of_interest:
   - Europe
   - UK

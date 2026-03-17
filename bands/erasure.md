@@ -3,7 +3,10 @@ name: Erasure
 bandsintown_id: Erasure
 active: true
 priority: baja
-genres: []
+genres:
+  - Synthpop
+  - New Wave
+  - Dance Pop
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,10 @@ name: Journey
 bandsintown_id: Journey
 active: true
 priority: baja
-genres: []
+genres:
+  - AOR
+  - Hard Rock
+  - Soft Rock
 regions_of_interest:
   - Europe
   - UK

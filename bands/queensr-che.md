@@ -3,7 +3,9 @@ name: Queensrÿche
 bandsintown_id: Queensrÿche
 active: true
 priority: media
-genres: []
+genres:
+  - Progressive Metal
+  - Heavy Metal
 regions_of_interest:
   - Europe
   - UK

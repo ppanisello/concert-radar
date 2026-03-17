@@ -3,7 +3,10 @@ name: Texas
 bandsintown_id: Texas
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop Rock
+  - Blue-Eyed Soul
+  - New Wave
 regions_of_interest:
   - Europe
   - UK

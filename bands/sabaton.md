@@ -3,7 +3,9 @@ name: Sabaton
 bandsintown_id: Sabaton
 active: true
 priority: baja
-genres: []
+genres:
+  - Power Metal
+  - Heavy Metal
 regions_of_interest:
   - Europe
   - UK

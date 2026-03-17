@@ -3,7 +3,10 @@ name: Queen + Adam Lambert
 bandsintown_id: Queen%20%2B%20Adam%20Lambert
 active: true
 priority: media
-genres: []
+genres:
+  - Rock
+  - Pop Rock
+  - Glam Rock
 regions_of_interest:
   - Europe
   - UK

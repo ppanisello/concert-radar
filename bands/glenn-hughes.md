@@ -3,7 +3,10 @@ name: Glenn Hughes
 bandsintown_id: Glenn%20Hughes
 active: true
 priority: alta
-genres: []
+genres:
+  - Hard Rock
+  - Blues Rock
+  - Funk Rock
 regions_of_interest:
   - Europe
   - UK

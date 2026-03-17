@@ -3,7 +3,10 @@ name: Blondie
 bandsintown_id: Blondie
 active: true
 priority: baja
-genres: []
+genres:
+  - New Wave
+  - Punk Rock
+  - Pop
 regions_of_interest:
   - Europe
   - UK

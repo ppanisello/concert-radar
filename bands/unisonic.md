@@ -3,7 +3,9 @@ name: Unisonic
 bandsintown_id: Unisonic
 active: true
 priority: baja
-genres: []
+genres:
+  - Power Metal
+  - Hard Rock
 regions_of_interest:
   - Europe
   - UK

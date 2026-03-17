@@ -3,7 +3,10 @@ name: Savatage
 bandsintown_id: Savatage
 active: true
 priority: baja
-genres: []
+genres:
+  - Heavy Metal
+  - Progressive Metal
+  - Power Metal
 regions_of_interest:
   - Europe
   - UK

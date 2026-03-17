@@ -3,7 +3,10 @@ name: Roberto Carlos
 bandsintown_id: Roberto%20Carlos
 active: true
 priority: media
-genres: []
+genres:
+  - Pop
+  - Balada
+  - MPB
 regions_of_interest:
   - Europe
   - UK

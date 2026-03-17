@@ -3,7 +3,10 @@ name: Squeeze
 bandsintown_id: Squeeze
 active: true
 priority: baja
-genres: []
+genres:
+  - New Wave
+  - Pop Rock
+  - Power Pop
 regions_of_interest:
   - Europe
   - UK

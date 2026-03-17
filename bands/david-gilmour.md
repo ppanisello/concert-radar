@@ -3,7 +3,10 @@ name: David Gilmour
 bandsintown_id: David%20Gilmour
 active: true
 priority: alta
-genres: []
+genres:
+  - Progressive Rock
+  - Art Rock
+  - Blues Rock
 regions_of_interest:
   - Europe
   - UK

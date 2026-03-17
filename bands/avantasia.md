@@ -3,7 +3,10 @@ name: Avantasia
 bandsintown_id: Avantasia
 active: true
 priority: media
-genres: []
+genres:
+  - Power Metal
+  - Symphonic Metal
+  - Rock Opera
 regions_of_interest:
   - Europe
   - UK

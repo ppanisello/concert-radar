@@ -3,7 +3,9 @@ name: Uli Jon Roth
 bandsintown_id: Uli%20Jon%20Roth
 active: true
 priority: baja
-genres: []
+genres:
+  - Hard Rock
+  - Neoclassical Metal
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,10 @@ name: Gary Clark Jr.
 bandsintown_id: Gary%20Clark%20Jr.
 active: true
 priority: baja
-genres: []
+genres:
+  - Blues Rock
+  - Rgenres: []B
+  - Hip Hop
 regions_of_interest:
   - Europe
   - UK

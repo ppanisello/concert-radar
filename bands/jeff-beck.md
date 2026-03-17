@@ -3,7 +3,10 @@ name: Jeff Beck
 bandsintown_id: Jeff%20Beck
 active: true
 priority: baja
-genres: []
+genres:
+  - Blues Rock
+  - Jazz Fusion
+  - Hard Rock
 regions_of_interest:
   - Europe
   - UK

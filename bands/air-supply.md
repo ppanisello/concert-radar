@@ -3,7 +3,10 @@ name: Air Supply
 bandsintown_id: Air%20Supply
 active: true
 priority: baja
-genres: []
+genres:
+  - Soft Rock
+  - Pop
+  - Adult Contemporary
 regions_of_interest:
   - Europe
   - UK

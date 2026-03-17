@@ -3,7 +3,10 @@ name: Uriah Heep
 bandsintown_id: Uriah%20Heep
 active: true
 priority: baja
-genres: []
+genres:
+  - Hard Rock
+  - Progressive Rock
+  - Heavy Metal
 regions_of_interest:
   - Europe
   - UK

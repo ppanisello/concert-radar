@@ -3,7 +3,9 @@ name: Primal Fear
 bandsintown_id: Primal%20Fear
 active: true
 priority: baja
-genres: []
+genres:
+  - Power Metal
+  - Heavy Metal
 regions_of_interest:
   - Europe
   - UK

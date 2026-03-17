@@ -3,7 +3,10 @@ name: Rick Astley
 bandsintown_id: Rick%20Astley
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop
+  - Dance Pop
+  - Blue-Eyed Soul
 regions_of_interest:
   - Europe
   - UK

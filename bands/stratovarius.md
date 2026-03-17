@@ -3,7 +3,10 @@ name: Stratovarius
 bandsintown_id: Stratovarius
 active: true
 priority: baja
-genres: []
+genres:
+  - Power Metal
+  - Symphonic Metal
+  - Neoclassical Metal
 regions_of_interest:
   - Europe
   - UK

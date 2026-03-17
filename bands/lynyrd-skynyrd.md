@@ -3,7 +3,10 @@ name: Lynyrd Skynyrd
 bandsintown_id: Lynyrd%20Skynyrd
 active: true
 priority: baja
-genres: []
+genres:
+  - Southern Rock
+  - Classic Rock
+  - Blues Rock
 regions_of_interest:
   - Europe
   - UK

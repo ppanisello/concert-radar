@@ -3,7 +3,10 @@ name: Marisha Wallace
 bandsintown_id: Marisha%20Wallace
 active: true
 priority: baja
-genres: []
+genres:
+  - Soul
+  - Musical Theatre
+  - Gospel
 regions_of_interest:
   - Europe
   - UK

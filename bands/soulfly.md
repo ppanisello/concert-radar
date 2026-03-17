@@ -3,7 +3,10 @@ name: Soulfly
 bandsintown_id: Soulfly
 active: true
 priority: baja
-genres: []
+genres:
+  - Thrash Metal
+  - Nu Metal
+  - Groove Metal
 regions_of_interest:
   - Europe
   - UK

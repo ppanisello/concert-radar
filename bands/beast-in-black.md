@@ -3,7 +3,10 @@ name: Beast in Black
 bandsintown_id: Beast%20in%20Black
 active: true
 priority: baja
-genres: []
+genres:
+  - Power Metal
+  - Heavy Metal
+  - Synthwave
 regions_of_interest:
   - Europe
   - UK

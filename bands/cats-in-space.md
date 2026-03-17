@@ -3,7 +3,10 @@ name: Cats in Space
 bandsintown_id: Cats%20in%20Space
 active: true
 priority: baja
-genres: []
+genres:
+  - Classic Rock
+  - Power Pop
+  - Glam Rock
 regions_of_interest:
   - Europe
   - UK

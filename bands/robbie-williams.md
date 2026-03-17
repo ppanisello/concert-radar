@@ -3,7 +3,10 @@ name: Robbie Williams
 bandsintown_id: Robbie%20Williams
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop
+  - Pop Rock
+  - Swing
 regions_of_interest:
   - Europe
   - UK

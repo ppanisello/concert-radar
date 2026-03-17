@@ -3,7 +3,9 @@ name: Bad Company
 bandsintown_id: Bad%20Company
 active: true
 priority: baja
-genres: []
+genres:
+  - Hard Rock
+  - Blues Rock
 regions_of_interest:
   - Europe
   - UK

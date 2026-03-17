@@ -3,7 +3,9 @@ name: W.A.S.P.
 bandsintown_id: W.A.S.P.
 active: true
 priority: baja
-genres: []
+genres:
+  - Heavy Metal
+  - Glam Metal
 regions_of_interest:
   - Europe
   - UK

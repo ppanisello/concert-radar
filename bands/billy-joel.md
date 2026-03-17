@@ -3,7 +3,10 @@ name: Billy Joel
 bandsintown_id: Billy%20Joel
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop Rock
+  - Piano Rock
+  - Soft Rock
 regions_of_interest:
   - Europe
   - UK

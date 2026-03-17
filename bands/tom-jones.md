@@ -3,7 +3,10 @@ name: Tom Jones
 bandsintown_id: Tom%20Jones
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop
+  - Soul
+  - Country
 regions_of_interest:
   - Europe
   - UK

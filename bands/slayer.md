@@ -3,7 +3,8 @@ name: Slayer
 bandsintown_id: Slayer
 active: true
 priority: media
-genres: []
+genres:
+  - Thrash Metal
 regions_of_interest:
   - Europe
   - UK

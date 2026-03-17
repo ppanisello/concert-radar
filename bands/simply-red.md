@@ -3,7 +3,10 @@ name: Simply Red
 bandsintown_id: Simply%20Red
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop
+  - Soul
+  - New Wave
 regions_of_interest:
   - Europe
   - UK

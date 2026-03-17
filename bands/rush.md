@@ -3,7 +3,9 @@ name: Rush
 bandsintown_id: Rush
 active: true
 priority: baja
-genres: []
+genres:
+  - Progressive Rock
+  - Hard Rock
 regions_of_interest:
   - Europe
   - UK

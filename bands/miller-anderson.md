@@ -3,7 +3,9 @@ name: Miller Anderson
 bandsintown_id: Miller%20Anderson
 active: true
 priority: baja
-genres: []
+genres:
+  - Blues Rock
+  - Classic Rock
 regions_of_interest:
   - Europe
   - UK

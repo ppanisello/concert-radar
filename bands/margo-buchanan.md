@@ -3,7 +3,10 @@ name: Margo Buchanan
 bandsintown_id: Margo%20Buchanan
 active: true
 priority: baja
-genres: []
+genres:
+  - Soul
+  - Blues
+  - Rock
 regions_of_interest:
   - Europe
   - UK

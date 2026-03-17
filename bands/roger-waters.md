@@ -3,7 +3,9 @@ name: Roger Waters
 bandsintown_id: Roger%20Waters
 active: true
 priority: alta
-genres: []
+genres:
+  - Progressive Rock
+  - Art Rock
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,10 @@ name: Phil Collins
 bandsintown_id: Phil%20Collins
 active: true
 priority: alta
-genres: []
+genres:
+  - Pop Rock
+  - Soft Rock
+  - Progressive Rock
 regions_of_interest:
   - Europe
   - UK

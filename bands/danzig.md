@@ -3,7 +3,10 @@ name: Danzig
 bandsintown_id: Danzig
 active: true
 priority: baja
-genres: []
+genres:
+  - Heavy Metal
+  - Horror Punk
+  - Blues Rock
 regions_of_interest:
   - Europe
   - UK

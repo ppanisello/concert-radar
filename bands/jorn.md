@@ -3,7 +3,10 @@ name: Jorn
 bandsintown_id: Jorn
 active: true
 priority: baja
-genres: []
+genres:
+  - Hard Rock
+  - Heavy Metal
+  - AOR
 regions_of_interest:
   - Europe
   - UK

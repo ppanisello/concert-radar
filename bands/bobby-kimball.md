@@ -3,7 +3,9 @@ name: Bobby Kimball
 bandsintown_id: Bobby%20Kimball
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop Rock
+  - AOR
 regions_of_interest:
   - Europe
   - UK

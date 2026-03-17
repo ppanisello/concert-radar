@@ -3,7 +3,9 @@ name: Steve Hackett
 bandsintown_id: Steve%20Hackett
 active: true
 priority: media
-genres: []
+genres:
+  - Progressive Rock
+  - Art Rock
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,9 @@ name: Malón
 bandsintown_id: Malón
 active: true
 priority: media
-genres: []
+genres:
+  - Thrash Metal
+  - Heavy Metal
 regions_of_interest:
   - Europe
   - UK

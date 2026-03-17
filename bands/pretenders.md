@@ -3,7 +3,10 @@ name: Pretenders
 bandsintown_id: Pretenders
 active: true
 priority: baja
-genres: []
+genres:
+  - New Wave
+  - Alternative Rock
+  - Pop Rock
 regions_of_interest:
   - Europe
   - UK

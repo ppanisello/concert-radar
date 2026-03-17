@@ -3,7 +3,9 @@ name: Eric Clapton
 bandsintown_id: Eric%20Clapton
 active: true
 priority: alta
-genres: []
+genres:
+  - Blues Rock
+  - Classic Rock
 regions_of_interest:
   - Europe
   - UK

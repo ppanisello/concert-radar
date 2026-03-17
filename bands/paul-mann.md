@@ -3,7 +3,9 @@ name: Paul Mann
 bandsintown_id: Paul%20Mann
 active: true
 priority: baja
-genres: []
+genres:
+  - Classical
+  - Film Score
 regions_of_interest:
   - Europe
   - UK

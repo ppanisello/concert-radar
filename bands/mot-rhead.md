@@ -3,7 +3,10 @@ name: Motörhead
 bandsintown_id: Motörhead
 active: true
 priority: baja
-genres: []
+genres:
+  - Heavy Metal
+  - Speed Metal
+  - Punk Rock
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,9 @@ name: FM
 bandsintown_id: FM
 active: true
 priority: baja
-genres: []
+genres:
+  - AOR
+  - Melodic Rock
 regions_of_interest:
   - Europe
   - UK

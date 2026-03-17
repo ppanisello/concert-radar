@@ -3,7 +3,9 @@ name: Judas Priest
 bandsintown_id: Judas%20Priest
 active: true
 priority: alta
-genres: []
+genres:
+  - Heavy Metal
+  - NWOBHM
 regions_of_interest:
   - Europe
   - UK

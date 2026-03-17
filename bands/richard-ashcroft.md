@@ -3,7 +3,9 @@ name: Richard Ashcroft
 bandsintown_id: Richard%20Ashcroft
 active: true
 priority: baja
-genres: []
+genres:
+  - Alternative Rock
+  - Britpop
 regions_of_interest:
   - Europe
   - UK

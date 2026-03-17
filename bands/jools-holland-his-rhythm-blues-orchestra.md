@@ -3,7 +3,10 @@ name: Jools Holland & His Rhythm & Blues Orchestra
 bandsintown_id: Jools%20Holland%20%26%20His%20Rhythm%20%26%20Blues%20Orchestra
 active: true
 priority: baja
-genres: []
+genres:
+  - Rhythm genres: [] Blues
+  - Boogie-Woogie
+  - Jazz
 regions_of_interest:
   - Europe
   - UK

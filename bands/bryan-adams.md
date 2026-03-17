@@ -3,7 +3,9 @@ name: Bryan Adams
 bandsintown_id: Bryan%20Adams
 active: true
 priority: alta
-genres: []
+genres:
+  - Rock
+  - Pop Rock
 regions_of_interest:
   - Europe
   - UK

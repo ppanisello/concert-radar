@@ -3,7 +3,9 @@ name: Halford
 bandsintown_id: Halford
 active: true
 priority: baja
-genres: []
+genres:
+  - Heavy Metal
+  - Power Metal
 regions_of_interest:
   - Europe
   - UK

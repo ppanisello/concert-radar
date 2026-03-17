@@ -3,7 +3,9 @@ name: Soledad
 bandsintown_id: Soledad
 active: true
 priority: baja
-genres: []
+genres:
+  - Folklore
+  - World Music
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,10 @@ name: Paul McCartney
 bandsintown_id: Paul%20McCartney
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop Rock
+  - Classic Rock
+  - Art Rock
 regions_of_interest:
   - Europe
   - UK

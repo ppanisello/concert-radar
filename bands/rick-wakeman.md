@@ -3,7 +3,9 @@ name: Rick Wakeman
 bandsintown_id: Rick%20Wakeman
 active: true
 priority: alta
-genres: []
+genres:
+  - Progressive Rock
+  - Symphonic Rock
 regions_of_interest:
   - Europe
   - UK

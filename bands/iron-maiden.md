@@ -3,7 +3,9 @@ name: Iron Maiden
 bandsintown_id: Iron%20Maiden
 active: true
 priority: alta
-genres: []
+genres:
+  - Heavy Metal
+  - NWOBHM
 regions_of_interest:
   - Europe
   - UK

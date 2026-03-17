@@ -3,7 +3,10 @@ name: Pedro Aznar
 bandsintown_id: Pedro%20Aznar
 active: true
 priority: media
-genres: []
+genres:
+  - Rock Nacional
+  - Jazz Fusion
+  - World Music
 regions_of_interest:
   - Europe
   - UK

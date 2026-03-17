@@ -3,7 +3,9 @@ name: Quiet Riot
 bandsintown_id: Quiet%20Riot
 active: true
 priority: baja
-genres: []
+genres:
+  - Heavy Metal
+  - Glam Metal
 regions_of_interest:
   - Europe
   - UK

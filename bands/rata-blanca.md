@@ -3,7 +3,10 @@ name: Rata Blanca
 bandsintown_id: Rata%20Blanca
 active: true
 priority: baja
-genres: []
+genres:
+  - Heavy Metal
+  - Power Metal
+  - Neoclassical Metal
 regions_of_interest:
   - Europe
   - UK

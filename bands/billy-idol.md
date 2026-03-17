@@ -3,7 +3,10 @@ name: Billy Idol
 bandsintown_id: Billy%20Idol
 active: true
 priority: media
-genres: []
+genres:
+  - Punk Rock
+  - New Wave
+  - Hard Rock
 regions_of_interest:
   - Europe
   - UK

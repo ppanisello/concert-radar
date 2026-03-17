@@ -3,7 +3,9 @@ name: JAF
 bandsintown_id: JAF
 active: true
 priority: media
-genres: []
+genres:
+  - Blues Rock
+  - Rock Nacional
 regions_of_interest:
   - Europe
   - UK

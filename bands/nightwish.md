@@ -3,7 +3,9 @@ name: Nightwish
 bandsintown_id: Nightwish
 active: true
 priority: alta
-genres: []
+genres:
+  - Symphonic Metal
+  - Power Metal
 regions_of_interest:
   - Europe
   - UK

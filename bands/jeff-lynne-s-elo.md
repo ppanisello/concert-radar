@@ -3,7 +3,10 @@ name: Jeff Lynne's ELO
 bandsintown_id: Jeff%20Lynne%27s%20ELO
 active: true
 priority: baja
-genres: []
+genres:
+  - Art Rock
+  - Pop Rock
+  - Symphonic Rock
 regions_of_interest:
   - Europe
   - UK

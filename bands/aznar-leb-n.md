@@ -3,7 +3,9 @@ name: Aznar Lebón
 bandsintown_id: Aznar%20Lebón
 active: true
 priority: media
-genres: []
+genres:
+  - Rock Nacional
+  - Pop Rock
 regions_of_interest:
   - Europe
   - UK

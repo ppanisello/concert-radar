@@ -3,7 +3,9 @@ name: Angra
 bandsintown_id: Angra
 active: true
 priority: baja
-genres: []
+genres:
+  - Power Metal
+  - Progressive Metal
 regions_of_interest:
   - Europe
   - UK

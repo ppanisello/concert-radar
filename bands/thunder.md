@@ -3,7 +3,9 @@ name: Thunder
 bandsintown_id: Thunder
 active: true
 priority: baja
-genres: []
+genres:
+  - Hard Rock
+  - Blues Rock
 regions_of_interest:
   - Europe
   - UK

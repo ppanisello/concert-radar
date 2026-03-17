@@ -3,7 +3,10 @@ name: Emeli Sandé
 bandsintown_id: Emeli%20Sandé
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop
+  - Soul
+  - Rgenres: []B
 regions_of_interest:
   - Europe
   - UK

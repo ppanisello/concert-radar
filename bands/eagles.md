@@ -3,7 +3,10 @@ name: Eagles
 bandsintown_id: Eagles
 active: true
 priority: media
-genres: []
+genres:
+  - Classic Rock
+  - Country Rock
+  - Soft Rock
 regions_of_interest:
   - Europe
   - UK

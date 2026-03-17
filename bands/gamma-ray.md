@@ -3,7 +3,9 @@ name: Gamma Ray
 bandsintown_id: Gamma%20Ray
 active: true
 priority: baja
-genres: []
+genres:
+  - Power Metal
+  - Speed Metal
 regions_of_interest:
   - Europe
   - UK

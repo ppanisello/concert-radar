@@ -3,7 +3,9 @@ name: Adrenaline Mob
 bandsintown_id: Adrenaline%20Mob
 active: true
 priority: baja
-genres: []
+genres:
+  - Hard Rock
+  - Heavy Metal
 regions_of_interest:
   - Europe
   - UK

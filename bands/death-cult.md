@@ -3,7 +3,9 @@ name: Death Cult
 bandsintown_id: Death%20Cult
 active: true
 priority: baja
-genres: []
+genres:
+  - Gothic Rock
+  - Post-Punk
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,10 @@ name: Steely Dan
 bandsintown_id: Steely%20Dan
 active: true
 priority: baja
-genres: []
+genres:
+  - Jazz Rock
+  - Soft Rock
+  - Pop Rock
 regions_of_interest:
   - Europe
   - UK

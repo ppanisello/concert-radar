@@ -3,7 +3,9 @@ name: Saxon
 bandsintown_id: Saxon
 active: true
 priority: alta
-genres: []
+genres:
+  - Heavy Metal
+  - NWOBHM
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,10 @@ name: Céline Dion
 bandsintown_id: Céline%20Dion
 active: true
 priority: media
-genres: []
+genres:
+  - Pop
+  - Ballad
+  - Adult Contemporary
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,9 @@ name: Halestorm
 bandsintown_id: Halestorm
 active: true
 priority: baja
-genres: []
+genres:
+  - Hard Rock
+  - Heavy Metal
 regions_of_interest:
   - Europe
   - UK

@@ -3,7 +3,9 @@ name: De Toppers
 bandsintown_id: De%20Toppers
 active: true
 priority: baja
-genres: []
+genres:
+  - Pop
+  - Schlager
 regions_of_interest:
   - Europe
   - UK

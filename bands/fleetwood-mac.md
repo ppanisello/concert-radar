@@ -3,7 +3,10 @@ name: Fleetwood Mac
 bandsintown_id: Fleetwood%20Mac
 active: true
 priority: baja
-genres: []
+genres:
+  - Classic Rock
+  - Soft Rock
+  - Pop Rock
 regions_of_interest:
   - Europe
   - UK

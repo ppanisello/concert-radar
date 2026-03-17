@@ -3,7 +3,10 @@ name: Steve Winwood
 bandsintown_id: Steve%20Winwood
 active: true
 priority: baja
-genres: []
+genres:
+  - Blue-Eyed Soul
+  - Rock
+  - Jazz Fusion
 regions_of_interest:
   - Europe
   - UK
