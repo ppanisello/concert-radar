@@ -133,7 +133,16 @@ def fetch_events(band, api_key, cutoff_date):
             "venue": venue.get("name", ""),
             "ticket_url": ev.get("url", ""),
         })
-    return events
+
+    # Deduplicate by (date, city, country)
+    seen = set()
+    deduped = []
+    for ev in events:
+        key = (ev["date"], ev["city"], ev["country"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(ev)
+    return deduped
 
 
 def scan_all(bands, api_key, lookahead_days, lookahead_dream_days):
@@ -329,7 +338,7 @@ Si no hay clusters, indicalo claramente."""
     client = anthropic.Anthropic()
     message = client.messages.create(
         model="claude-sonnet-4-20250514",
-        max_tokens=8192,
+        max_tokens=16384,
         messages=[{"role": "user", "content": prompt}],
     )
     return message.content[0].text
