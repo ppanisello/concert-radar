@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Concert Radar — scans Ticketmaster for upcoming events and generates
-cluster reports via Claude."""
+"""Concert Radar — scans Ticketmaster for upcoming events, clusters them
+by city+country within a time window, and generates reports via Claude."""
 
+import json
 import os
 import sys
 import time
 import glob as globmod
-from datetime import datetime, timedelta, timezone
+from collections import defaultdict
+from datetime import datetime, timedelta, timezone, date
 
 # Fix Windows console encoding
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -89,11 +91,15 @@ def fetch_events(band, api_key, cutoff_date):
     events = []
     for ev in raw_events:
         # Check the event is actually for this artist (keyword search is fuzzy)
-        attractions = []
         ev_embedded = ev.get("_embedded", {})
-        for attr in ev_embedded.get("attractions", []):
-            attractions.append(attr.get("name", "").lower())
-        if attractions and band["name"].lower() not in attractions:
+        attraction_names = [
+            attr.get("name", "").lower()
+            for attr in ev_embedded.get("attractions", [])
+        ]
+        # Skip events with no attractions — likely mismatches (city names, etc.)
+        if not attraction_names:
+            continue
+        if band["name"].lower() not in attraction_names:
             continue
 
         dates = ev.get("dates", {})
@@ -102,27 +108,28 @@ def fetch_events(band, api_key, cutoff_date):
         if not date_str:
             continue
 
+        # Geolocation comes strictly from the venue object
         venues = ev_embedded.get("venues", [{}])
         venue = venues[0] if venues else {}
 
-        city_obj = venue.get("city", {})
-        state_obj = venue.get("state", {})
-        country_obj = venue.get("country", {})
+        venue_city = venue.get("city", {}).get("name", "")
+        venue_state = venue.get("state", {})
+        state_code = venue_state.get("stateCode", "") or venue_state.get("name", "")
+        venue_country = venue.get("country", {}).get("name", "")
 
-        city_name = city_obj.get("name", "")
-        state_name = state_obj.get("stateCode", "") or state_obj.get("name", "")
-        country_name = country_obj.get("name", "")
+        if not venue_city or not venue_country:
+            continue
 
         # Build precise location: "City, State" for US/CA, "City" otherwise
-        if state_name and country_name in ("United States Of America", "Canada"):
-            precise_city = f"{city_name}, {state_name}"
+        if state_code and venue_country in ("United States Of America", "Canada"):
+            precise_city = f"{venue_city}, {state_code}"
         else:
-            precise_city = city_name
+            precise_city = venue_city
 
         events.append({
             "date": date_str,
             "city": precise_city,
-            "country": country_name,
+            "country": venue_country,
             "venue": venue.get("name", ""),
             "ticket_url": ev.get("url", ""),
         })
@@ -193,43 +200,115 @@ def write_raw(results, bands_scanned):
     return path
 
 
-# ── 4. ANALISIS CON CLAUDE ──────────────────────────────────────────
+# ── 4. CLUSTERING EN PYTHON ─────────────────────────────────────────
 
-def analyze_with_claude(raw_path, settings):
-    with open(raw_path, "r", encoding="utf-8") as f:
-        raw_content = f.read()
+def cluster_events(results, settings):
+    """Group events by city+country, then split into time-windowed clusters."""
+    window = settings["cluster_window_days"]
+    min_artists = settings["cluster_min_shows"]
 
-    settings_path = os.path.join(ROOT, "config", "settings.md")
-    with open(settings_path, "r", encoding="utf-8") as f:
-        settings_content = f.read()
+    # Flatten all events with their band info
+    flat = []
+    for band_name, info in results.items():
+        for ev in info["events"]:
+            flat.append({
+                "band": band_name,
+                "priority": info["priority"],
+                "date": ev["date"],
+                "city": ev["city"],
+                "country": ev["country"],
+                "venue": ev["venue"],
+                "ticket_url": ev.get("ticket_url", ""),
+            })
 
-    prompt = f"""Sos un analista de conciertos. Te paso dos archivos:
+    # Group by city+country
+    by_location = defaultdict(list)
+    for ev in flat:
+        key = (ev["city"], ev["country"])
+        by_location[key].append(ev)
 
-## config/settings.md
-{settings_content}
+    clusters = []
+    for (city, country), events in by_location.items():
+        # Sort by date
+        events.sort(key=lambda e: e["date"])
 
-## events/upcoming-raw.md
-{raw_content}
+        # Split into time windows
+        current_cluster = [events[0]]
+        cluster_start = date.fromisoformat(events[0]["date"])
 
-Tu tarea: agrupar eventos en clusters y generar un reporte.
+        for ev in events[1:]:
+            ev_date = date.fromisoformat(ev["date"])
+            if (ev_date - cluster_start).days <= window:
+                current_cluster.append(ev)
+            else:
+                # Close current cluster and start new one
+                clusters.append(_build_cluster(city, country, current_cluster))
+                current_cluster = [ev]
+                cluster_start = ev_date
 
-### Reglas de agrupacion
+        # Don't forget the last cluster
+        clusters.append(_build_cluster(city, country, current_cluster))
 
-1. **Geolocalizacion estricta:** Agrupar SOLO por la combinacion exacta de City + Country tal como aparece en los datos. NO agrupar ciudades distintas aunque esten geograficamente cerca. Ejemplo: "Silver Spring" y "Boston" son clusters separados, NO se agrupan como "New York". Cada evento pertenece unicamente al cluster de su city+country exacto.
+    # Filter: at least min_artists distinct artists
+    valid = [c for c in clusters if c["unique_artists"] >= min_artists]
 
-2. **Ventana temporal:** Dentro de cada city+country, agrupar eventos que caigan dentro de una ventana de **{settings['cluster_window_days']} dias**. Si hay eventos separados por mas de {settings['cluster_window_days']} dias en la misma ciudad, son clusters distintos.
+    print(f"\nClustering: {len(clusters)} raw clusters -> "
+          f"{len(valid)} valid (>= {min_artists} distinct artists)")
 
-3. **Minimo de artistas distintos:** Un cluster solo es valido si tiene al menos **{settings['cluster_min_shows']} artistas DISTINTOS**. Multiples fechas del mismo artista no cuentan como artistas adicionales.
+    return valid
 
-### Calculo de score
 
-4. **Score ponderado por prioridad:**
-   - Cada artista UNICO en el cluster suma puntos segun su prioridad: dream=3, alta=3, media=2, baja=1
-   - Si un artista tiene multiples fechas en el cluster, cuenta UNA sola vez para el score
-   - Score = (suma de puntos de artistas unicos) / (cantidad de artistas unicos * 3) * 10
+def _build_cluster(city, country, events):
+    """Build a cluster dict from a list of events in the same city+window."""
+    dates = [e["date"] for e in events]
+    unique = {}
+    for e in events:
+        if e["band"] not in unique:
+            unique[e["band"]] = e["priority"]
+
+    return {
+        "city": city,
+        "country": country,
+        "date_from": min(dates),
+        "date_to": max(dates),
+        "events": events,
+        "unique_artists": len(unique),
+        "total_events": len(events),
+        "artist_priorities": unique,
+    }
+
+
+# ── 5. ANALISIS CON CLAUDE ──────────────────────────────────────────
+
+def analyze_with_claude(clusters):
+    """Send pre-computed clusters as JSON; Claude scores, detects residencies,
+    flags tributes, and formats the Markdown report."""
+
+    clusters_json = json.dumps(clusters, ensure_ascii=False, indent=2)
+
+    prompt = f"""Sos un analista de conciertos. Te paso clusters de eventos ya agrupados por ciudad y ventana temporal (el agrupamiento ya esta hecho, NO lo cambies).
+
+## Clusters (JSON)
+```json
+{clusters_json}
+```
+
+Tu tarea: calcular scores, detectar residencias, marcar tributos, y formatear el reporte.
+
+### Reglas
+
+1. **NO reagrupar.** Cada cluster del JSON es un cluster final. No combines ni separes clusters.
+
+2. **Score ponderado por prioridad:**
+   - Cada artista UNICO suma puntos: dream=3, alta=3, media=2, baja=1
+   - Si un artista tiene multiples fechas, cuenta UNA sola vez
+   - Artistas marcados como posible tributo (?) NO suman al score
+   - Score = (suma de puntos) / (cantidad de artistas que suman * 3) * 10
    - Redondear a un decimal
 
-5. **Penalizacion por residencias:** Si un mismo artista tiene 3+ fechas en el mismo venue dentro del cluster, ese artista es una "residencia" y se marca con (R) en la tabla. Para el conteo de "shows unicos" del cluster, una residencia cuenta como 1.
+3. **Residencias:** Si un mismo artista tiene 3+ fechas en el mismo venue dentro del cluster, marcarlo con (R) en Notas.
+
+4. **Posibles tributos:** Si un artista tiene prioridad alta o dream y el venue es un bar, brewery, pub, o club pequeno (no un teatro, arena, estadio o sala de conciertos reconocida), marcarlo con (?) en Notas. NO contarlo para el score.
 
 ### Formato de salida
 
@@ -241,22 +320,22 @@ Ordenar clusters por score descendente. Solo el contenido Markdown, sin frontmat
 
 | Banda | Fecha | Venue | Prioridad | Notas |
 |-------|-------|-------|-----------|-------|
-| ... | ... | ... | ... | (R) si es residencia |
+| ... | ... | ... | ... | (R) y/o (?) |
 
 ---
 
-Si no hay clusters que cumplan el minimo de artistas distintos, indicalo claramente."""
+Si no hay clusters, indicalo claramente."""
 
     client = anthropic.Anthropic()
     message = client.messages.create(
         model="claude-sonnet-4-20250514",
-        max_tokens=4096,
+        max_tokens=8192,
         messages=[{"role": "user", "content": prompt}],
     )
     return message.content[0].text
 
 
-# ── 5. ESCRIBIR REPORTE SEMANAL ─────────────────────────────────────
+# ── 6. ESCRIBIR REPORTE SEMANAL ─────────────────────────────────────
 
 def write_report(analysis):
     now = datetime.now(timezone.utc)
@@ -324,11 +403,18 @@ def main():
     # 4. Write raw events
     raw_path = write_raw(results, len(bands))
 
-    # 5. Claude analysis
-    print("\nAnalyzing with Claude...")
-    analysis = analyze_with_claude(raw_path, settings)
+    # 5. Cluster in Python
+    clusters = cluster_events(results, settings)
 
-    # 6. Write report
+    if not clusters:
+        print("\nNo valid clusters found.")
+        sys.exit(0)
+
+    # 6. Claude analysis (score + format only)
+    print("\nAnalyzing with Claude...")
+    analysis = analyze_with_claude(clusters)
+
+    # 7. Write report
     report_path = write_report(analysis)
 
     print(f"\nDone! Report ready at {report_path}")
