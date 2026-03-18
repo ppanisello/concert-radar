@@ -5,7 +5,7 @@ active: true
 priority: baja
 genres:
   - Blues Rock
-  - Rgenres: []B
+  - R&B
   - Hip Hop
 regions_of_interest:
   - Europe

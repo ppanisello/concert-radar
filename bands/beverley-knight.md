@@ -5,7 +5,7 @@ active: true
 priority: baja
 genres:
   - Soul
-  - Rgenres: []B
+  - R&B
   - Gospel
 regions_of_interest:
   - Europe

@@ -5,7 +5,7 @@ active: true
 priority: baja
 genres:
   - Pop
-  - Rgenres: []B
+  - R&B
   - Dance Pop
 regions_of_interest:
   - Europe

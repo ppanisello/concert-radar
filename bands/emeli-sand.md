@@ -6,7 +6,7 @@ priority: baja
 genres:
   - Pop
   - Soul
-  - Rgenres: []B
+  - R&B
 regions_of_interest:
   - Europe
   - UK

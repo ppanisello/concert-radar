@@ -1,20 +1,29 @@
 #!/usr/bin/env python3
-"""Concert Radar — scans Bandsintown for upcoming events and generates
+"""Concert Radar — scans Ticketmaster for upcoming events and generates
 cluster reports via Claude."""
 
 import os
 import sys
 import time
 import glob as globmod
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
+# Fix Windows console encoding
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
+from dotenv import load_dotenv
 import frontmatter
 import requests
 import anthropic
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+load_dotenv(os.path.join(ROOT, ".env"))
 
-# ── 1. CONFIGURACIÓN ────────────────────────────────────────────────
+TM_BASE = "https://app.ticketmaster.com/discovery/v2/events.json"
+
+
+# ── 1. CONFIGURACION ────────────────────────────────────────────────
 
 def load_settings():
     path = os.path.join(ROOT, "config", "settings.md")
@@ -39,73 +48,93 @@ def load_bands(priority_filter):
             continue
         bands.append({
             "name": post["name"],
-            "bandsintown_id": post.get("bandsintown_id", post["name"]),
             "priority": priority,
         })
     return bands
 
 
-# ── 2. BANDSINTOWN API ──────────────────────────────────────────────
+# ── 2. TICKETMASTER API ─────────────────────────────────────────────
 
-def fetch_events(band, app_id, cutoff_date):
-    url = (
-        f"https://rest.bandsintown.com/artists/"
-        f"{band['bandsintown_id']}/events"
-    )
-    params = {"app_id": app_id}
+def fetch_events(band, api_key, cutoff_date):
+    today = datetime.now(timezone.utc).date()
+    params = {
+        "keyword": band["name"],
+        "classificationName": "music",
+        "apikey": api_key,
+        "size": 50,
+        "sort": "date,asc",
+        "startDateTime": today.strftime("%Y-%m-%dT00:00:00Z"),
+        "endDateTime": cutoff_date.strftime("%Y-%m-%dT23:59:59Z"),
+    }
     try:
-        resp = requests.get(url, params=params, timeout=15)
+        resp = requests.get(TM_BASE, params=params, timeout=15)
         if resp.status_code == 429:
-            print(f"  ⏳ Rate limit hit, waiting 60s…")
+            print(f"  Rate limit, waiting 60s...")
             time.sleep(60)
-            resp = requests.get(url, params=params, timeout=15)
+            resp = requests.get(TM_BASE, params=params, timeout=15)
         if resp.status_code == 404:
-            print(f"  ⚠ {band['name']}: not found on Bandsintown")
             return []
         resp.raise_for_status()
         data = resp.json()
-        if isinstance(data, dict):
-            return []
     except requests.RequestException as exc:
-        print(f"  ✗ {band['name']}: {exc}")
+        print(f"  x {band['name']}: {exc}")
         return []
 
-    today = datetime.utcnow().date()
+    embedded = data.get("_embedded")
+    if not embedded:
+        return []
+
+    raw_events = embedded.get("events", [])
     events = []
-    for ev in data:
-        try:
-            dt = datetime.strptime(ev["datetime"], "%Y-%m-%dT%H:%M:%S").date()
-        except (ValueError, KeyError):
+    for ev in raw_events:
+        # Check the event is actually for this artist (keyword search is fuzzy)
+        attractions = []
+        ev_embedded = ev.get("_embedded", {})
+        for attr in ev_embedded.get("attractions", []):
+            attractions.append(attr.get("name", "").lower())
+        if attractions and band["name"].lower() not in attractions:
             continue
-        if today <= dt <= cutoff_date:
-            venue = ev.get("venue", {})
-            events.append({
-                "date": dt.isoformat(),
-                "city": venue.get("city", ""),
-                "country": venue.get("country", ""),
-                "venue": venue.get("name", ""),
-                "ticket_url": ev.get("url", ""),
-            })
+
+        dates = ev.get("dates", {})
+        start = dates.get("start", {})
+        date_str = start.get("localDate")
+        if not date_str:
+            continue
+
+        venues = ev_embedded.get("venues", [{}])
+        venue = venues[0] if venues else {}
+
+        city_obj = venue.get("city", {})
+        country_obj = venue.get("country", {})
+
+        events.append({
+            "date": date_str,
+            "city": city_obj.get("name", ""),
+            "country": country_obj.get("name", ""),
+            "venue": venue.get("name", ""),
+            "ticket_url": ev.get("url", ""),
+        })
     return events
 
 
-def scan_all(bands, app_id, lookahead_days):
-    cutoff = datetime.utcnow().date() + timedelta(days=lookahead_days)
+def scan_all(bands, api_key, lookahead_days):
+    cutoff = datetime.now(timezone.utc).date() + timedelta(days=lookahead_days)
     results = {}
+
     for i, band in enumerate(bands, 1):
-        print(f"[{i}/{len(bands)}] {band['name']}…")
-        events = fetch_events(band, app_id, cutoff)
+        print(f"[{i}/{len(bands)}] {band['name']}...")
+        events = fetch_events(band, api_key, cutoff)
         if events:
             results[band["name"]] = {
                 "priority": band["priority"],
                 "events": events,
             }
-            print(f"  ✓ {len(events)} events")
+            print(f"  + {len(events)} events")
         else:
-            print(f"  – no upcoming events")
-        # Be polite with the API
+            print(f"  - no upcoming events")
+        # Ticketmaster rate limit: 5 req/sec
         if i < len(bands):
-            time.sleep(0.5)
+            time.sleep(0.25)
     return results
 
 
@@ -115,15 +144,16 @@ def write_raw(results, bands_scanned):
     all_events = [e for info in results.values() for e in info["events"]]
     cities = {e["city"] for e in all_events if e["city"]}
     countries = {e["country"] for e in all_events if e["country"]}
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     lines = [
         "---",
-        f"generated_at: {datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')}",
+        f"generated_at: {now}",
         f"bands_scanned: {bands_scanned}",
         f"events_found: {len(all_events)}",
         f"cities_scanned: {len(cities)}",
         f"countries_scanned: {len(countries)}",
-        "source: Bandsintown API",
+        "source: Ticketmaster Discovery API",
         "---",
         "",
     ]
@@ -145,11 +175,11 @@ def write_raw(results, bands_scanned):
     path = os.path.join(ROOT, "events", "upcoming-raw.md")
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
-    print(f"\n📄 Wrote {path}")
+    print(f"\nWrote {path}")
     return path
 
 
-# ── 4. ANÁLISIS CON CLAUDE ──────────────────────────────────────────
+# ── 4. ANALISIS CON CLAUDE ──────────────────────────────────────────
 
 def analyze_with_claude(raw_path, settings):
     with open(raw_path, "r", encoding="utf-8") as f:
@@ -168,12 +198,12 @@ def analyze_with_claude(raw_path, settings):
 {raw_content}
 
 Tu tarea:
-1. Agrupar los eventos por **ciudad** dentro de una ventana de **{settings['cluster_window_days']} días**.
+1. Agrupar los eventos por **ciudad** dentro de una ventana de **{settings['cluster_window_days']} dias**.
 2. Identificar clusters que tengan al menos **{settings['cluster_min_shows']} shows** de bandas distintas.
 3. Generar un reporte en Markdown ordenado por cantidad de shows **descendente**.
 
-Para cada cluster incluí:
-- Ciudad y país
+Para cada cluster inclui:
+- Ciudad y pais
 - Rango de fechas del cluster
 - Cantidad de shows
 - Lista de bandas con fecha, venue y prioridad
@@ -181,8 +211,8 @@ Para cada cluster incluí:
 
 Formato de salida (solo el contenido, sin frontmatter):
 
-## 1. Ciudad, País (N shows)
-**Fechas:** YYYY-MM-DD → YYYY-MM-DD
+## 1. Ciudad, Pais (N shows)
+**Fechas:** YYYY-MM-DD -> YYYY-MM-DD
 **Score:** X/10
 
 | Banda | Fecha | Venue | Prioridad |
@@ -191,8 +221,8 @@ Formato de salida (solo el contenido, sin frontmatter):
 
 ---
 
-Si no hay clusters que cumplan el mínimo, indicalo claramente.
-Respondé solo con el reporte en Markdown, sin explicaciones adicionales."""
+Si no hay clusters que cumplan el minimo, indicalo claramente.
+Responde solo con el reporte en Markdown, sin explicaciones adicionales."""
 
     client = anthropic.Anthropic()
     message = client.messages.create(
@@ -206,7 +236,7 @@ Respondé solo con el reporte en Markdown, sin explicaciones adicionales."""
 # ── 5. ESCRIBIR REPORTE SEMANAL ─────────────────────────────────────
 
 def write_report(analysis):
-    now = datetime.utcnow()
+    now = datetime.now(timezone.utc)
     week = now.isocalendar()[1]
     filename = f"{now.year}-W{week:02d}.md"
 
@@ -217,7 +247,7 @@ def write_report(analysis):
         "type: cluster-report",
         "---",
         "",
-        f"# Concert Radar — Semana {now.year}-W{week:02d}",
+        f"# Concert Radar -- Semana {now.year}-W{week:02d}",
         "",
         analysis,
     ]
@@ -225,44 +255,44 @@ def write_report(analysis):
     path = os.path.join(ROOT, "reports", filename)
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
-    print(f"📊 Wrote {path}")
+    print(f"Wrote report: {path}")
     return path
 
 
 # ── MAIN ─────────────────────────────────────────────────────────────
 
 def main():
-    app_id = os.environ.get("BANDSINTOWN_APP_ID")
+    tm_key = os.environ.get("TICKETMASTER_API_KEY")
     api_key = os.environ.get("ANTHROPIC_API_KEY")
 
-    if not app_id:
-        print("✗ Set BANDSINTOWN_APP_ID environment variable")
+    if not tm_key:
+        print("x Set TICKETMASTER_API_KEY environment variable")
         sys.exit(1)
     if not api_key:
-        print("✗ Set ANTHROPIC_API_KEY environment variable")
+        print("x Set ANTHROPIC_API_KEY environment variable")
         sys.exit(1)
 
-    print("═" * 50)
-    print("  Concert Radar 🎸")
-    print("═" * 50)
+    print("=" * 50)
+    print("  Concert Radar")
+    print("=" * 50)
 
     # 1. Config
     settings = load_settings()
-    print(f"\n⚙ Settings: lookahead={settings['lookahead_days']}d, "
+    print(f"\nSettings: lookahead={settings['lookahead_days']}d, "
           f"cluster_window={settings['cluster_window_days']}d, "
           f"min_shows={settings['cluster_min_shows']}, "
           f"filter={settings['priority_filter']}")
 
     # 2. Bands
     bands = load_bands(settings["priority_filter"])
-    print(f"🎤 Loaded {len(bands)} active bands\n")
+    print(f"Loaded {len(bands)} active bands\n")
 
     if not bands:
         print("No bands to scan.")
         sys.exit(0)
 
-    # 3. Scan Bandsintown
-    results = scan_all(bands, app_id, settings["lookahead_days"])
+    # 3. Scan Ticketmaster
+    results = scan_all(bands, tm_key, settings["lookahead_days"])
 
     if not results:
         print("\nNo upcoming events found for any band.")
@@ -272,13 +302,13 @@ def main():
     raw_path = write_raw(results, len(bands))
 
     # 5. Claude analysis
-    print("\n🤖 Analyzing with Claude…")
+    print("\nAnalyzing with Claude...")
     analysis = analyze_with_claude(raw_path, settings)
 
     # 6. Write report
     report_path = write_report(analysis)
 
-    print(f"\n✅ Done! Report ready at {report_path}")
+    print(f"\nDone! Report ready at {report_path}")
 
 
 if __name__ == "__main__":

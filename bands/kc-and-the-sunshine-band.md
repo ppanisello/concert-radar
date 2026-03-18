@@ -6,7 +6,7 @@ priority: baja
 genres:
   - Disco
   - Funk
-  - Rgenres: []B
+  - R&B
 regions_of_interest:
   - Europe
   - UK

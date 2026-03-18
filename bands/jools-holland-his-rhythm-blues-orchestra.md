@@ -4,7 +4,7 @@ bandsintown_id: Jools%20Holland%20%26%20His%20Rhythm%20%26%20Blues%20Orchestra
 active: true
 priority: baja
 genres:
-  - Rhythm genres: [] Blues
+  - Rhythm & Blues
   - Boogie-Woogie
   - Jazz
 regions_of_interest:
