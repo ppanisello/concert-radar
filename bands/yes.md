@@ -1,5 +1,5 @@
 ---
-name: Yes
+name: "Yes"
 priority: dream
 active: true
 ---
