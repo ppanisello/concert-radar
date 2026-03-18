@@ -105,12 +105,23 @@ def fetch_events(band, api_key, cutoff_date):
         venue = venues[0] if venues else {}
 
         city_obj = venue.get("city", {})
+        state_obj = venue.get("state", {})
         country_obj = venue.get("country", {})
+
+        city_name = city_obj.get("name", "")
+        state_name = state_obj.get("stateCode", "") or state_obj.get("name", "")
+        country_name = country_obj.get("name", "")
+
+        # Build precise location: "City, State" for US/CA, "City" otherwise
+        if state_name and country_name in ("United States Of America", "Canada"):
+            precise_city = f"{city_name}, {state_name}"
+        else:
+            precise_city = city_name
 
         events.append({
             "date": date_str,
-            "city": city_obj.get("name", ""),
-            "country": country_obj.get("name", ""),
+            "city": precise_city,
+            "country": country_name,
             "venue": venue.get("name", ""),
             "ticket_url": ev.get("url", ""),
         })
@@ -197,32 +208,41 @@ def analyze_with_claude(raw_path, settings):
 ## events/upcoming-raw.md
 {raw_content}
 
-Tu tarea:
-1. Agrupar los eventos por **ciudad** dentro de una ventana de **{settings['cluster_window_days']} dias**.
-2. Identificar clusters que tengan al menos **{settings['cluster_min_shows']} shows** de bandas distintas.
-3. Generar un reporte en Markdown ordenado por cantidad de shows **descendente**.
+Tu tarea: agrupar eventos en clusters y generar un reporte.
 
-Para cada cluster inclui:
-- Ciudad y pais
-- Rango de fechas del cluster
-- Cantidad de shows
-- Lista de bandas con fecha, venue y prioridad
-- Un score de atractivo (1-10) basado en prioridad de las bandas y cantidad
+### Reglas de agrupacion
 
-Formato de salida (solo el contenido, sin frontmatter):
+1. **Geolocalizacion estricta:** Agrupar SOLO por la combinacion exacta de City + Country tal como aparece en los datos. NO agrupar ciudades distintas aunque esten geograficamente cerca. Ejemplo: "Silver Spring" y "Boston" son clusters separados, NO se agrupan como "New York". Cada evento pertenece unicamente al cluster de su city+country exacto.
 
-## 1. Ciudad, Pais (N shows)
+2. **Ventana temporal:** Dentro de cada city+country, agrupar eventos que caigan dentro de una ventana de **{settings['cluster_window_days']} dias**. Si hay eventos separados por mas de {settings['cluster_window_days']} dias en la misma ciudad, son clusters distintos.
+
+3. **Minimo de artistas distintos:** Un cluster solo es valido si tiene al menos **{settings['cluster_min_shows']} artistas DISTINTOS**. Multiples fechas del mismo artista no cuentan como artistas adicionales.
+
+### Calculo de score
+
+4. **Score ponderado por prioridad:**
+   - Cada artista UNICO en el cluster suma puntos segun su prioridad: alta=3, media=2, baja=1
+   - Si un artista tiene multiples fechas en el cluster, cuenta UNA sola vez para el score
+   - Score = (suma de puntos de artistas unicos) / (cantidad de artistas unicos * 3) * 10
+   - Redondear a un decimal
+
+5. **Penalizacion por residencias:** Si un mismo artista tiene 3+ fechas en el mismo venue dentro del cluster, ese artista es una "residencia" y se marca con (R) en la tabla. Para el conteo de "shows unicos" del cluster, una residencia cuenta como 1.
+
+### Formato de salida
+
+Ordenar clusters por score descendente. Solo el contenido Markdown, sin frontmatter ni explicaciones.
+
+## 1. City, Country (N artistas unicos / M eventos totales)
 **Fechas:** YYYY-MM-DD -> YYYY-MM-DD
-**Score:** X/10
+**Score:** X.X/10
 
-| Banda | Fecha | Venue | Prioridad |
-|-------|-------|-------|-----------|
-| ... | ... | ... | ... |
+| Banda | Fecha | Venue | Prioridad | Notas |
+|-------|-------|-------|-----------|-------|
+| ... | ... | ... | ... | (R) si es residencia |
 
 ---
 
-Si no hay clusters que cumplan el minimo, indicalo claramente.
-Responde solo con el reporte en Markdown, sin explicaciones adicionales."""
+Si no hay clusters que cumplan el minimo de artistas distintos, indicalo claramente."""
 
     client = anthropic.Anthropic()
     message = client.messages.create(
