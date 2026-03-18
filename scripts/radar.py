@@ -32,6 +32,7 @@ def load_settings():
         "cluster_window_days": int(post.get("cluster_window_days", 7)),
         "cluster_min_shows": int(post.get("cluster_min_shows", 2)),
         "lookahead_days": int(post.get("lookahead_days", 180)),
+        "lookahead_dream_days": int(post.get("lookahead_dream_days", 227)),
         "priority_filter": post.get("priority_filter", "todas"),
     }
 
@@ -128,12 +129,14 @@ def fetch_events(band, api_key, cutoff_date):
     return events
 
 
-def scan_all(bands, api_key, lookahead_days):
-    cutoff = datetime.now(timezone.utc).date() + timedelta(days=lookahead_days)
+def scan_all(bands, api_key, lookahead_days, lookahead_dream_days):
+    cutoff_default = datetime.now(timezone.utc).date() + timedelta(days=lookahead_days)
+    cutoff_dream = datetime.now(timezone.utc).date() + timedelta(days=lookahead_dream_days)
     results = {}
 
     for i, band in enumerate(bands, 1):
         print(f"[{i}/{len(bands)}] {band['name']}...")
+        cutoff = cutoff_dream if band["priority"] in ("dream", "alta") else cutoff_default
         events = fetch_events(band, api_key, cutoff)
         if events:
             results[band["name"]] = {
@@ -221,7 +224,7 @@ Tu tarea: agrupar eventos en clusters y generar un reporte.
 ### Calculo de score
 
 4. **Score ponderado por prioridad:**
-   - Cada artista UNICO en el cluster suma puntos segun su prioridad: alta=3, media=2, baja=1
+   - Cada artista UNICO en el cluster suma puntos segun su prioridad: dream=3, alta=3, media=2, baja=1
    - Si un artista tiene multiples fechas en el cluster, cuenta UNA sola vez para el score
    - Score = (suma de puntos de artistas unicos) / (cantidad de artistas unicos * 3) * 10
    - Redondear a un decimal
@@ -312,7 +315,7 @@ def main():
         sys.exit(0)
 
     # 3. Scan Ticketmaster
-    results = scan_all(bands, tm_key, settings["lookahead_days"])
+    results = scan_all(bands, tm_key, settings["lookahead_days"], settings["lookahead_dream_days"])
 
     if not results:
         print("\nNo upcoming events found for any band.")
