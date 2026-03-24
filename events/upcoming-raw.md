@@ -1,9 +1,9 @@
 ---
-generated_at: 2026-03-18T23:53:18Z
+generated_at: 2026-03-24T21:25:35Z
 bands_scanned: 148
-events_found: 900
-cities_scanned: 337
-countries_scanned: 19
+events_found: 931
+cities_scanned: 342
+countries_scanned: 21
 source: Ticketmaster Discovery API
 ---
 
@@ -67,11 +67,18 @@ source: Ticketmaster Discovery API
 | 2026-07-25 | Decatur, IL | United States Of America | Devon Lakeshore Amphitheater | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7O3vY) |
 | 2026-07-31 | Detroit, MI | United States Of America | Music Hall Center | [link](https://www.ticketmaster.com/air-supply-a-matter-of-time-detroit-michigan-07-31-2026/event/0800643CE43B9681) |
 | 2026-08-01 | Shipshewana, IN | United States Of America | Blue Gate Performing Arts Center | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7-9ay) |
+| 2026-08-06 | Fresno, CA | United States Of America | Save Mart Center | [link](https://www.ticketmaster.com/air-supply-little-river-band-fresno-california-08-06-2026/event/1C0064729D5AA8DB) |
+| 2026-08-07 | Murphys, CA | United States Of America | Ironstone Amphitheatre at Ironstone Vineyards | [link](https://www.ticketmaster.com/air-supply-little-river-band-murphys-california-08-07-2026/event/1C006472A721BD94) |
 | 2026-08-26 | Hampton Beach, NH | United States Of America | Hampton Beach Casino Ballroom | [link](https://www.ticketmaster.com/air-supplya-matter-of-time-tour-hampton-beach-new-hampshire-08-26-2026/event/01006457EC349163) |
 | 2026-09-04 | Las Vegas, NV | United States Of America | Westgate Las Vegas Resort & Casino | [link](https://www.ticketmaster.com/air-supply-las-vegas-nevada-09-04-2026/event/17006348E5435F0A) |
 | 2026-09-05 | Las Vegas, NV | United States Of America | Westgate Las Vegas Resort & Casino | [link](https://www.ticketmaster.com/air-supply-las-vegas-nevada-09-05-2026/event/17006348E5465F10) |
+| 2026-09-10 | Columbia, SC | United States Of America | Township Auditorium | [link](https://www.ticketmaster.com/air-supply-a-matter-of-time-columbia-south-carolina-09-10-2026/event/2D006471C3112C38) |
+| 2026-09-11 | Atlanta, GA | United States Of America | Atlanta Symphony Hall | [link](https://www.ticketmaster.com/air-supply-a-matter-of-time-atlanta-georgia-09-11-2026/event/0E006471F08ECDFB) |
+| 2026-09-12 | Raleigh, NC | United States Of America | Martin Marietta Center for the Performing Arts | [link](https://www.ticketmaster.com/air-supply-a-matter-of-time-raleigh-north-carolina-09-12-2026/event/2D00647489EF87E4) |
 | 2026-10-03 | San Diego, CA | United States Of America | Humphreys Concerts By the Bay | [link](https://www.ticketmaster.com/air-supply-a-matter-of-time-san-diego-california-10-03-2026/event/0A006451F5AEDF53) |
 | 2026-10-09 | Napa, CA | United States Of America | Blue Note Napa Summer Sessions | [link](https://www.ticketmaster.com/air-supply-a-matter-of-time-napa-california-10-09-2026/event/1C00644DBD1F294C) |
+| 2026-10-15 | Evans, GA | United States Of America | Columbia County Performing Arts Center | [link](https://www.ticketmaster.com/air-supply-a-matter-of-time-evans-georgia-10-15-2026/event/0E006473BAFBC635) |
+| 2026-10-16 | Birmingham, AL | United States Of America | Alabama Theatre | [link](https://www.ticketmaster.com/air-supply-a-matter-of-time-birmingham-alabama-10-16-2026/event/200064748808289B) |
 
 ## Avantasia (prioridad: media)
 
@@ -195,39 +202,41 @@ source: Ticketmaster Discovery API
 | 2026-06-06 | Las Vegas, NV | United States Of America | Encore Theater at Wynn Las Vegas | [link](https://www.ticketmaster.com/bryan-adams-bare-bones-acoustic-solo-las-vegas-nevada-06-06-2026/event/170063839147AE15) |
 | 2026-06-22 | Brno | Czech Republic | Janáčkovo divadlo | [link](https://www.ticketmaster.cz/event/bryan-adams-bare-bones-tickets/1298739589?language=en-us) |
 | 2026-07-11 | Werchter | Belgium | Festivalpark Werchter | [link](https://www.ticketmaster.be/event/tw-classic-2026-tickets/906846387) |
+| 2026-07-24 | Saint Louis, MO | United States Of America | Enterprise Center | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-saint-louis-missouri-07-24-2026/event/0600646BDDA56194) |
+| 2026-07-25 | Wichita, KS | United States Of America | INTRUST Bank Arena | [link](https://selectaseat.com/adams) |
+| 2026-07-26 | Thackerville, OK | United States Of America | Lucas Oil Live at WinStar World Casino & Resort | [link](https://seatgeek.com/bryan-adams-tickets/thackerville-oklahoma-lucas-oil-live-at-winstar-world-casino-and-resort-2026-07-26-7-pm/concert/18132836?preview_token=aZ6DGdraq2&amplify_preview=true&quantity=2) |
+| 2026-07-28 | Austin, TX | United States Of America | Moody Center ATX | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-austin-texas-07-28-2026/event/3A0064748BFF5F56) |
+| 2026-07-29 | Houston, TX | United States Of America | Toyota Center | [link](https://ddec1-0-en-ctp.trendmicro.com/wis/clicktime/v1/query?url=https%3a%2f%2fwww.toyotacenter.com%2fevents%2fdetail%2fbryan%2dadams&umid=5a913276-f4cf-4485-93d4-e2095bf32063&rct=1773955345&auth=31681f672906dea02b218fb66688e036ee210e00-c3e2328a1811a) |
+| 2026-07-31 | New Orleans, LA | United States Of America | Smoothie King Center | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-new-orleans-louisiana-07-31-2026/event/1B006470A686B0A2) |
+| 2026-08-01 | North Little Rock, AR | United States Of America | Simmons Bank Arena | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-north-little-rock-arkansas-08-01-2026/event/1B0064719DE1CDAC) |
+| 2026-08-04 | Greenville, SC | United States Of America | Bon Secours Wellness Arena  | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-greenville-south-carolina-08-04-2026/event/2D0064722EC8B978) |
+| 2026-08-05 | Orlando, FL | United States Of America | Kia Center | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-orlando-florida-08-05-2026/event/22006471D73E7369) |
 | 2026-08-08 | Charlotte, NC | United States Of America | Spectrum Center | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-charlotte-north-carolina-08-08-2026/event/2D00646D08DC7020) |
-| 2026-08-24 | Trois-Rivieres, QC | Canada | Amphithéâtre Cogeco | [link](https://billets.amphitheatrecogeco.com/atr/?locale=fr-CA&skin=ampcogeco&fac=ATR#cc32e45c-c242-4592-b160-d121a29c2b80) |
+| 2026-08-09 | Baltimore, MD | United States Of America | CFG Bank Arena | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-baltimore-maryland-08-09-2026/event/150064711017E25C) |
+| 2026-08-11 | Reading, PA | United States Of America | The Santander Arena  | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-reading-pennsylvania-08-11-2026/event/02006471C20FC128) |
+| 2026-08-12 | Newark, NJ | United States Of America | Prudential Center | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-newark-new-jersey-08-12-2026/event/02006472B000CB4C) |
+| 2026-08-14 | Buffalo, NY | United States Of America | KeyBank Center | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-buffalo-new-york-08-14-2026/event/00006471CFB7E665) |
+| 2026-08-15 | Detroit, MI | United States Of America | Little Caesars Arena | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-detroit-michigan-08-15-2026/event/08006465CFBFA543) |
+| 2026-08-16 | Milwaukee, WI | United States Of America | Fiserv Forum | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-milwaukee-wisconsin-08-16-2026/event/0700647096E12C4A) |
+| 2026-08-24 | Trois-Rivieres, QC | Canada | Amphitheatre Cogeco | [link](https://www.ticketmaster.ca/event/Z7r9jZ1A7--jt) |
 | 2026-08-25 | Kingston, ON | Canada | Slush Puppie Place | [link](https://www.ticketmaster.ca/bryan-adams-roll-with-the-punches-kingston-ontario-08-25-2026/event/100064439D0E7A3F) |
 | 2026-08-26 | Oshawa, ON | Canada | Tribute Communities Centre | [link](https://tributecommunitiescentre.evenue.net/cgi-bin/ncommerce3/SEGetEventList?groupCode=BA&linkID=global-oshawa&shopperContext=&caller=&appCode=&RSRC=WEB_PR&RDAT=BA26) |
 | 2026-08-28 | Hamilton, ON | Canada | TD Coliseum | [link](https://www.ticketmaster.ca/bryan-adams-roll-with-the-punches-hamilton-ontario-08-28-2026/event/10006443A70B8DB3) |
 | 2026-08-29 | London, ON | Canada | Canada Life Place | [link](https://www.ticketmaster.ca/bryan-adams-roll-with-the-punches-london-ontario-08-29-2026/event/10006443EE8DF2C9) |
 | 2026-08-31 | Sudbury, ON | Canada | Sudbury Arena | [link](https://www.ticketmaster.ca/bryan-adams-roll-with-the-punches-sudbury-ontario-08-31-2026/event/1000645AB613CF75) |
 | 2026-09-01 | Sault Ste. Marie, ON | Canada | GFL Memorial Gardens | [link](https://gflgardens.ca/bryan) |
+| 2026-09-01 | Ste. Marie, ON | Canada | GFL Memorial Gardens | [link](https://www.ticketmaster.ca/event/Z7r9jZ1A7-_eK) |
 | 2026-09-03 | Thunder Bay, ON | Canada | Thunder Bay Community Auditorium | [link](https://www.ticketmaster.ca/bryan-adams-thunder-bay-ontario-09-03-2026/event/1000645994F34081) |
 | 2026-09-05 | Saskatoon, SK | Canada | SaskTel Centre | [link](https://www.ticketmaster.ca/bryan-adams-roll-with-the-punches-saskatoon-saskatchewan-09-05-2026/event/11006449C8D788D2) |
 | 2026-09-08 | Lethbridge, AB | Canada | VisitLethbridge.com Arena  | [link](https://visitlethbridgearena.evenue.net/events/BA) |
 | 2026-09-10 | Red Deer, AB | Canada | Marchant Crane Centrium at Westerner Park | [link](https://ticketsalberta.evenue.net/events/BA0910) |
-| 2026-09-11 | Dawson Creek, BC | Canada | Ovintiv Events Centre | [link](https://dcec.evenue.net/events/BA26) |
+| 2026-09-11 | Dawson Creek, BC | Canada | Ovintiv Events Centre | [link](https://www.ticketmaster.ca/event/Z7r9jZ1A7-bFS) |
 | 2026-09-13 | Penticton, BC | Canada | South Okanagan Events Centre | [link](https://valleyfirsttix.evenue.net/events/BRYANADAMS) |
-| 2026-09-15 | Abbotsford, BC | Canada | Rogers Forum | [link](https://www.ticketmaster.ca/bryan-adams-roll-with-the-punches-abbotsford-british-columbia-09-15-2026/event/1100646AEC2CC1EC) |
-| 2026-09-30 | Rostock | Germany |  | [link](https://www.ticketmaster.de/event/bryan-adams-roll-with-the-punches-tour-tickets/970399215?language=en-us) |
-| 2026-10-02 | Berlin | Germany | Uber Arena | [link](https://www.ticketmaster.de/event/bryan-adams-roll-with-the-punches-tour%7C-box-seat-tickets/1426180179?language=en-us) |
-| 2026-10-03 | Cologne | Germany |  | [link](https://www.ticketmaster.de/event/bryan-adams-roll-with-the-punches-tour-tickets/1702612759?language=en-us) |
-| 2026-10-05 | Munich | Germany | Olympiahalle | [link](https://www.ticketmaster.de/event/bryan-adams-roll-with-the-punches-tour-tickets/502813192?language=en-us) |
-| 2026-10-06 | Nürnberg | Germany | PSD Bank Nürnberg ARENA | [link](https://www.ticketmaster.de/event/bryan-adams-roll-with-the-punches-tour-tickets/193867448?language=en-us) |
-| 2026-10-08 | Bremen | Germany | ÖVB-Arena | [link](https://www.ticketmaster.de/event/bryan-adams-roll-with-the-punches-tour-tickets/1229412656?language=en-us) |
-| 2026-10-09 | Hamburg | Germany | Barclays Arena | [link](https://www.ticketmaster.de/event/bryan-adams-roll-with-the-punches-tour-%7C-box-seat-tickets/1541073550?language=en-us) |
-| 2026-10-10 | Leipzig | Germany |  | [link](https://www.ticketmaster.de/event/bryan-adams-roll-with-the-punches-tour-tickets/939983232?language=en-us) |
-| 2026-10-12 | Mannheim | Germany | SAP Arena | [link](https://www.ticketmaster.de/event/bryan-adams-roll-with-the-punches-tour-tickets/1839966056?language=en-us) |
-| 2026-10-14 | Amsterdam | Netherlands | Ziggo Dome | [link](https://www.ticketmaster.nl/event/bryan-adams-roll-with-the-punches-tickets/1823223105?language=en-us) |
-| 2026-10-15 | Merksem (Antwerpen) | Belgium | AFAS Dome | [link](https://www.ticketmaster.be/event/bryan-adams-roll-with-the-punches-tickets/165061686) |
 
 ## Cheap Trick (prioridad: baja)
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
-| 2026-03-20 | Sayreville, NJ | United States Of America | Starland Ballroom | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7rpG0) |
-| 2026-03-21 | Mashantucket, CT | United States Of America | Premier Theater at Foxwoods Resort Casino | [link](https://www.ticketmaster.com/cheap-trick-all-washed-up-tour-mashantucket-connecticut-03-21-2026/event/1D00636CAB56661C) |
 | 2026-03-27 | Charles Town, WV | United States Of America | Hollywood Casino at Charles Town Races | [link](https://www.ticketmaster.com/cheap-trick-all-washed-up-tour-charles-town-west-virginia-03-27-2026/event/1500636497FA6E88) |
 | 2026-03-28 | Danville, VA | United States Of America | The Pantheon at Caesars Virginia | [link](https://www.ticketmaster.com/cheap-trick-all-washed-up-tour-danville-virginia-03-28-2026/event/0100636DC45FEA11) |
 | 2026-04-03 | Bensalem, PA | United States Of America | Xcite Center | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7rp8w) |
@@ -254,7 +263,6 @@ source: Ticketmaster Discovery API
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
-| 2026-03-21 | Colorado Springs, CO | United States Of America | Pikes Peak Center | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7q74w) |
 | 2026-05-17 | Hartford, CT | United States Of America | Bushnell Theatre/ Mortensen Hall | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7OUOZ) |
 
 ## Danzig (prioridad: baja)
@@ -273,6 +281,7 @@ source: Ticketmaster Discovery API
 | 2026-10-23 | Merksem (Antwerpen) | Belgium | Lotto Arena Antwerpen | [link](https://www.ticketmaster.be/event/deep-purple-tickets/1210228515) |
 | 2026-10-25 | København S | Denmark |  | [link](https://www.ticketmaster.dk/event/deep-purple-tickets/421203516?language=en-us) |
 | 2026-10-26 | Stockholm | Sweden |  | [link](https://www.ticketmaster.se/event/deep-purple-platinum-tickets-tickets/351092412?language=en-us) |
+| 2026-11-04 | Berlin | Germany | Uber Arena | [link](https://www.ticketmaster.de/event/deep-purple-%7C-box-seat-in-the-ticketmaster-suite-tickets/1337004822?language=en-us) |
 
 ## Duran Duran (prioridad: baja)
 
@@ -290,8 +299,6 @@ source: Ticketmaster Discovery API
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
-| 2026-03-20 | Las Vegas, NV | United States Of America | Sphere | [link](https://www.ticketmaster.com/eagles-live-at-sphere-las-vegas-nevada-03-20-2026/event/17006323D5EC5795) |
-| 2026-03-21 | Las Vegas, NV | United States Of America | Sphere | [link](https://www.ticketmaster.com/eagles-live-at-sphere-las-vegas-nevada-03-21-2026/event/17006323D5EC57A0) |
 | 2026-03-27 | Las Vegas, NV | United States Of America | Sphere | [link](https://www.ticketmaster.com/eagles-live-at-sphere-las-vegas-nevada-03-27-2026/event/17006323D5EC57E6) |
 | 2026-03-28 | Las Vegas, NV | United States Of America | Sphere | [link](https://www.ticketmaster.com/eagles-live-at-sphere-las-vegas-nevada-03-28-2026/event/17006323F7C0689C) |
 | 2026-04-10 | Las Vegas, NV | United States Of America | Sphere | [link](https://www.ticketmaster.com/eagles-live-at-sphere-las-vegas-nevada-04-10-2026/event/17006449A50FB915) |
@@ -330,9 +337,6 @@ source: Ticketmaster Discovery API
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
-| 2026-03-20 | San Diego, CA | United States Of America | The Rady Shell at Jacobs Park | [link](https://www.ticketmaster.com/foreigner-san-diego-symphony-orchestra-san-diego-california-03-20-2026/event/0A00632143B6486C) |
-| 2026-03-21 | Napa, CA | United States Of America | Uptown Theatre Napa | [link](https://www.ticketmaster.com/foreigner-live-with-an-orchestra-napa-california-03-21-2026/event/1C006323BAB35712) |
-| 2026-03-22 | San Jose, CA | United States Of America | San Jose Civic | [link](https://www.ticketmaster.com/foreigner-rock-orchestra-san-jose-california-03-22-2026/event/1C006322E0245DAF) |
 | 2026-03-25 | Idaho Falls, ID | United States Of America | Mountain America Center | [link](https://www.ticketmaster.com/foreigner-idaho-falls-idaho-03-25-2026/event/1E0063309F711BE6) |
 | 2026-03-28 | Ridgefield, WA | United States Of America | Ilani Cowlitz Ballroom | [link](https://www.ticketmaster.com/foreigner-celebrating-fifty-years-ridgefield-washington-03-28-2026/event/0F006358D6405744) |
 | 2026-03-29 | Auburn, WA | United States Of America | Muckleshoot Casino Events Center | [link](https://www.ticketmaster.com/foreigner-auburn-washington-03-29-2026/event/0F0063649F7055E7) |
@@ -361,6 +365,9 @@ source: Ticketmaster Discovery API
 | 2026-08-18 | Toledo, OH | United States Of America | Toledo Zoo Amphitheatre | [link](https://www.ticketmaster.com/foreigner-celebrating-fifty-years-toledo-ohio-08-18-2026/event/080064548E6C6337) |
 | 2026-08-20 | Camden, NJ | United States Of America | Freedom Mortgage Pavilion  | [link](https://www.ticketmaster.com/lynyrd-skynyrd-x-foreigner-double-trouble-camden-new-jersey-08-20-2026/event/0200636CA158B1B5) |
 | 2026-08-21 | Wantagh, NY | United States Of America | Northwell at Jones Beach Theater | [link](https://www.ticketmaster.com/lynyrd-skynyrd-x-foreigner-double-trouble-wantagh-new-york-08-21-2026/event/1D00636C87DD2DA4) |
+| 2026-08-22 | Mansfield, MA | United States Of America | Xfinity Center | [link](https://www.ticketmaster.com/lynyrd-skynyrd-x-foreigner-double-trouble-mansfield-massachusetts-08-22-2026/event/0100636CF2394011) |
+| 2026-08-23 | Saratoga Springs, NY | United States Of America | Albany Med Health System at SPAC | [link](https://www.ticketmaster.com/lynyrd-skynyrd-x-foreigner-double-trouble-saratoga-springs-new-york-08-23-2026/event/0000636CA483AE13) |
+| 2026-08-27 | The Woodlands, TX | United States Of America | The Cynthia Woods Mitchell Pavilion sponsored by Huntsman | [link](https://www.ticketmaster.com/lynyrd-skynyrd-x-foreigner-double-trouble-the-woodlands-texas-08-27-2026/event/3A00636CDB00F721) |
 
 ## Glenn Hughes (prioridad: alta)
 
@@ -379,6 +386,7 @@ source: Ticketmaster Discovery API
 |------|------|---------|-------|---------|
 | 2026-06-05 | Plzeň | Czech Republic | Amfiteátr Lochotín | [link](https://www.ticketmaster.cz/event/metalfest-open-air-2026-festival-ticket-5-762026-tickets/1773906550?language=en-us) |
 | 2026-06-07 | Plzeň | Czech Republic | Amfiteátr Lochotín | [link](https://www.ticketmaster.cz/event/metalfest-open-air-2026-sunday-762026-tickets/294837391?language=en-us) |
+| 2026-11-06 | Fribourg | Switzerland | BCF ARENA | [link](https://www.ticketmaster.ch/event/bellarena-indoor-festival-%7C-rock-monsters-of-switzerland-tickets/1050336883?language=en-us) |
 
 ## Halestorm (prioridad: baja)
 
@@ -415,7 +423,6 @@ source: Ticketmaster Discovery API
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
-| 2026-03-19 | Merksem (Antwerpen) | Belgium | AFAS Dome | [link](https://www.ticketmaster.be/event/hans-zimmer-live-the-next-level-tickets/64893) |
 | 2026-05-16 | İstanbul | Turkey | Lütfi Kırdar Anadolu Auditorium | [link](https://www.biletix.com/performance/5LDA1/001/TURKIYE/tr) |
 | 2026-10-06 | Glasgow | Great Britain | OVO Hydro | [link](https://www.eventtravel.com/the-world-of-hans-zimmer-tickets-2026?agentCodeWeblink=AF294) |
 | 2026-10-07 | Manchester | Great Britain | Co-op Live | [link](https://www.eventtravel.com/the-world-of-hans-zimmer-tickets-2026?agentCodeWeblink=AF294) |
@@ -471,6 +478,7 @@ source: Ticketmaster Discovery API
 | 2026-09-27 | Los Angeles, CA | United States Of America | BMO Stadium | [link](https://www.ticketmaster.com/iron-maiden-run-for-your-lives-los-angeles-california-09-27-2026/event/0A00635B10E0C0D4) |
 | 2026-09-29 | San Antonio, TX | United States Of America | Alamodome | [link](https://www.ticketmaster.com/iron-maiden-run-for-your-lives-san-antonio-texas-09-29-2026/event/3A0063540A2590C8) |
 | 2026-10-02 | Ciudad de México | Mexico | Estadio GNP Seguros | [link](https://www.ticketmaster.com.mx/iron-maiden-ciudad-de-mexico-02-10-2026/event/1400634DB30C6F68) |
+| 2026-10-17 | Lima | Peru | Estadio Nacional del Peru | [link](https://www.ticketmaster.pe/event/iron-maiden-home) |
 
 ## Jimmie Vaughan (prioridad: baja)
 
@@ -486,9 +494,6 @@ source: Ticketmaster Discovery API
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
-| 2026-03-19 | Milwaukee, WI | United States Of America | Fiserv Forum | [link](https://www.ticketmaster.com/journey-final-frontier-tour-an-evening-milwaukee-wisconsin-03-19-2026/event/0700634E86EB3B8D) |
-| 2026-03-21 | Memphis, TN | United States Of America | FedExForum | [link](https://www.ticketmaster.com/journey-final-frontier-tour-an-evening-memphis-tennessee-03-21-2026/event/1B006350BBFCD421) |
-| 2026-03-22 | Lexington, KY | United States Of America | Rupp Arena | [link](https://www.ticketmaster.com/journey-final-frontier-tour-an-evening-lexington-kentucky-03-22-2026/event/1600634ECE5D3327) |
 | 2026-03-25 | North Little Rock, AR | United States Of America | Simmons Bank Arena | [link](https://www.ticketmaster.com/journey-final-frontier-tour-an-evening-north-little-rock-arkansas-03-25-2026/event/1B00634E80174310) |
 | 2026-03-26 | Kansas City, MO | United States Of America | T-Mobile Center | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7qgAe) |
 | 2026-03-28 | New Orleans, LA | United States Of America | Smoothie King Center | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7qwbV) |
@@ -508,6 +513,8 @@ source: Ticketmaster Discovery API
 | 2026-04-22 | Bakersfield, CA | United States Of America | Dignity Health Arena | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7qgAF) |
 | 2026-04-24 | Fresno, CA | United States Of America | Save Mart Center | [link](https://www.ticketmaster.com/journey-final-frontier-tour-an-evening-fresno-california-04-24-2026/event/1C006350AFE5B38A) |
 | 2026-04-29 | Las Vegas, NV | United States Of America | The Sandbar at Red Rock Casino Resort & Spa | [link](https://www.ticketmaster.com/journey-the-final-frontier-tour-2026-las-vegas-nevada-04-29-2026/event/17006454D381B4F6) |
+| 2026-05-15 | Tampa, FL | United States Of America | Benchmark International Arena | [link](https://www.ticketmaster.com/journey-final-frontier-tour-an-evening-tampa-florida-05-15-2026/event/0D00635698C139F9) |
+| 2026-05-16 | Jacksonville, FL | United States Of America | VyStar Veterans Arena | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7qgA7) |
 
 ## Judas Priest (prioridad: alta)
 
@@ -522,9 +529,6 @@ source: Ticketmaster Discovery API
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
-| 2026-03-19 | New York, NY | United States Of America | Madison Square Garden | [link](https://www.ticketmaster.com/lady-gaga-the-mayhem-ball-new-york-new-york-03-19-2026/event/3B006323A17C102E) |
-| 2026-03-20 | New York, NY | United States Of America | Madison Square Garden | [link](https://www.ticketmaster.com/lady-gaga-the-mayhem-ball-new-york-new-york-03-20-2026/event/3B006323A1871033) |
-| 2026-03-23 | Washington, DC | United States Of America | Capital One Arena | [link](https://www.ticketmaster.com/lady-gaga-the-mayhem-ball-washington-district-of-columbia-03-23-2026/event/1500631F3AF36793) |
 | 2026-03-24 | Washington, DC | United States Of America | Capital One Arena | [link](https://www.ticketmaster.com/lady-gaga-the-mayhem-ball-washington-district-of-columbia-03-24-2026/event/15006328335E411F) |
 | 2026-03-29 | Boston, MA | United States Of America | TD Garden | [link](https://www.ticketmaster.com/lady-gaga-the-mayhem-ball-boston-massachusetts-03-29-2026/event/01006323DE0B7BE1) |
 | 2026-03-30 | Boston, MA | United States Of America | TD Garden | [link](https://www.ticketmaster.com/lady-gaga-the-mayhem-ball-boston-massachusetts-03-30-2026/event/0100632824DA64B8) |
@@ -540,7 +544,6 @@ source: Ticketmaster Discovery API
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
 | 2026-04-10 | New Orleans, LA | United States Of America | Caesars Superdome  | [link](https://www.ticketmaster.com/the-hondo-rodeo-fest-friday-followed-new-orleans-louisiana-04-10-2026/event/1B0063872C7BE100) |
-| 2026-04-25 | San Leandro, CA | United States Of America | Historic BAL Theatre | [link](https://www.ticketmaster.com/ultimate-lynyrd-skynyrd-tribute-concert-sounds-san-leandro-california-04-25-2026/event/1C00637CE7C44C1E) |
 | 2026-07-10 | Ashland, KY | United States Of America | Boyd County Fairgrounds | [link](https://on.fgtix.com/trk/Regtb) |
 | 2026-07-17 | West Palm Beach, FL | United States Of America | iTHINK Financial Amphitheatre  | [link](https://www.ticketmaster.com/lynyrd-skynyrd-with-loverboy-west-palm-beach-florida-07-17-2026/event/0D00636DC094AE35) |
 | 2026-07-18 | Tampa, FL | United States Of America | MIDFLORIDA Credit Union Amphitheatre at the FL State Fairgrounds | [link](https://www.ticketmaster.com/lynyrd-skynyrd-with-loverboy-tampa-florida-07-18-2026/event/0D00636C9CCE73FD) |
@@ -613,15 +616,23 @@ source: Ticketmaster Discovery API
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
+| 2026-07-24 | Saint Louis, MO | United States Of America | Enterprise Center | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-saint-louis-missouri-07-24-2026/event/0600646BDDA56194) |
+| 2026-07-25 | Wichita, KS | United States Of America | INTRUST Bank Arena | [link](https://selectaseat.com/adams) |
+| 2026-07-26 | Thackerville, OK | United States Of America | Lucas Oil Live at WinStar World Casino & Resort | [link](https://seatgeek.com/bryan-adams-tickets/thackerville-oklahoma-lucas-oil-live-at-winstar-world-casino-and-resort-2026-07-26-7-pm/concert/18132836?preview_token=aZ6DGdraq2&amplify_preview=true&quantity=2) |
+| 2026-07-29 | Houston, TX | United States Of America | Toyota Center | [link](https://ddec1-0-en-ctp.trendmicro.com/wis/clicktime/v1/query?url=https%3a%2f%2fwww.toyotacenter.com%2fevents%2fdetail%2fbryan%2dadams&umid=5a913276-f4cf-4485-93d4-e2095bf32063&rct=1773955345&auth=31681f672906dea02b218fb66688e036ee210e00-c3e2328a1811a) |
+| 2026-07-31 | New Orleans, LA | United States Of America | Smoothie King Center | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-new-orleans-louisiana-07-31-2026/event/1B006470A686B0A2) |
+| 2026-08-01 | North Little Rock, AR | United States Of America | Simmons Bank Arena | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-north-little-rock-arkansas-08-01-2026/event/1B0064719DE1CDAC) |
+| 2026-08-04 | Greenville, SC | United States Of America | Bon Secours Wellness Arena  | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-greenville-south-carolina-08-04-2026/event/2D0064722EC8B978) |
+| 2026-08-05 | Orlando, FL | United States Of America | Kia Center | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-orlando-florida-08-05-2026/event/22006471D73E7369) |
 | 2026-08-08 | Charlotte, NC | United States Of America | Spectrum Center | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-charlotte-north-carolina-08-08-2026/event/2D00646D08DC7020) |
+| 2026-08-09 | Baltimore, MD | United States Of America | CFG Bank Arena | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-baltimore-maryland-08-09-2026/event/150064711017E25C) |
+| 2026-08-11 | Reading, PA | United States Of America | The Santander Arena  | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-reading-pennsylvania-08-11-2026/event/02006471C20FC128) |
+| 2026-08-12 | Newark, NJ | United States Of America | Prudential Center | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-newark-new-jersey-08-12-2026/event/02006472B000CB4C) |
+| 2026-08-14 | Buffalo, NY | United States Of America | KeyBank Center | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-buffalo-new-york-08-14-2026/event/00006471CFB7E665) |
+| 2026-08-15 | Detroit, MI | United States Of America | Little Caesars Arena | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-detroit-michigan-08-15-2026/event/08006465CFBFA543) |
+| 2026-08-16 | Milwaukee, WI | United States Of America | Fiserv Forum | [link](https://www.ticketmaster.com/bryan-adams-roll-with-the-punches-milwaukee-wisconsin-08-16-2026/event/0700647096E12C4A) |
 | 2026-08-21 | Las Vegas, NV | United States Of America | Pearl Concert Theater at Palms Casino Resort | [link](https://www.axs.com/events/1338342/pat-benatar-neil-giraldo-tickets?skin=palmscasinoresort) |
 | 2026-08-22 | Rancho Mirage, CA | United States Of America | The Show - Agua Caliente Casino | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7-NFK) |
-
-## Paul McCartney (prioridad: baja)
-
-| Date | City | Country | Venue | Tickets |
-|------|------|---------|-------|---------|
-| 2026-08-27 | San Leandro, CA | United States Of America | Historic BAL Theatre | [link](https://www.ticketmaster.com/ultimate-beatles-tribute-concert-britain-finest-san-leandro-california-08-27-2026/event/1C006434CB82CE9D) |
 
 ## Paul Weller (prioridad: baja)
 
@@ -666,6 +677,8 @@ source: Ticketmaster Discovery API
 |------|------|---------|-------|---------|
 | 2026-03-28 | Lawrenceburg, IN | United States Of America | Lawrenceburg Event Center | [link](https://www.ticketmaster.com/great-white-and-slaughter-and-quiet-lawrenceburg-indiana-03-28-2026/event/16006374AA3F91D6) |
 | 2026-04-10 | Las Vegas, NV | United States Of America | The Showroom at the Golden Nugget | [link](https://www.ticketmaster.com/quiet-riot-las-vegas-nevada-04-10-2026/event/170064267C0E537B) |
+| 2026-07-17 | Fresno, CA | United States Of America | Save Mart Center | [link](https://www.ticketmaster.com/the-rock-road-show-fresno-california-07-17-2026/event/1C006474C816EF61) |
+| 2026-07-18 | Murphys, CA | United States Of America | Ironstone Amphitheatre at Ironstone Vineyards | [link](https://www.ticketmaster.com/gene-simmons-and-his-bandsebastian-bachlita-murphys-california-07-18-2026/event/1C006472B264D1A3) |
 | 2026-07-24 | Anaheim, CA | United States Of America | Grove of Anaheim | [link](https://www.ticketmaster.com/slaughter-quiet-riot-tuff-anaheim-california-07-24-2026/event/0900645AD8473E81) |
 | 2026-07-31 | Minnedosa, MB | Canada | Lake Minnedosa Field | [link](https://on.fgtix.com/trk/P4W4b) |
 | 2026-08-01 | Minnedosa, MB | Canada | Lake Minnedosa Field | [link](https://on.fgtix.com/trk/P4W4b) |
@@ -695,7 +708,7 @@ source: Ticketmaster Discovery API
 | 2026-06-19 | Glasgow | Great Britain | Glasgow Green | [link](https://www.ticketmaster.co.uk/richard-ashcroft-trnsmt-friday-vip-priority-glasgow-19-06-2026/event/36006365CFDF903C) |
 | 2026-06-27 | Scarborough | Great Britain | Scarborough Open Air Theatre | [link](https://www.ticketmaster.co.uk/richard-ashcroft-scarborough-27-06-2026/event/3500637393C342E0) |
 | 2026-06-28 | Gloucestershire | Great Britain | Westonbirt Arboretum | [link](https://www.ticketmaster.co.uk/richard-ashcroft-westonbirt-arboretum-coaches-gloucestershire-28-06-2026/event/37006371B6357358) |
-| 2026-07-16 | Cardiff | Great Britain | Cardiff Castle | [link](https://www.ticketmaster.co.uk/richard-ashcroft-tom-meighan-apollo-junction-cardiff-16-07-2026/event/1F00636CD65B87F7) |
+| 2026-07-16 | Cardiff | Great Britain | Cardiff Castle | [link](https://www.ticketmaster.co.uk/richard-ashcroft-upgrade-does-not-include-cardiff-16-07-2026/event/1F00643E3D9EAD79) |
 | 2026-07-17 | London | Great Britain | Alexandra Palace Park | [link](https://www.ticketmaster.co.uk/richard-ashcroft-london-17-07-2026/event/1F00633D88E44732) |
 | 2026-07-24 | Reading | Great Britain | Englefield House | [link](https://www.ticketmaster.co.uk/heritage-live-richard-ashcroft-reading-24-07-2026/event/1F0063477CFA3548) |
 | 2026-08-27 | Colchester | Great Britain | Colchester Castle Park | [link](https://www.ticketmaster.co.uk/richard-ashcroft-colchester-27-08-2026/event/3500636BE039E4FB) |
@@ -725,12 +738,12 @@ source: Ticketmaster Discovery API
 | 2026-06-24 | Llangollen | Great Britain | Live at Llangollen, Llangollen Pavilion | [link](https://www.ticketmaster.co.uk/rick-astley-llangollen-24-06-2026/event/1F006367979B5761) |
 | 2026-06-25 | Lincoln | Great Britain | Lincoln Castle | [link](https://www.ticketmaster.co.uk/rick-astley-lincoln-25-06-2026/event/1F006357F0C89778) |
 | 2026-06-27 | Gloucestershire | Great Britain | Westonbirt Arboretum | [link](https://www.ticketmaster.co.uk/rick-astley-westonbirt-arboretum-coaches-gloucestershire-27-06-2026/event/3700635FCC97BA73) |
+| 2026-07-10 | Marbella | Spain | Auditorio Starlite | [link](https://www.ticketmaster.es/event/rick-astley-tickets/452131021?language=en-us) |
 
 ## Rick Wakeman (prioridad: alta)
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
-| 2026-03-22 | Cincinnati, OH | United States Of America | Ludlow Garage Cincinnati | [link](https://www.ticketmaster.com/rick-wakeman-and-son-featuring-special-cincinnati-ohio-03-22-2026/event/16006294038E2DB4) |
 | 2026-03-24 | Richmond, VA | United States Of America | The National | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7_w7b) |
 | 2026-03-25 | Englewood, NJ | United States Of America | Bergen Performing Arts Center | [link](https://www.ticketmaster.com/wakeman-son-englewood-new-jersey-03-25-2026/event/000062968FC61797) |
 | 2026-03-26 | Huntington, NY | United States Of America | The Paramount in concert with Northwell | [link](https://www.ticketmaster.com/rick-wakeman-and-son-huntington-new-york-03-26-2026/event/0000632FB9661ED5) |
@@ -756,7 +769,6 @@ source: Ticketmaster Discovery API
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
-| 2026-03-21 | San Leandro, CA | United States Of America | Historic BAL Theatre | [link](https://www.ticketmaster.com/the-ultimate-rod-stewart-tribute-concert-san-leandro-california-03-21-2026/event/1C0062D2A71838AC) |
 | 2026-04-15 | Knoxville, TN | United States Of America | Food City Center | [link](https://www.ticketmaster.com/rod-stewart-one-last-time-knoxville-tennessee-04-15-2026/event/1B0063659C2E8BBF) |
 | 2026-04-17 | Huntsville, AL | United States Of America | Orion Amphitheater | [link](https://www.axs.com/events/1213666/rod-stewart-tickets?skin=orionamphitheater) |
 | 2026-04-19 | The Woodlands, TX | United States Of America | The Cynthia Woods Mitchell Pavilion sponsored by Huntsman | [link](https://www.ticketmaster.com/rod-stewart-one-last-time-the-woodlands-texas-04-19-2026/event/3A006363DA8CCF13) |
@@ -797,6 +809,7 @@ source: Ticketmaster Discovery API
 |------|------|---------|-------|---------|
 | 2026-06-07 | Inglewood, CA | United States Of America | Kia Forum | [link](https://www.ticketmaster.com/rush-fifty-something-inglewood-california-06-07-2026/event/09006344C1786B21) |
 | 2026-06-09 | Inglewood, CA | United States Of America | Kia Forum | [link](https://www.ticketmaster.com/rush-fifty-something-inglewood-california-06-09-2026/event/09006344C1A26B2A) |
+| 2026-06-11 | Inglewood, CA | United States Of America | Kia Forum | [link](https://www.ticketmaster.com/rush-fifty-something-inglewood-california-06-11-2026/event/09006344C1F56B40) |
 
 ## Sabaton (prioridad: baja)
 
@@ -807,6 +820,7 @@ source: Ticketmaster Discovery API
 | 2026-09-17 | Louisville, KY | United States Of America | Kentucky Expo Center | [link](https://on.fgtix.com/trk/Rm3ec) |
 | 2026-09-23 | Halifax, NS | Canada | Scotiabank Centre | [link](https://www.ticketmaster.ca/sabaton-legends-on-tour-halifax-nova-scotia-09-23-2026/event/3100632BC75633EB) |
 | 2026-09-25 | Laval, QC | Canada | Place Bell | [link](https://www.ticketmaster.ca/sabaton-legends-on-tour-laval-quebec-09-25-2026/event/31006329B7123161) |
+| 2026-09-26 | Ottawa, ON | Canada | History Ottawa | [link](https://www.ticketmaster.ca/sabaton-legends-on-tour-ottawa-ontario-09-26-2026/event/31006472AC4F6A88) |
 | 2026-09-27 | Toronto, ON | Canada | The Theatre at Great Canadian Casino Resort Toronto | [link](https://www.ticketmaster.ca/sabaton-legends-on-tour-toronto-ontario-09-27-2026/event/1000632BAF262337) |
 | 2026-10-01 | Winnipeg, MB | Canada | Burton Cummings Theatre | [link](https://www.ticketmaster.ca/sabaton-legends-on-tour-winnipeg-manitoba-10-01-2026/event/1100632AD2C6353F) |
 | 2026-10-02 | Winnipeg, MB | Canada | Burton Cummings Theatre | [link](https://www.ticketmaster.ca/sabaton-legends-on-tour-winnipeg-manitoba-10-02-2026/event/11006458ABEF4DA1) |
@@ -839,7 +853,6 @@ source: Ticketmaster Discovery API
 | 2026-05-24 | Las Vegas, NV | United States Of America | House of Blues Las Vegas  | [link](https://www.ticketmaster.com/siriusxm-presents-an-intimate-evening-with-las-vegas-nevada-05-24-2026/event/17006331AD5353CD) |
 | 2026-05-27 | Morrison, CO | United States Of America | Red Rocks Amphitheatre | [link](https://www.axs.com/events/1333318/santana-tickets) |
 | 2026-05-28 | Morrison, CO | United States Of America | Red Rocks Amphitheatre | [link](https://www.axs.com/events/1333321/santana-tickets) |
-| 2026-06-12 | San Leandro, CA | United States Of America | Historic BAL Theatre | [link](https://www.ticketmaster.com/ultimate-santana-tribute-concert-san-leandro-california-06-12-2026/event/1C006384888E7B26) |
 | 2026-06-13 | Tinley Park, IL | United States Of America | Credit Union 1 Amphitheatre | [link](https://www.ticketmaster.com/santana-the-doobie-brothers-oneness-tour-tinley-park-illinois-06-13-2026/event/0400644CF962DBF9) |
 | 2026-06-15 | Grand Rapids, MI | United States Of America | Acrisure Amphitheater | [link](https://www.ticketmaster.com/santana-the-doobie-brothers-oneness-tour-grand-rapids-michigan-06-15-2026/event/0800644CE2A6BF37) |
 | 2026-06-17 | Cincinnati, OH | United States Of America | Riverbend Music Center | [link](https://www.ticketmaster.com/santana-the-doobie-brothers-oneness-tour-cincinnati-ohio-06-17-2026/event/16006449C57284BC) |
@@ -859,7 +872,6 @@ source: Ticketmaster Discovery API
 | 2026-08-06 | Auburn, WA | United States Of America | White River Amphitheatre | [link](https://www.ticketmaster.com/santana-the-doobie-brothers-oneness-tour-auburn-washington-08-06-2026/event/0F00644B2F30D3AB) |
 | 2026-08-08 | Wheatland, CA | United States Of America | Toyota Amphitheatre | [link](https://www.ticketmaster.com/santana-the-doobie-brothers-oneness-tour-wheatland-california-08-08-2026/event/1C00644D9E7BD0B9) |
 | 2026-08-09 | Mountain View, CA | United States Of America | Shoreline Amphitheatre | [link](https://www.ticketmaster.com/santana-the-doobie-brothers-oneness-tour-mountain-view-california-08-09-2026/event/1C00644B9FA89E89) |
-| 2026-08-11 | Chula Vista, CA | United States Of America | North Island Credit Union Amphitheatre | [link](https://www.ticketmaster.com/santana-the-doobie-brothers-oneness-tour-chula-vista-california-08-11-2026/event/0A00644BBF4685BC) |
 
 ## Savatage (prioridad: baja)
 
@@ -882,7 +894,7 @@ source: Ticketmaster Discovery API
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
-| 2026-03-31 | Forest (Brussels) | Belgium | Vorst Nationaal/Forest National | [link](https://www.ticketmaster.be/event/scorpions-tickets/44354756) |
+| 2026-04-15 | Forest (Brussels) | Belgium | Vorst Nationaal/Forest National | [link](https://www.ticketmaster.be/event/scorpions-tickets/44354756) |
 | 2026-05-03 | Abu Dhabi | United Arab Emirates | Etihad Arena, Yas Bay | [link](https://www.ticketmaster.ae/event/coming-home--60-years-of-scorpions-tour-tickets/44838488) |
 | 2026-06-24 | İstanbul | Turkey | Beşiktaş Tüpraş Stadyumu | [link](https://www.biletix.com/performance/55A52/001/TURKIYE/tr) |
 | 2026-07-28 | Helsinki | Finland | Veikkaus Arena | [link](https://www.ticketmaster.fi/event/scorpions-over-60-years-of-scorpions--premium-aitiolippu-tickets/1407109765?language=en-us) |
@@ -906,10 +918,6 @@ source: Ticketmaster Discovery API
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
-| 2026-03-19 | Richmond, VA | United States Of America | The National | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7OK73) |
-| 2026-03-20 | Reading, PA | United States Of America | Reverb | [link](https://www.ticketmaster.com/gwar-reading-pennsylvania-03-20-2026/event/0200638ABF5BCF3C) |
-| 2026-03-21 | Albany, NY | United States Of America | Empire Live | [link](https://www.ticketmaster.com/gwar-gor-gor-strikes-back-albany-new-york-03-21-2026/event/30006389D830A14E) |
-| 2026-03-22 | Huntington, NY | United States Of America | The Paramount in concert with Northwell | [link](https://www.ticketmaster.com/gwar-huntington-new-york-03-22-2026/event/000063839A8A8B34) |
 | 2026-03-24 | Hartford, CT | United States Of America | Webster Theatre | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7-NGx) |
 | 2026-03-25 | Wilmington, DE | United States Of America | The Queen | [link](https://www.ticketmaster.com/gwar-wilmington-delaware-03-25-2026/event/020063838E527F4A) |
 | 2026-03-26 | Sayreville, NJ | United States Of America | Starland Ballroom | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7OK7P) |
@@ -935,6 +943,7 @@ source: Ticketmaster Discovery API
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
+| 2026-09-03 | Vienna, VA | United States Of America | Wolf Trap Filene Center | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7-tbV) |
 | 2026-09-26 | Louisville, KY | United States Of America | Kentucky Expo Center | [link](https://on.fgtix.com/trk/Es3ec) |
 
 ## Steve Hackett (prioridad: media)
@@ -970,6 +979,7 @@ source: Ticketmaster Discovery API
 | 2026-09-11 | Atlantic City, NJ | United States Of America | Ovation Hall at Ocean Casino Resort  | [link](https://www.ticketmaster.com/john-fogerty-and-steve-winwood-atlantic-city-new-jersey-09-11-2026/event/02006466A73DD42E) |
 | 2026-09-12 | Wantagh, NY | United States Of America | Northwell at Jones Beach Theater | [link](https://www.ticketmaster.com/john-fogerty-and-steve-winwood-wantagh-new-york-09-12-2026/event/1D006464A2814C64) |
 | 2026-09-13 | Bethel, NY | United States Of America | Bethel Woods Center for the Arts | [link](https://www.ticketmaster.com/john-fogerty-and-steve-winwood-bethel-new-york-09-13-2026/event/00006464F06B7691) |
+| 2026-09-15 | Vienna, VA | United States Of America | Wolf Trap Filene Center | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7-tbg) |
 | 2026-09-16 | Charlotte, NC | United States Of America | Truliant Amphitheater | [link](https://www.ticketmaster.com/john-fogerty-and-steve-winwood-charlotte-north-carolina-09-16-2026/event/2D006463F3DCA7EE) |
 | 2026-09-19 | Clearwater, FL | United States Of America | The BayCare Sound | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7-IZE) |
 | 2026-09-20 | Hollywood, FL | United States Of America | Hard Rock Live | [link](https://www.ticketmaster.com/john-fogerty-and-steve-winwood-hollywood-florida-09-20-2026/event/0D00646592E4724A) |
@@ -978,9 +988,6 @@ source: Ticketmaster Discovery API
 
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
-| 2026-03-20 | Albuquerque, NM | United States Of America | Route 66 Casino | [link](https://www.ticketmaster.com/styx-albuquerque-new-mexico-03-20-2026/event/1E00636D9BB37B99) |
-| 2026-03-21 | Midland, TX | United States Of America | Wagner Noel Performing Arts Center | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7Oexo) |
-| 2026-03-22 | El Paso, TX | United States Of America | Abraham Chavez Theatre | [link](https://www.ticketmaster.com/styx-el-paso-texas-03-22-2026/event/0C00636BDFC196EF) |
 | 2026-03-24 | Lubbock, TX | United States Of America | Helen DeVitt Jones Theater at The Buddy Holly Hall | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7Oexb) |
 | 2026-03-26 | San Antonio, TX | United States Of America | Majestic Theatre San Antonio | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7OZQk) |
 | 2026-03-27 | Durant, OK | United States Of America | Choctaw Grand Theater | [link](https://www.ticketmaster.com/styx-durant-oklahoma-03-27-2026/event/0C00638ACC96CE54) |
@@ -1024,6 +1031,8 @@ source: Ticketmaster Discovery API
 | 2026-08-24 | Maryland Heights, MO | United States Of America | Hollywood Casino Amphitheater | [link](https://www.ticketmaster.com/styx-chicago-the-windy-cities-tour-maryland-heights-missouri-08-24-2026/event/06006378B3E2AD96) |
 | 2026-08-25 | Kansas City, MO | United States Of America | Morton Amphitheater | [link](https://www.ticketmaster.com/chicago-styx-the-windy-cities-tour-kansas-city-missouri-08-25-2026/event/21006378114C2593) |
 | 2026-08-28 | Denver, CO | United States Of America | Ball Arena | [link](https://www.ticketmaster.com/chicago-styx-the-windy-cities-tour-denver-colorado-08-28-2026/event/1E006378B5A77148) |
+| 2026-08-30 | West Valley City, UT | United States Of America | Utah First Credit Union Amphitheatre | [link](https://www.ticketmaster.com/styx-chicago-the-windy-cities-tour-west-valley-city-utah-08-30-2026/event/1E006378C8FC78F8) |
+| 2026-09-01 | Phoenix, AZ | United States Of America | Mortgage Matchup Center | [link](https://www.ticketmaster.com/chicago-styx-the-windy-cities-tour-phoenix-arizona-09-01-2026/event/190063799D894F42) |
 
 ## Sugababes (prioridad: baja)
 
@@ -1102,6 +1111,16 @@ source: Ticketmaster Discovery API
 | 2026-08-22 | Dallas, TX | United States Of America | American Airlines Center | [link](https://www.ticketmaster.com/santana-the-doobie-brothers-oneness-tour-dallas-texas-08-22-2026/event/0C00644CD07EDB3D) |
 | 2026-08-26 | Kansas City, MO | United States Of America | Morton Amphitheater | [link](https://www.ticketmaster.com/santana-the-doobie-brothers-oneness-tour-kansas-city-missouri-08-26-2026/event/2100644DCFC93F08) |
 | 2026-08-27 | Shakopee, MN | United States Of America | Mystic Lake Amphitheater | [link](https://www.ticketmaster.com/santana-the-doobie-brothers-oneness-tour-shakopee-minnesota-08-27-2026/event/2100644C16005291) |
+| 2026-09-26 | Northfield, OH | United States Of America | MGM Northfield Park - Center Stage | [link](https://www.ticketmaster.com/the-doobie-brothers-walk-this-road-northfield-ohio-09-26-2026/event/05006473DE49E5A6) |
+| 2026-10-02 | Atlantic City, NJ | United States Of America | Hard Rock Live at Etess Arena | [link](https://www.ticketmaster.com/the-doobie-brothers-walk-this-road-atlantic-city-new-jersey-10-02-2026/event/02006474A184A7B3) |
+| 2026-10-06 | Wilmington, NC | United States Of America | Live Oak Bank Pavilion | [link](https://www.ticketmaster.com/the-doobie-brothers-walk-this-road-wilmington-north-carolina-10-06-2026/event/2D006472AB77ECE1) |
+| 2026-10-09 | Chattanooga, TN | United States Of America | Soldiers and Sailors Memorial Auditorium | [link](https://www.ticketmaster.com/the-doobie-brothers-walk-this-road-chattanooga-tennessee-10-09-2026/event/1B006472931CB1E9) |
+| 2026-10-11 | Franklin, TN | United States Of America | FirstBank Amphitheater | [link](https://www.ticketmaster.com/the-doobie-brothers-walk-this-road-franklin-tennessee-10-11-2026/event/1B006472B4FF1E1B) |
+| 2026-10-13 | Huntsville, AL | United States Of America | Orion Amphitheater | [link](https://www.axs.com/events/1378880/the-doobie-brothers-tickets?skin=orionamphitheater) |
+| 2026-10-14 | Brandon, MS | United States Of America | Brandon Amphitheater | [link](https://www.ticketmaster.com/the-doobie-brothers-walk-this-road-brandon-mississippi-10-14-2026/event/1B006472D4AA9A96) |
+| 2026-10-16 | Biloxi, MS | United States Of America | Mississippi Coast Coliseum | [link](https://www.ticketmaster.com/the-doobie-brothers-walk-this-road-biloxi-mississippi-10-16-2026/event/1B006474F6E6629B) |
+| 2026-10-18 | Savannah, GA | United States Of America | Enmarket Arena | [link](https://www.ticketmaster.com/the-doobie-brothers-walk-this-road-savannah-georgia-10-18-2026/event/0E006472C083AEB9) |
+| 2026-10-21 | Estero, FL | United States Of America | Hertz Arena | [link](https://www.ticketmaster.com/the-doobie-brothers-walk-this-road-estero-florida-10-21-2026/event/0D006472DF453BE0) |
 
 ## The HU (prioridad: baja)
 
@@ -1115,6 +1134,7 @@ source: Ticketmaster Discovery API
 | 2026-05-23 | Irving, TX | United States Of America | The Pavilion at Toyota Music Factory | [link](https://www.ticketmaster.com/the-hu-and-apocalyptica-with-special-irving-texas-05-23-2026/event/0C00644590A66E79) |
 | 2026-05-24 | San Antonio, TX | United States Of America | Aztec Theatre | [link](https://www.ticketmaster.com/the-hu-and-apocalyptica-with-special-san-antonio-texas-05-24-2026/event/3A006446BFC9DDC8) |
 | 2026-05-26 | Houston, TX | United States Of America | Warehouse Live Midtown | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7-abv) |
+| 2026-05-27 | Oklahoma City, OK | United States Of America | Diamond Ballroom | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7-abe) |
 | 2026-05-29 | Phoenix, AZ | United States Of America | The Van Buren | [link](https://www.ticketmaster.com/the-hu-and-apocalyptica-with-special-phoenix-arizona-05-29-2026/event/19006446A132524D) |
 | 2026-05-31 | Valley Center, CA | United States Of America | Harrah's Resort SoCal - The Events Center | [link](https://www.ticketmaster.com/the-hu-and-apocalyptica-with-special-valley-center-california-05-31-2026/event/0A006446DAA4914F) |
 | 2026-06-04 | Reno, NV | United States Of America | Grand Sierra Resort and Casino | [link](https://www.ticketmaster.com/the-hu-apocalyptica-with-special-guest-reno-nevada-06-04-2026/event/17006446E981B3DF) |
@@ -1207,7 +1227,8 @@ source: Ticketmaster Discovery API
 | 2026-04-10 | Agoura Hills, CA | United States Of America | Canyon Club-CA | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7bS-U) |
 | 2026-04-11 | San Juan Capistrano, CA | United States Of America | The Coach House | [link](https://www.ticketweb.com/event/uli-jon-roth-the-coach-house-tickets/14450203) |
 | 2026-04-12 | Fontana, CA | United States Of America | Stage Red | [link](https://www.ticketmaster.com/uli-jon-roth-fontana-california-04-12-2026/event/090062B396111646) |
-| 2026-04-16 | Hobart, IN | United States Of America | Hobart Art Theatre | [link](https://www.ticketweb.com/event/uli-jon-roth-hobart-art-theatre-tickets/13833344) |
+| 2026-04-16 | Hobart, IN | United States Of America | Hobart Art Theater | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7-VCv) |
+| 2026-04-18 | Saint Charles, IL | United States Of America | Arcada Theatre | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7qNQ7) |
 | 2026-04-21 | Lakewood, OH | United States Of America | The Mercury Music Lounge | [link](https://www.ticketweb.com/event/an-evening-with-uli-jon-the-mercury-music-lounge-tickets/13839714) |
 | 2026-04-23 | Lititz, PA | United States Of America | Mickey's Black Box | [link](https://www.ticketmaster.com/an-evening-with-uli-jon-roth-lititz-pennsylvania-04-23-2026/event/020062D4AD878168) |
 | 2026-04-26 | New York, NY | United States Of America | Iridium | [link](https://www.ticketweb.com/event/uli-jon-roth-iridium-tickets/14756763) |
@@ -1256,6 +1277,7 @@ source: Ticketmaster Discovery API
 | 2026-10-27 | San Jose, CA | United States Of America | San Jose Civic | [link](https://www.ticketmaster.com/wasp-1984-to-headless-san-jose-california-10-27-2026/event/1C006444A680BAFA) |
 | 2026-10-29 | Rancho Mirage, CA | United States Of America | The Show - Agua Caliente Casino | [link](https://www.ticketmaster.com/event/Z7r9jZ1A7-NFp) |
 | 2026-10-30 | Las Vegas, NV | United States Of America | House of Blues Las Vegas  | [link](https://www.ticketmaster.com/wasp-1984-to-headless-las-vegas-nevada-10-30-2026/event/1700643CE489CA77) |
+| 2026-10-31 | Anaheim, CA | United States Of America | Grove of Anaheim | [link](https://www.ticketmaster.com/wasp-1984-to-headless-anaheim-california-10-31-2026/event/09006445041BD6C3) |
 
 ## Within Temptation (prioridad: dream)
 
@@ -1271,3 +1293,7 @@ source: Ticketmaster Discovery API
 | Date | City | Country | Venue | Tickets |
 |------|------|---------|-------|---------|
 | 2026-04-22 | Glasgow | Great Britain | Glasgow Royal Concert Hall | [link](https://www.ticketmaster.co.uk/yes-the-fragile-tour-glasgow-22-04-2026/event/360063317335254B) |
+| 2026-04-24 | Sheffield | Great Britain | Sheffield City Hall Oval Hall | [link](https://www.ticketmaster.co.uk/yes-the-fragile-tour-sheffield-24-04-2026/event/3500632CA9E016D3) |
+| 2026-04-25 | Liverpool | Great Britain | Liverpool Philharmonic Hall | [link](https://www.ticketmaster.co.uk/yes-the-fragile-tour-liverpool-25-04-2026/event/1F0063317D303F9E) |
+| 2026-04-27 | Birmingham | Great Britain | Symphony Hall | [link](https://www.ticketmaster.co.uk/yes-the-fragile-tour-birmingham-27-04-2026/event/1F006331841A4406) |
+| 2026-04-28 | Bournemouth | Great Britain | Bournemouth Pavilion | [link](https://www.ticketmaster.co.uk/yes-the-fragile-tour-bournemouth-28-04-2026/event/1F0063318990467E) |

@@ -437,123 +437,34 @@ def generate_map(results):
             "bands": bands_list,
         })
 
+    import re
+
     data_json = json.dumps(data, ensure_ascii=False)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-    html = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Concert Radar</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<style>
-  * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-  body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #e0e0e0; }}
-  #map {{ width: 100vw; height: 100vh; }}
-  .header {{
-    position: absolute; top: 0; left: 0; right: 0; z-index: 1000;
-    background: linear-gradient(180deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0) 100%);
-    padding: 16px 24px; pointer-events: none;
-  }}
-  .header h1 {{ font-size: 20px; font-weight: 700; color: #fff; letter-spacing: 1px; }}
-  .header p {{ font-size: 12px; color: #888; margin-top: 2px; }}
-  .legend {{
-    position: absolute; bottom: 24px; left: 24px; z-index: 1000;
-    background: rgba(10,10,10,0.9); border: 1px solid #333; border-radius: 8px;
-    padding: 12px 16px; font-size: 12px;
-  }}
-  .legend-item {{ display: flex; align-items: center; gap: 8px; margin: 4px 0; }}
-  .legend-dot {{ width: 12px; height: 12px; border-radius: 50%; }}
-  .leaflet-popup-content-wrapper {{
-    background: #1a1a2e !important; color: #e0e0e0 !important;
-    border: 1px solid #444 !important; border-radius: 8px !important;
-  }}
-  .leaflet-popup-tip {{ background: #1a1a2e !important; }}
-  .popup-title {{ font-size: 14px; font-weight: 700; margin-bottom: 6px; color: #fff; }}
-  .popup-stats {{ font-size: 11px; color: #888; margin-bottom: 8px; }}
-  .popup-band {{ font-size: 12px; padding: 3px 0; border-bottom: 1px solid #2a2a3e; }}
-  .popup-band:last-child {{ border-bottom: none; }}
-  .popup-band .priority {{
-    display: inline-block; font-size: 10px; padding: 1px 6px;
-    border-radius: 3px; margin-left: 4px;
-  }}
-  .priority-dream {{ background: #7c3aed; color: #fff; }}
-  .priority-alta {{ background: #dc2626; color: #fff; }}
-  .priority-media {{ background: #d97706; color: #fff; }}
-  .priority-baja {{ background: #374151; color: #9ca3af; }}
-  .popup-dates {{ font-size: 10px; color: #888; margin-left: 2px; }}
-</style>
-</head>
-<body>
-<div class="header">
-  <h1>CONCERT RADAR</h1>
-  <p>Updated {now} &middot; Powered by Ticketmaster</p>
-</div>
-<div id="map"></div>
-<div class="legend">
-  <div class="legend-item"><div class="legend-dot" style="background:#7c3aed"></div> dream</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div> alta</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div> media</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#374151"></div> baja</div>
-</div>
-<script>
-const DATA = {data_json};
-const COLORS = {{ dream: '#7c3aed', alta: '#dc2626', media: '#d97706', baja: '#374151' }};
-
-const map = L.map('map', {{
-  center: [30, -20],
-  zoom: 3,
-  minZoom: 2,
-  maxZoom: 15,
-  zoomControl: false,
-}});
-L.control.zoom({{ position: 'topright' }}).addTo(map);
-L.tileLayer('https://{{s}}.basemaps.cartocdn.com/dark_all/{{z}}/{{x}}/{{y}}{{r}}.png', {{
-  attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
-  subdomains: 'abcd',
-  maxZoom: 19,
-}}).addTo(map);
-
-DATA.forEach(city => {{
-  const color = COLORS[city.best_priority] || COLORS.baja;
-  const radius = Math.min(4 + Math.sqrt(city.total_events) * 3, 20);
-
-  const marker = L.circleMarker([city.lat, city.lng], {{
-    radius: radius,
-    fillColor: color,
-    color: color,
-    weight: 1,
-    opacity: 0.9,
-    fillOpacity: 0.6,
-  }}).addTo(map);
-
-  let bandsHtml = city.bands.map(b => {{
-    const dates = b.dates.length <= 3
-      ? b.dates.join(', ')
-      : b.dates[0] + ' ... ' + b.dates[b.dates.length - 1] + ' (' + b.dates.length + ')';
-    return '<div class="popup-band">'
-      + b.name + ' <span class="priority priority-' + b.priority + '">' + b.priority + '</span>'
-      + '<br><span class="popup-dates">' + dates + '</span>'
-      + '</div>';
-  }}).join('');
-
-  marker.bindPopup(
-    '<div class="popup-title">' + city.city + '</div>'
-    + '<div class="popup-stats">' + city.country + ' &middot; '
-    + city.unique_artists + ' artists &middot; ' + city.total_events + ' events</div>'
-    + bandsHtml,
-    {{ maxWidth: 320, maxHeight: 400 }}
-  );
-}});
-</script>
-</body>
-</html>"""
 
     docs_dir = os.path.join(ROOT, "docs")
     os.makedirs(docs_dir, exist_ok=True)
     path = os.path.join(docs_dir, "index.html")
+
+    with open(path, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    # Replace the DATA placeholder or existing DATA array
+    html = re.sub(
+        r'const DATA = .+?;',
+        f'const DATA = {data_json};',
+        html,
+        count=1,
+        flags=re.DOTALL,
+    )
+    # Update the timestamp
+    html = re.sub(
+        r'Updated .+? [·&]',
+        f'Updated {now} ·',
+        html,
+        count=1,
+    )
+
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"Wrote {path}")
