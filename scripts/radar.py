@@ -58,6 +58,20 @@ def load_bands(priority_filter):
 
 # ── 2. TICKETMASTER API ─────────────────────────────────────────────
 
+def _fetch_page(params, page=0):
+    """Fetch a single page from Ticketmaster, handling rate limits."""
+    params = {**params, "page": page}
+    resp = requests.get(TM_BASE, params=params, timeout=15)
+    if resp.status_code == 429:
+        print(f"  Rate limit, waiting 60s...")
+        time.sleep(60)
+        resp = requests.get(TM_BASE, params=params, timeout=15)
+    if resp.status_code == 404:
+        return None
+    resp.raise_for_status()
+    return resp.json()
+
+
 def fetch_events(band, api_key, cutoff_date):
     today = datetime.now(timezone.utc).date()
     params = {
@@ -69,25 +83,25 @@ def fetch_events(band, api_key, cutoff_date):
         "startDateTime": today.strftime("%Y-%m-%dT00:00:00Z"),
         "endDateTime": cutoff_date.strftime("%Y-%m-%dT23:59:59Z"),
     }
-    try:
-        resp = requests.get(TM_BASE, params=params, timeout=15)
-        if resp.status_code == 429:
-            print(f"  Rate limit, waiting 60s...")
-            time.sleep(60)
-            resp = requests.get(TM_BASE, params=params, timeout=15)
-        if resp.status_code == 404:
+
+    # Paginate through all results (max 5 pages = 250 events)
+    raw_events = []
+    for page in range(5):
+        try:
+            data = _fetch_page(params, page)
+        except requests.RequestException as exc:
+            print(f"  x {band['name']}: {exc}")
             return []
-        resp.raise_for_status()
-        data = resp.json()
-    except requests.RequestException as exc:
-        print(f"  x {band['name']}: {exc}")
-        return []
-
-    embedded = data.get("_embedded")
-    if not embedded:
-        return []
-
-    raw_events = embedded.get("events", [])
+        if data is None:
+            break
+        embedded = data.get("_embedded")
+        if not embedded:
+            break
+        raw_events.extend(embedded.get("events", []))
+        total_pages = data.get("page", {}).get("totalPages", 1)
+        if page + 1 >= total_pages:
+            break
+        time.sleep(0.2)
     events = []
     for ev in raw_events:
         # Check the event is actually for this artist (keyword search is fuzzy)
