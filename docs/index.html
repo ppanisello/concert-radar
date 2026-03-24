@@ -124,6 +124,7 @@
   .priority-media { background: #fed7aa; color: #9a3412; }
   .priority-baja { background: #e5e7eb; color: #374151; }
   .popup-dates { font-size: 10px; color: #666; margin-left: 4px; }
+  .popup-venue { font-size: 10px; color: #888; font-style: italic; }
 </style>
 </head>
 <body>
@@ -243,23 +244,48 @@ DATA.forEach(city => {
     fillOpacity: 0.6,
   });
 
-  let bandsHtml = city.bands.map(b => {
-    const dates = b.dates.length <= 3
-      ? b.dates.join(', ')
-      : b.dates[0] + ' ... ' + b.dates[b.dates.length - 1] + ' (' + b.dates.length + ')';
-    return '<div class="popup-band">'
-      + b.name + ' <span class="priority priority-' + b.priority + '">' + b.priority + '</span>'
-      + '<br><span class="popup-dates">' + dates + '</span>'
-      + '</div>';
-  }).join('');
+  marker.bindPopup(() => {
+    // Expand bands into individual events and filter by selected month
+    let events = [];
+    city.bands.forEach(b => {
+      const venues = b.venues || [''];
+      b.dates.forEach((date, i) => {
+        events.push({
+          date: date,
+          band: b.name,
+          priority: b.priority,
+          venue: venues[Math.min(i, venues.length - 1)] || '',
+        });
+      });
+    });
 
-  marker.bindPopup(
-    '<div class="popup-title">' + city.city + '</div>'
-    + '<div class="popup-stats">' + city.country + ' &middot; '
-    + city.unique_artists + ' artists &middot; ' + city.total_events + ' events</div>'
-    + bandsHtml,
-    { maxWidth: 320, maxHeight: 400 }
-  );
+    if (selectedMonth !== 'all') {
+      const monthNum = parseInt(selectedMonth);
+      events = events.filter(e => parseInt(e.date.split('-')[1]) === monthNum);
+    }
+
+    // Sort by date, then venue, then band
+    events.sort((a, b) =>
+      a.date.localeCompare(b.date)
+      || a.venue.localeCompare(b.venue)
+      || a.band.localeCompare(b.band)
+    );
+
+    const uniqueArtists = new Set(events.map(e => e.band)).size;
+
+    const eventsHtml = events.map(e =>
+      '<div class="popup-band">'
+      + '<span class="popup-dates">' + e.date + '</span><br>'
+      + e.band + ' <span class="priority priority-' + e.priority + '">' + e.priority + '</span>'
+      + (e.venue ? '<br><span class="popup-venue">' + e.venue + '</span>' : '')
+      + '</div>'
+    ).join('');
+
+    return '<div class="popup-title">' + city.city + '</div>'
+      + '<div class="popup-stats">' + city.country + ' &middot; '
+      + uniqueArtists + ' artists &middot; ' + events.length + ' events</div>'
+      + (events.length ? eventsHtml : '<div class="popup-band" style="color:#999">No events for this filter</div>');
+  }, { maxWidth: 320, maxHeight: 400 });
   
   marker.cityData = city;
   allMarkers.push(marker);
