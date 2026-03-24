@@ -49,10 +49,13 @@ def load_bands(priority_filter):
         priority = post.get("priority", "baja")
         if priority_filter != "todas" and priority != priority_filter:
             continue
-        bands.append({
+        band = {
             "name": post["name"],
             "priority": priority,
-        })
+        }
+        if post.get("ticketmaster_id"):
+            band["ticketmaster_id"] = post["ticketmaster_id"]
+        bands.append(band)
     return bands
 
 
@@ -75,7 +78,6 @@ def _fetch_page(params, page=0):
 def fetch_events(band, api_key, cutoff_date):
     today = datetime.now(timezone.utc).date()
     params = {
-        "keyword": band["name"],
         "classificationName": "music",
         "apikey": api_key,
         "size": 50,
@@ -83,6 +85,11 @@ def fetch_events(band, api_key, cutoff_date):
         "startDateTime": today.strftime("%Y-%m-%dT00:00:00Z"),
         "endDateTime": cutoff_date.strftime("%Y-%m-%dT23:59:59Z"),
     }
+    # Use attractionId for precise matching when available
+    if band.get("ticketmaster_id"):
+        params["attractionId"] = band["ticketmaster_id"]
+    else:
+        params["keyword"] = band["name"]
 
     # Paginate through all results (max 5 pages = 250 events)
     raw_events = []

@@ -1,6 +1,7 @@
 ---
 name: Kansas
 bandsintown_id: Kansas
+ticketmaster_id: K8vZ9171C-f
 active: true
 priority: baja
 genres:

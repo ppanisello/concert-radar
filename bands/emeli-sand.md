@@ -1,5 +1,5 @@
 ---
-name: Emeli Sandé
+name: Emeli Sande
 bandsintown_id: Emeli%20Sandé
 active: true
 priority: baja

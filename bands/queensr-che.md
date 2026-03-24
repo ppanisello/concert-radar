@@ -1,5 +1,5 @@
 ---
-name: Queensrÿche
+name: Queensryche
 bandsintown_id: Queensrÿche
 active: true
 priority: media
