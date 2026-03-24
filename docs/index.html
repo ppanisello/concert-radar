@@ -317,37 +317,69 @@ function filterMarkers() {
   let visibleCities = 0;
   let visibleEvents = 0;
   let visibleArtists = new Set();
-  
+
   allMarkers.forEach(marker => {
     const city = marker.cityData;
-    
-    let hasEventsInMonth = false;
-    if (selectedMonth === 'all') {
-      hasEventsInMonth = true;
-    } else {
+
+    // Filtrar eventos por mes
+    let filteredBands = city.bands.filter(band => {
+      if (selectedMonth === 'all') return true;
       const monthNum = parseInt(selectedMonth);
-      city.bands.forEach(band => {
-        band.dates.forEach(date => {
-          const dateMonth = parseInt(date.split('-')[1]);
-          if (dateMonth === monthNum) {
-            hasEventsInMonth = true;
-          }
-        });
+      return band.dates.some(date => {
+        const dateMonth = parseInt(date.split('-')[1]);
+        return dateMonth === monthNum;
       });
+    });
+
+    // Si no hay eventos en este mes, ocultar marcador
+    if (filteredBands.length === 0) {
+      map.removeLayer(marker);
+      return;
     }
-    
-    const hasPriority = selectedPriorities.has(city.best_priority);
-    
-    if (hasEventsInMonth && hasPriority) {
+
+    // Recalcular best_priority basado en bandas filtradas
+    const priorityOrder = ['dream', 'alta', 'media', 'baja'];
+    let bestPriority = 'baja';
+    filteredBands.forEach(band => {
+      if (priorityOrder.indexOf(band.priority) < priorityOrder.indexOf(bestPriority)) {
+        bestPriority = band.priority;
+      }
+    });
+
+    // Filtrar por prioridad seleccionada
+    const hasPriority = selectedPriorities.has(bestPriority);
+
+    if (hasPriority) {
+      // Actualizar color del marcador según nueva prioridad
+      const color = COLORS[bestPriority];
+      marker.setStyle({
+        fillColor: color,
+        color: color
+      });
+
       marker.addTo(map);
       visibleCities++;
-      visibleEvents += city.total_events;
-      city.bands.forEach(band => visibleArtists.add(band.name));
+
+      // Contar eventos y artistas
+      filteredBands.forEach(band => {
+        band.dates.forEach(date => {
+          if (selectedMonth === 'all') {
+            visibleEvents++;
+          } else {
+            const monthNum = parseInt(selectedMonth);
+            const dateMonth = parseInt(date.split('-')[1]);
+            if (dateMonth === monthNum) {
+              visibleEvents++;
+            }
+          }
+        });
+        visibleArtists.add(band.name);
+      });
     } else {
       map.removeLayer(marker);
     }
   });
-  
+
   document.getElementById('stat-cities').textContent = visibleCities;
   document.getElementById('stat-events').textContent = visibleEvents;
   document.getElementById('stat-artists').textContent = visibleArtists.size;
