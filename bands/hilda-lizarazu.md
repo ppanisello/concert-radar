@@ -1,17 +1,18 @@
 ---
-name: Hilda Lizarazu
-bandsintown_id: Hilda%20Lizarazu
 active: true
-priority: baja
+bandsintown_id: Hilda%20Lizarazu
 genres:
-  - Rock Nacional
-  - Pop Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Rock Nacional
+- Pop Rock
 last_updated: 2026-03-17
+name: Hilda Lizarazu
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+seatgeek_id: 228871
 ---
 
 # Hilda Lizarazu

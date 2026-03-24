@@ -12,6 +12,7 @@ regions_of_interest:
 - Europe
 - UK
 - North America
+seatgeek_id: 7068
 ticketmaster_id: K8vZ9171o00
 ---
 

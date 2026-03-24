@@ -1,17 +1,18 @@
 ---
-name: Royal Philharmonic Orchestra
-bandsintown_id: Royal%20Philharmonic%20Orchestra
 active: true
-priority: baja
+bandsintown_id: Royal%20Philharmonic%20Orchestra
 genres:
-  - Classical
-  - Orchestral
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Classical
+- Orchestral
 last_updated: 2026-03-17
+name: Royal Philharmonic Orchestra
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+seatgeek_id: 8573
 ---
 
 # Royal Philharmonic Orchestra

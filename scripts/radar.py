@@ -23,6 +23,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv(os.path.join(ROOT, ".env"))
 
 TM_BASE = "https://app.ticketmaster.com/discovery/v2/events.json"
+SG_BASE = "https://api.seatgeek.com/2"
 
 
 # ── 1. CONFIGURACION ────────────────────────────────────────────────
@@ -55,6 +56,8 @@ def load_bands(priority_filter):
         }
         if post.get("ticketmaster_id"):
             band["ticketmaster_id"] = post["ticketmaster_id"]
+        if post.get("seatgeek_id"):
+            band["seatgeek_id"] = post["seatgeek_id"]
         bands.append(band)
     return bands
 
@@ -173,7 +176,118 @@ def fetch_events(band, api_key, cutoff_date):
     return deduped
 
 
+# ── 2b. SEATGEEK API ─────────────────────────────────────────────
+
+def fetch_events_seatgeek(band, sg_client_id, cutoff_date):
+    """Fetch events from SeatGeek for a band. Requires seatgeek_id."""
+    sg_id = band.get("seatgeek_id")
+    if not sg_id:
+        return []
+
+    today = datetime.now(timezone.utc).date()
+    events = []
+    page = 1
+    per_page = 50
+
+    while True:
+        params = {
+            "performers.id": sg_id,
+            "client_id": sg_client_id,
+            "per_page": per_page,
+            "page": page,
+            "datetime_utc.gte": today.strftime("%Y-%m-%dT00:00:00"),
+            "datetime_utc.lte": cutoff_date.strftime("%Y-%m-%dT23:59:59"),
+            "sort": "datetime_utc.asc",
+        }
+        try:
+            resp = requests.get(f"{SG_BASE}/events", params=params, timeout=15)
+            if resp.status_code == 429:
+                print(f"  SG rate limit, waiting 60s...")
+                time.sleep(60)
+                resp = requests.get(f"{SG_BASE}/events", params=params, timeout=15)
+            if resp.status_code != 200:
+                break
+            data = resp.json()
+        except requests.RequestException as exc:
+            print(f"  x SG {band['name']}: {exc}")
+            break
+
+        sg_events = data.get("events", [])
+        if not sg_events:
+            break
+
+        for ev in sg_events:
+            venue = ev.get("venue", {})
+            date_str = (ev.get("datetime_local") or "")[:10]
+            if not date_str:
+                continue
+
+            city = venue.get("city", "")
+            state = venue.get("state", "")
+            country = venue.get("country", "")
+            if not city or not country:
+                continue
+
+            # Normalize country
+            if country == "US":
+                country = "United States Of America"
+            elif country == "CA":
+                country = "Canada"
+
+            # Build precise city
+            if state and country in ("United States Of America", "Canada"):
+                precise_city = f"{city}, {state}"
+            else:
+                precise_city = city
+
+            lat = venue.get("location", {}).get("lat", 0) or 0
+            lng = venue.get("location", {}).get("lon", 0) or 0
+
+            events.append({
+                "date": date_str,
+                "city": precise_city,
+                "country": country,
+                "venue": venue.get("name", ""),
+                "ticket_url": ev.get("url", ""),
+                "lat": lat,
+                "lng": lng,
+            })
+
+        total = data.get("meta", {}).get("total", 0)
+        if page * per_page >= total:
+            break
+        page += 1
+        time.sleep(0.2)
+
+    # Deduplicate
+    seen = set()
+    deduped = []
+    for ev in events:
+        key = (ev["date"], ev["city"], ev["country"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(ev)
+    return deduped
+
+
+def merge_events(tm_events, sg_events):
+    """Merge events from two sources, deduplicating by (date, city, country)."""
+    seen = set()
+    merged = []
+    for ev in tm_events:
+        key = (ev["date"], ev["city"], ev["country"])
+        seen.add(key)
+        merged.append(ev)
+    for ev in sg_events:
+        key = (ev["date"], ev["city"], ev["country"])
+        if key not in seen:
+            seen.add(key)
+            merged.append(ev)
+    return merged
+
+
 def scan_all(bands, api_key, lookahead_days, lookahead_dream_days):
+    sg_client_id = os.environ.get("SEATGEEK_CLIENT_ID")
     cutoff_default = datetime.now(timezone.utc).date() + timedelta(days=lookahead_days)
     cutoff_dream = datetime.now(timezone.utc).date() + timedelta(days=lookahead_dream_days)
     results = {}
@@ -181,13 +295,25 @@ def scan_all(bands, api_key, lookahead_days, lookahead_dream_days):
     for i, band in enumerate(bands, 1):
         print(f"[{i}/{len(bands)}] {band['name']}...")
         cutoff = cutoff_dream if band["priority"] in ("dream", "alta") else cutoff_default
-        events = fetch_events(band, api_key, cutoff)
+
+        # Ticketmaster
+        tm_events = fetch_events(band, api_key, cutoff)
+
+        # SeatGeek (if client_id and band has seatgeek_id)
+        sg_events = []
+        if sg_client_id and band.get("seatgeek_id"):
+            sg_events = fetch_events_seatgeek(band, sg_client_id, cutoff)
+
+        events = merge_events(tm_events, sg_events)
+        sg_extra = len(events) - len(tm_events)
+
         if events:
             results[band["name"]] = {
                 "priority": band["priority"],
                 "events": events,
             }
-            print(f"  + {len(events)} events")
+            sg_note = f" (+{sg_extra} SG)" if sg_extra > 0 else ""
+            print(f"  + {len(events)} events{sg_note}")
         else:
             print(f"  - no upcoming events")
         # Ticketmaster rate limit: 5 req/sec
@@ -498,6 +624,8 @@ def main():
     tm_key = os.environ.get("TICKETMASTER_API_KEY")
     api_key = os.environ.get("ANTHROPIC_API_KEY")
 
+    sg_key = os.environ.get("SEATGEEK_CLIENT_ID")
+
     if not tm_key:
         print("x Set TICKETMASTER_API_KEY environment variable")
         sys.exit(1)
@@ -507,6 +635,11 @@ def main():
 
     print("=" * 50)
     print("  Concert Radar")
+    print("=" * 50)
+    sources = ["Ticketmaster"]
+    if sg_key:
+        sources.append("SeatGeek")
+    print(f"  Sources: {', '.join(sources)}")
     print("=" * 50)
 
     # 1. Config

@@ -1,18 +1,19 @@
 ---
-name: Mike + the Mechanics
-bandsintown_id: Mike%20%2B%20the%20Mechanics
 active: true
-priority: baja
+bandsintown_id: Mike%20%2B%20the%20Mechanics
 genres:
-  - Pop Rock
-  - Soft Rock
-  - Progressive Pop
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Pop Rock
+- Soft Rock
+- Progressive Pop
 last_updated: 2026-03-17
+name: Mike + the Mechanics
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+seatgeek_id: 8864
 ---
 
 # Mike + the Mechanics

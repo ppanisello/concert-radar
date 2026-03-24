@@ -1,17 +1,18 @@
 ---
-name: JAF
-bandsintown_id: JAF
 active: true
-priority: media
+bandsintown_id: JAF
 genres:
-  - Blues Rock
-  - Rock Nacional
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Blues Rock
+- Rock Nacional
 last_updated: 2026-03-17
+name: JAF
+notes: ''
+priority: media
+regions_of_interest:
+- Europe
+- UK
+- North America
+seatgeek_id: 212278
 ---
 
 # JAF

@@ -1,17 +1,18 @@
 ---
-name: Death Cult
-bandsintown_id: Death%20Cult
 active: true
-priority: baja
+bandsintown_id: Death%20Cult
 genres:
-  - Gothic Rock
-  - Post-Punk
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Gothic Rock
+- Post-Punk
 last_updated: 2026-03-17
+name: Death Cult
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+seatgeek_id: 234950
 ---
 
 # Death Cult
