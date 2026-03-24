@@ -1,6 +1,7 @@
 ---
 name: The Cult
 bandsintown_id: The%20Cult
+ticketmaster_id: K8vZ917G0YV
 active: true
 priority: alta
 genres:
