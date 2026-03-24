@@ -1,18 +1,19 @@
 ---
-name: Uriah Heep
-bandsintown_id: Uriah%20Heep
 active: true
-priority: baja
+bandsintown_id: Uriah%20Heep
 genres:
-  - Hard Rock
-  - Progressive Rock
-  - Heavy Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Hard Rock
+- Progressive Rock
+- Heavy Metal
 last_updated: 2026-03-17
+name: Uriah Heep
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ91712Hf
 ---
 
 # Uriah Heep

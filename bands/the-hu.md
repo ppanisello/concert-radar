@@ -1,17 +1,18 @@
 ---
-name: The HU
-bandsintown_id: The%20HU
 active: true
-priority: baja
+bandsintown_id: The%20HU
 genres:
-  - Folk Metal
-  - Mongolian Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Folk Metal
+- Mongolian Rock
 last_updated: 2026-03-17
+name: The HU
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917bAqV
 ---
 
 # The HU

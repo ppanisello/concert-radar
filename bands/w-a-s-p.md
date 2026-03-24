@@ -1,17 +1,18 @@
 ---
-name: W.A.S.P.
-bandsintown_id: W.A.S.P.
 active: true
-priority: baja
+bandsintown_id: W.A.S.P.
 genres:
-  - Heavy Metal
-  - Glam Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Heavy Metal
+- Glam Metal
 last_updated: 2026-03-17
+name: W.A.S.P.
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9171uFV
 ---
 
 # W.A.S.P.

@@ -1,18 +1,19 @@
 ---
-name: Danzig
-bandsintown_id: Danzig
 active: true
-priority: baja
+bandsintown_id: Danzig
 genres:
-  - Heavy Metal
-  - Horror Punk
-  - Blues Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Heavy Metal
+- Horror Punk
+- Blues Rock
 last_updated: 2026-03-17
+name: Danzig
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9171Gf0
 ---
 
 # Danzig

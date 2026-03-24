@@ -1,17 +1,18 @@
 ---
-name: Steve Hackett
-bandsintown_id: Steve%20Hackett
 active: true
-priority: media
+bandsintown_id: Steve%20Hackett
 genres:
-  - Progressive Rock
-  - Art Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Progressive Rock
+- Art Rock
 last_updated: 2026-03-17
+name: Steve Hackett
+notes: ''
+priority: media
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9178hU0
 ---
 
 # Steve Hackett

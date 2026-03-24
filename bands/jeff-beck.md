@@ -1,18 +1,19 @@
 ---
-name: Jeff Beck
-bandsintown_id: Jeff%20Beck
 active: true
-priority: baja
+bandsintown_id: Jeff%20Beck
 genres:
-  - Blues Rock
-  - Jazz Fusion
-  - Hard Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Blues Rock
+- Jazz Fusion
+- Hard Rock
 last_updated: 2026-03-17
+name: Jeff Beck
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9171K9V
 ---
 
 # Jeff Beck

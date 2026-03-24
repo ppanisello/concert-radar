@@ -1,18 +1,19 @@
 ---
-name: Jeff Lynne's ELO
-bandsintown_id: Jeff%20Lynne%27s%20ELO
 active: true
-priority: baja
+bandsintown_id: Jeff%20Lynne%27s%20ELO
 genres:
-  - Art Rock
-  - Pop Rock
-  - Symphonic Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Art Rock
+- Pop Rock
+- Symphonic Rock
 last_updated: 2026-03-17
+name: Jeff Lynne's ELO
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9178q_7
 ---
 
 # Jeff Lynne's ELO

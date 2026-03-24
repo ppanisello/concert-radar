@@ -1,17 +1,18 @@
 ---
-name: Roger Hodgson
-bandsintown_id: Roger%20Hodgson
 active: true
-priority: media
+bandsintown_id: Roger%20Hodgson
 genres:
-  - Progressive Rock
-  - Pop Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Progressive Rock
+- Pop Rock
 last_updated: 2026-03-17
+name: Roger Hodgson
+notes: ''
+priority: media
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ91719iV
 ---
 
 # Roger Hodgson

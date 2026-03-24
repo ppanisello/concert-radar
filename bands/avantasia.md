@@ -1,18 +1,19 @@
 ---
-name: Avantasia
-bandsintown_id: Avantasia
 active: true
-priority: media
+bandsintown_id: Avantasia
 genres:
-  - Power Metal
-  - Symphonic Metal
-  - Rock Opera
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Power Metal
+- Symphonic Metal
+- Rock Opera
 last_updated: 2026-03-17
+name: Avantasia
+notes: ''
+priority: media
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9178iD7
 ---
 
 # Avantasia

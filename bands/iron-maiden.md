@@ -1,17 +1,18 @@
 ---
-name: Iron Maiden
-bandsintown_id: Iron%20Maiden
 active: true
-priority: alta
+bandsintown_id: Iron%20Maiden
 genres:
-  - Heavy Metal
-  - NWOBHM
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Heavy Metal
+- NWOBHM
 last_updated: 2026-03-17
+name: Iron Maiden
+notes: ''
+priority: alta
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9171G4V
 ---
 
 # Iron Maiden

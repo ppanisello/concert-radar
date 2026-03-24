@@ -1,18 +1,19 @@
 ---
-name: Squeeze
-bandsintown_id: Squeeze
 active: true
-priority: baja
+bandsintown_id: Squeeze
 genres:
-  - New Wave
-  - Pop Rock
-  - Power Pop
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- New Wave
+- Pop Rock
+- Power Pop
 last_updated: 2026-03-17
+name: Squeeze
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ91712Yf
 ---
 
 # Squeeze

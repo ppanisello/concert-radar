@@ -1,18 +1,19 @@
 ---
-name: Rick Astley
-bandsintown_id: Rick%20Astley
 active: true
-priority: baja
+bandsintown_id: Rick%20Astley
 genres:
-  - Pop
-  - Dance Pop
-  - Blue-Eyed Soul
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Pop
+- Dance Pop
+- Blue-Eyed Soul
 last_updated: 2026-03-17
+name: Rick Astley
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ91712t7
 ---
 
 # Rick Astley

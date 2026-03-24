@@ -1,18 +1,19 @@
 ---
-name: Roberto Carlos
-bandsintown_id: Roberto%20Carlos
 active: true
-priority: media
+bandsintown_id: Roberto%20Carlos
 genres:
-  - Pop
-  - Balada
-  - MPB
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Pop
+- Balada
+- MPB
 last_updated: 2026-03-17
+name: Roberto Carlos
+notes: ''
+priority: media
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917GGCV
 ---
 
 # Roberto Carlos

@@ -1,18 +1,19 @@
 ---
-name: Paul Weller
-bandsintown_id: Paul%20Weller
 active: true
-priority: baja
+bandsintown_id: Paul%20Weller
 genres:
-  - Mod Revival
-  - Britpop
-  - Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Mod Revival
+- Britpop
+- Rock
 last_updated: 2026-03-17
+name: Paul Weller
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ91712hf
 ---
 
 # Paul Weller

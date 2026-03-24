@@ -1,17 +1,18 @@
 ---
-name: Judas Priest
-bandsintown_id: Judas%20Priest
 active: true
-priority: alta
+bandsintown_id: Judas%20Priest
 genres:
-  - Heavy Metal
-  - NWOBHM
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Heavy Metal
+- NWOBHM
 last_updated: 2026-03-17
+name: Judas Priest
+notes: ''
+priority: alta
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ91715LV
 ---
 
 # Judas Priest

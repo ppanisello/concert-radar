@@ -1,17 +1,18 @@
 ---
-name: Angra
-bandsintown_id: Angra
 active: true
-priority: baja
+bandsintown_id: Angra
 genres:
-  - Power Metal
-  - Progressive Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Power Metal
+- Progressive Metal
 last_updated: 2026-03-17
+name: Angra
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917Gbn7
 ---
 
 # Angra

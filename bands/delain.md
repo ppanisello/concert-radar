@@ -1,17 +1,18 @@
 ---
-name: Delain
-bandsintown_id: Delain
 active: true
-priority: media
+bandsintown_id: Delain
 genres:
-  - Symphonic Metal
-  - Gothic Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Symphonic Metal
+- Gothic Metal
 last_updated: 2026-03-17
+name: Delain
+notes: ''
+priority: media
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917GOvf
 ---
 
 # Delain

@@ -1,17 +1,18 @@
 ---
-name: Marillion
-bandsintown_id: Marillion
 active: true
-priority: baja
+bandsintown_id: Marillion
 genres:
-  - Progressive Rock
-  - Neo-Prog
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Progressive Rock
+- Neo-Prog
 last_updated: 2026-03-17
+name: Marillion
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9171Cnf
 ---
 
 # Marillion

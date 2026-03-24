@@ -1,18 +1,19 @@
 ---
-name: Queen + Adam Lambert
-bandsintown_id: Queen%20%2B%20Adam%20Lambert
 active: true
-priority: media
+bandsintown_id: Queen%20%2B%20Adam%20Lambert
 genres:
-  - Rock
-  - Pop Rock
-  - Glam Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Rock
+- Pop Rock
+- Glam Rock
 last_updated: 2026-03-17
+name: Queen + Adam Lambert
+notes: ''
+priority: media
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9173oFf
 ---
 
 # Queen + Adam Lambert

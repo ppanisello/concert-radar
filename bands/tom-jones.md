@@ -1,18 +1,19 @@
 ---
-name: Tom Jones
-bandsintown_id: Tom%20Jones
 active: true
-priority: baja
+bandsintown_id: Tom%20Jones
 genres:
-  - Pop
-  - Soul
-  - Country
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Pop
+- Soul
+- Country
 last_updated: 2026-03-17
+name: Tom Jones
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9171uxf
 ---
 
 # Tom Jones

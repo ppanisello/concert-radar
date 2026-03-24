@@ -1,17 +1,18 @@
 ---
-name: Heaven & Hell
-bandsintown_id: Heaven%20%26%20Hell
 active: true
-priority: baja
+bandsintown_id: Heaven%20%26%20Hell
 genres:
-  - Heavy Metal
-  - Hard Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Heavy Metal
+- Hard Rock
 last_updated: 2026-03-17
+name: Heaven & Hell
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917GepV
 ---
 
 # Heaven & Hell

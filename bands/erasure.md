@@ -1,18 +1,19 @@
 ---
-name: Erasure
-bandsintown_id: Erasure
 active: true
-priority: baja
+bandsintown_id: Erasure
 genres:
-  - Synthpop
-  - New Wave
-  - Dance Pop
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Synthpop
+- New Wave
+- Dance Pop
 last_updated: 2026-03-17
+name: Erasure
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9171CF0
 ---
 
 # Erasure

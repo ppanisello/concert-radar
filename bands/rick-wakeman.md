@@ -1,17 +1,18 @@
 ---
-name: Rick Wakeman
-bandsintown_id: Rick%20Wakeman
 active: true
-priority: alta
+bandsintown_id: Rick%20Wakeman
 genres:
-  - Progressive Rock
-  - Symphonic Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Progressive Rock
+- Symphonic Rock
 last_updated: 2026-03-17
+name: Rick Wakeman
+notes: ''
+priority: alta
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9175_X7
 ---
 
 # Rick Wakeman

@@ -1,18 +1,19 @@
 ---
-name: Rod Stewart
-bandsintown_id: Rod%20Stewart
 active: true
-priority: baja
+bandsintown_id: Rod%20Stewart
 genres:
-  - Rock
-  - Pop Rock
-  - Blues Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Rock
+- Pop Rock
+- Blues Rock
 last_updated: 2026-03-17
+name: Rod Stewart
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917135f
 ---
 
 # Rod Stewart

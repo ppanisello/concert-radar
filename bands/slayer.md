@@ -1,16 +1,17 @@
 ---
-name: Slayer
-bandsintown_id: Slayer
 active: true
-priority: media
+bandsintown_id: Slayer
 genres:
-  - Thrash Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Thrash Metal
 last_updated: 2026-03-17
+name: Slayer
+notes: ''
+priority: media
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9171G_0
 ---
 
 # Slayer

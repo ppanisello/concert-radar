@@ -1,18 +1,19 @@
 ---
-name: Steve Winwood
-bandsintown_id: Steve%20Winwood
 active: true
-priority: baja
+bandsintown_id: Steve%20Winwood
 genres:
-  - Blue-Eyed Soul
-  - Rock
-  - Jazz Fusion
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Blue-Eyed Soul
+- Rock
+- Jazz Fusion
 last_updated: 2026-03-17
+name: Steve Winwood
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9171GS0
 ---
 
 # Steve Winwood

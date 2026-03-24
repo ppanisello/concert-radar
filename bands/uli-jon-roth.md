@@ -1,17 +1,18 @@
 ---
-name: Uli Jon Roth
-bandsintown_id: Uli%20Jon%20Roth
 active: true
-priority: baja
+bandsintown_id: Uli%20Jon%20Roth
 genres:
-  - Hard Rock
-  - Neoclassical Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Hard Rock
+- Neoclassical Metal
 last_updated: 2026-03-17
+name: Uli Jon Roth
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9175zd0
 ---
 
 # Uli Jon Roth

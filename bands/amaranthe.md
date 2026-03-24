@@ -1,18 +1,19 @@
 ---
-name: Amaranthe
-bandsintown_id: Amaranthe
 active: true
-priority: baja
+bandsintown_id: Amaranthe
 genres:
-  - Melodic Death Metal
-  - Power Metal
-  - Metalcore
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Melodic Death Metal
+- Power Metal
+- Metalcore
 last_updated: 2026-03-17
+name: Amaranthe
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917CzIV
 ---
 
 # Amaranthe

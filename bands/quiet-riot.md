@@ -1,17 +1,18 @@
 ---
-name: Quiet Riot
-bandsintown_id: Quiet%20Riot
 active: true
-priority: baja
+bandsintown_id: Quiet%20Riot
 genres:
-  - Heavy Metal
-  - Glam Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Heavy Metal
+- Glam Metal
 last_updated: 2026-03-17
+name: Quiet Riot
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917188V
 ---
 
 # Quiet Riot

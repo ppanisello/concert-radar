@@ -1,17 +1,18 @@
 ---
-name: FM
-bandsintown_id: FM
 active: true
-priority: baja
+bandsintown_id: FM
 genres:
-  - AOR
-  - Melodic Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- AOR
+- Melodic Rock
 last_updated: 2026-03-17
+name: FM
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917CGR7
 ---
 
 # FM

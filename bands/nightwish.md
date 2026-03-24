@@ -1,17 +1,18 @@
 ---
-name: Nightwish
-bandsintown_id: Nightwish
 active: true
-priority: alta
+bandsintown_id: Nightwish
 genres:
-  - Symphonic Metal
-  - Power Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Symphonic Metal
+- Power Metal
 last_updated: 2026-03-17
+name: Nightwish
+notes: ''
+priority: alta
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917GdM0
 ---
 
 # Nightwish

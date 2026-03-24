@@ -1,17 +1,18 @@
 ---
-name: Adrenaline Mob
-bandsintown_id: Adrenaline%20Mob
 active: true
-priority: baja
+bandsintown_id: Adrenaline%20Mob
 genres:
-  - Hard Rock
-  - Heavy Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Hard Rock
+- Heavy Metal
 last_updated: 2026-03-17
+name: Adrenaline Mob
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917CtbV
 ---
 
 # Adrenaline Mob

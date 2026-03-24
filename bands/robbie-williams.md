@@ -1,18 +1,19 @@
 ---
-name: Robbie Williams
-bandsintown_id: Robbie%20Williams
 active: true
-priority: baja
+bandsintown_id: Robbie%20Williams
 genres:
-  - Pop
-  - Pop Rock
-  - Swing
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Pop
+- Pop Rock
+- Swing
 last_updated: 2026-03-17
+name: Robbie Williams
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9171qQ0
 ---
 
 # Robbie Williams

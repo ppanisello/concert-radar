@@ -1,18 +1,19 @@
 ---
-name: Savatage
-bandsintown_id: Savatage
 active: true
-priority: baja
+bandsintown_id: Savatage
 genres:
-  - Heavy Metal
-  - Progressive Metal
-  - Power Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Heavy Metal
+- Progressive Metal
+- Power Metal
 last_updated: 2026-03-17
+name: Savatage
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9171uF7
 ---
 
 # Savatage

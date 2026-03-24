@@ -1,17 +1,18 @@
 ---
-name: Blind Guardian
-bandsintown_id: Blind%20Guardian
 active: true
-priority: baja
+bandsintown_id: Blind%20Guardian
 genres:
-  - Power Metal
-  - Speed Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Power Metal
+- Speed Metal
 last_updated: 2026-03-17
+name: Blind Guardian
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ91758mf
 ---
 
 # Blind Guardian

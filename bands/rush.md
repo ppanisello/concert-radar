@@ -1,17 +1,18 @@
 ---
-name: Rush
-bandsintown_id: Rush
 active: true
-priority: baja
+bandsintown_id: Rush
 genres:
-  - Progressive Rock
-  - Hard Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Progressive Rock
+- Hard Rock
 last_updated: 2026-03-17
+name: Rush
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917184V
 ---
 
 # Rush

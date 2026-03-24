@@ -1,17 +1,18 @@
 ---
-name: Gamma Ray
-bandsintown_id: Gamma%20Ray
 active: true
-priority: baja
+bandsintown_id: Gamma%20Ray
 genres:
-  - Power Metal
-  - Speed Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Power Metal
+- Speed Metal
 last_updated: 2026-03-17
+name: Gamma Ray
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9175ydV
 ---
 
 # Gamma Ray

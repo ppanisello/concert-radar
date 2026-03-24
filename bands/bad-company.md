@@ -1,17 +1,18 @@
 ---
-name: Bad Company
-bandsintown_id: Bad%20Company
 active: true
-priority: baja
+bandsintown_id: Bad%20Company
 genres:
-  - Hard Rock
-  - Blues Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Hard Rock
+- Blues Rock
 last_updated: 2026-03-17
+name: Bad Company
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9171GW0
 ---
 
 # Bad Company

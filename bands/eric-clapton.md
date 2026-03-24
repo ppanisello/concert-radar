@@ -1,17 +1,18 @@
 ---
-name: Eric Clapton
-bandsintown_id: Eric%20Clapton
 active: true
-priority: alta
+bandsintown_id: Eric%20Clapton
 genres:
-  - Blues Rock
-  - Classic Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Blues Rock
+- Classic Rock
 last_updated: 2026-03-17
+name: Eric Clapton
+notes: ''
+priority: alta
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ9171CFf
 ---
 
 # Eric Clapton

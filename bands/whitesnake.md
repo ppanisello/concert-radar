@@ -1,18 +1,19 @@
 ---
-name: Whitesnake
-bandsintown_id: Whitesnake
 active: true
-priority: media
+bandsintown_id: Whitesnake
 genres:
-  - Hard Rock
-  - Blues Rock
-  - Heavy Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Hard Rock
+- Blues Rock
+- Heavy Metal
 last_updated: 2026-03-17
+name: Whitesnake
+notes: ''
+priority: media
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ91712TV
 ---
 
 # Whitesnake

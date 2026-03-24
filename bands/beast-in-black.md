@@ -1,18 +1,19 @@
 ---
-name: Beast in Black
-bandsintown_id: Beast%20in%20Black
 active: true
-priority: baja
+bandsintown_id: Beast%20in%20Black
 genres:
-  - Power Metal
-  - Heavy Metal
-  - Synthwave
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Power Metal
+- Heavy Metal
+- Synthwave
 last_updated: 2026-03-17
+name: Beast in Black
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917pjIV
 ---
 
 # Beast in Black

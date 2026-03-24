@@ -1,17 +1,18 @@
 ---
-name: Soledad
-bandsintown_id: Soledad
 active: true
-priority: baja
+bandsintown_id: Soledad
 genres:
-  - Folklore
-  - World Music
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Folklore
+- World Music
 last_updated: 2026-03-17
+name: Soledad
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917p-v7
 ---
 
 # Soledad

@@ -1,17 +1,18 @@
 ---
-name: Accept
-bandsintown_id: Accept
 active: true
-priority: baja
+bandsintown_id: Accept
 genres:
-  - Heavy Metal
-  - Speed Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Heavy Metal
+- Speed Metal
 last_updated: 2026-03-17
+name: Accept
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ91715h7
 ---
 
 # Accept

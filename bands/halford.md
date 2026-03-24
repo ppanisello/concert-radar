@@ -1,17 +1,18 @@
 ---
-name: Halford
-bandsintown_id: Halford
 active: true
-priority: baja
+bandsintown_id: Halford
 genres:
-  - Heavy Metal
-  - Power Metal
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Heavy Metal
+- Power Metal
 last_updated: 2026-03-17
+name: Halford
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917GMOf
 ---
 
 # Halford

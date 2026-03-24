@@ -1,18 +1,19 @@
 ---
-name: Adele
-bandsintown_id: Adele
 active: true
-priority: baja
+bandsintown_id: Adele
 genres:
-  - Pop
-  - Soul
-  - Blues
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Pop
+- Soul
+- Blues
 last_updated: 2026-03-17
+name: Adele
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ917Gku7
 ---
 
 # Adele

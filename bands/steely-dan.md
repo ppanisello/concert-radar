@@ -1,18 +1,19 @@
 ---
-name: Steely Dan
-bandsintown_id: Steely%20Dan
 active: true
-priority: baja
+bandsintown_id: Steely%20Dan
 genres:
-  - Jazz Rock
-  - Soft Rock
-  - Pop Rock
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Jazz Rock
+- Soft Rock
+- Pop Rock
 last_updated: 2026-03-17
+name: Steely Dan
+notes: ''
+priority: baja
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ91712Y0
 ---
 
 # Steely Dan

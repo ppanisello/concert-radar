@@ -1,18 +1,19 @@
 ---
-name: Santana
-bandsintown_id: Santana
 active: true
-priority: alta
+bandsintown_id: Santana
 genres:
-  - Latin Rock
-  - Blues Rock
-  - Jazz Fusion
-regions_of_interest:
-  - Europe
-  - UK
-  - North America
-notes: ""
+- Latin Rock
+- Blues Rock
+- Jazz Fusion
 last_updated: 2026-03-17
+name: Santana
+notes: ''
+priority: alta
+regions_of_interest:
+- Europe
+- UK
+- North America
+ticketmaster_id: K8vZ91718pf
 ---
 
 # Santana
