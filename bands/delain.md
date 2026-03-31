@@ -6,6 +6,7 @@ genres:
 - Gothic Metal
 last_updated: 2026-03-17
 name: Delain
+eventim_id: '70498'
 notes: ''
 priority: media
 regions_of_interest:

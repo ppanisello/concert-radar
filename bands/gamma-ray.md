@@ -6,6 +6,7 @@ genres:
 - Speed Metal
 last_updated: 2026-03-17
 name: Gamma Ray
+eventim_id: '229'
 notes: ''
 priority: baja
 regions_of_interest:

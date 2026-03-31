@@ -6,6 +6,7 @@ genres:
 - Classic Rock
 last_updated: 2026-03-17
 name: Eric Clapton
+eventim_id: '202'
 notes: ''
 priority: alta
 regions_of_interest:

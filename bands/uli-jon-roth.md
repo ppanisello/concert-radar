@@ -6,6 +6,7 @@ genres:
 - Neoclassical Metal
 last_updated: 2026-03-17
 name: Uli Jon Roth
+eventim_id: '21189'
 notes: ''
 priority: baja
 regions_of_interest:

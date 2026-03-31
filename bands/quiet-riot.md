@@ -6,6 +6,7 @@ genres:
 - Glam Metal
 last_updated: 2026-03-17
 name: Quiet Riot
+eventim_id: '470756'
 notes: ''
 priority: baja
 regions_of_interest:

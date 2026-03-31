@@ -7,6 +7,7 @@ genres:
 - Adult Contemporary
 last_updated: 2026-03-17
 name: Celine Dion
+eventim_id: '104'
 notes: ''
 priority: media
 regions_of_interest:

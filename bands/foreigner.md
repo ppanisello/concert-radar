@@ -7,6 +7,7 @@ genres:
 - AOR
 last_updated: 2026-03-17
 name: Foreigner
+eventim_id: '781'
 notes: ''
 priority: media
 regions_of_interest:

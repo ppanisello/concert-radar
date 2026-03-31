@@ -7,6 +7,7 @@ genres:
 - Hard Rock
 last_updated: 2026-03-17
 name: Billy Idol
+eventim_id: '65'
 notes: ''
 priority: media
 regions_of_interest:

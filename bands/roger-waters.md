@@ -6,6 +6,7 @@ genres:
 - Art Rock
 last_updated: 2026-03-17
 name: Roger Waters
+eventim_id: '543'
 notes: ''
 priority: alta
 regions_of_interest:

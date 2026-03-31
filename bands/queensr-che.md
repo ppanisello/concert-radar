@@ -6,6 +6,7 @@ genres:
 - Heavy Metal
 last_updated: 2026-03-17
 name: Queensryche
+eventim_id: '856'
 notes: ''
 priority: media
 regions_of_interest:

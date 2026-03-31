@@ -58,6 +58,8 @@ def load_bands(priority_filter):
             band["ticketmaster_id"] = post["ticketmaster_id"]
         if post.get("seatgeek_id"):
             band["seatgeek_id"] = post["seatgeek_id"]
+        if post.get("eventim_id"):
+            band["eventim_id"] = str(post["eventim_id"])
         bands.append(band)
     return bands
 
@@ -270,6 +272,106 @@ def fetch_events_seatgeek(band, sg_client_id, cutoff_date):
     return deduped
 
 
+EVENTIM_BASE = "https://public-api.eventim.com/websearch/search/api/exploration"
+
+
+# ── 2c. EVENTIM API ──────────────────────────────────────────────
+
+def fetch_events_eventim(band, cutoff_date):
+    """Fetch events from Eventim for a band. Requires eventim_id."""
+    eventim_id = band.get("eventim_id")
+    if not eventim_id:
+        return []
+
+    today = datetime.now(timezone.utc).date()
+    band_name = band["name"]
+    band_lower = band_name.lower()
+
+    events = []
+    for page in range(1, 6):
+        params = {
+            "search_term": band_name,
+            "sort": "DateAsc",
+            "page": page,
+            "date_from": today.isoformat(),
+            "date_to": cutoff_date.isoformat(),
+            "in_stock": "true",
+        }
+        try:
+            resp = requests.get(
+                f"{EVENTIM_BASE}/v2/productGroups",
+                params=params,
+                headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"},
+                timeout=15,
+            )
+            if resp.status_code != 200:
+                break
+            data = resp.json()
+        except requests.RequestException as exc:
+            print(f"  x Eventim {band_name}: {exc}")
+            return []
+        except ValueError:
+            break
+
+        for pg in data.get("productGroups", []):
+            pg_name = pg.get("name", "")
+            pg_name_lower = pg_name.lower()
+            pg_desc = pg.get("description", "").lower()
+
+            # Skip if band name not in product group name
+            if band_lower not in pg_name_lower:
+                continue
+            # Skip tributes
+            if any(w in pg_name_lower for w in ("tribute", "cover", "tributeband")):
+                continue
+            if any(w in pg_desc for w in ("tribute", "coverband", "tribute band")):
+                continue
+
+            for product in pg.get("products", []):
+                attrs = product.get("typeAttributes", {}).get("liveEntertainment", {})
+                start_date = (attrs.get("startDate") or "")[:10]
+                if not start_date:
+                    continue
+
+                location = attrs.get("location", {})
+                city = location.get("city", "")
+                venue_name = location.get("name", "")
+                if not city:
+                    continue
+
+                geo = location.get("geoLocation", {})
+                lat = geo.get("latitude", 0) or 0
+                lng = geo.get("longitude", 0) or 0
+
+                # Eventim DE covers mostly Germany; reasonable default
+                country = "Germany"
+
+                events.append({
+                    "date": start_date,
+                    "city": city,
+                    "country": country,
+                    "venue": venue_name,
+                    "ticket_url": product.get("link", ""),
+                    "lat": lat,
+                    "lng": lng,
+                })
+
+        total_pages = data.get("totalPages", 1)
+        if page >= total_pages:
+            break
+        time.sleep(0.3)
+
+    # Deduplicate
+    seen = set()
+    deduped = []
+    for ev in events:
+        key = (ev["date"], ev["city"], ev["country"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(ev)
+    return deduped
+
+
 def merge_events(tm_events, sg_events):
     """Merge events from two sources, deduplicating by (date, city, country)."""
     seen = set()
@@ -307,13 +409,26 @@ def scan_all(bands, api_key, lookahead_days, lookahead_dream_days):
         events = merge_events(tm_events, sg_events)
         sg_extra = len(events) - len(tm_events)
 
+        # Eventim (if band has eventim_id)
+        ev_events = []
+        if band.get("eventim_id"):
+            ev_events = fetch_events_eventim(band, cutoff)
+        pre_eventim = len(events)
+        events = merge_events(events, ev_events)
+        ev_extra = len(events) - pre_eventim
+
         if events:
             results[band["name"]] = {
                 "priority": band["priority"],
                 "events": events,
             }
-            sg_note = f" (+{sg_extra} SG)" if sg_extra > 0 else ""
-            print(f"  + {len(events)} events{sg_note}")
+            extras = []
+            if sg_extra > 0:
+                extras.append(f"+{sg_extra} SG")
+            if ev_extra > 0:
+                extras.append(f"+{ev_extra} EV")
+            extra_note = f" ({', '.join(extras)})" if extras else ""
+            print(f"  + {len(events)} events{extra_note}")
         else:
             print(f"  - no upcoming events")
         # Ticketmaster rate limit: 5 req/sec
@@ -639,6 +754,7 @@ def main():
     sources = ["Ticketmaster"]
     if sg_key:
         sources.append("SeatGeek")
+    sources.append("Eventim")
     print(f"  Sources: {', '.join(sources)}")
     print("=" * 50)
 

@@ -1,5 +1,6 @@
 ---
 name: Unisonic
+eventim_id: '462491'
 bandsintown_id: Unisonic
 active: true
 priority: baja

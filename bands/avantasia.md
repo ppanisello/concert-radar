@@ -7,6 +7,7 @@ genres:
 - Rock Opera
 last_updated: 2026-03-17
 name: Avantasia
+eventim_id: '447691'
 notes: ''
 priority: media
 regions_of_interest:

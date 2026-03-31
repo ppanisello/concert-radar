@@ -7,6 +7,7 @@ genres:
 - Hard Rock
 last_updated: 2026-03-17
 name: Jeff Beck
+eventim_id: '55234'
 notes: ''
 priority: baja
 regions_of_interest:

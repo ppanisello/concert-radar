@@ -6,6 +6,7 @@ genres:
 - Heavy Metal
 last_updated: 2026-03-17
 name: Helloween
+eventim_id: '447297'
 notes: ''
 priority: alta
 regions_of_interest:

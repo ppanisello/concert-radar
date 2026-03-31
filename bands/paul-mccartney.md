@@ -7,6 +7,7 @@ genres:
 - Art Rock
 last_updated: 2026-03-17
 name: Paul McCartney
+eventim_id: '487'
 notes: ''
 priority: baja
 regions_of_interest:

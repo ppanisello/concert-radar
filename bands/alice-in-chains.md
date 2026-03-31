@@ -7,6 +7,7 @@ genres:
 - Heavy Metal
 last_updated: 2026-03-17
 name: Alice in Chains
+eventim_id: '24'
 notes: ''
 priority: baja
 regions_of_interest:

@@ -7,6 +7,7 @@ genres:
 - Neoclassical Metal
 last_updated: 2026-03-17
 name: Stratovarius
+eventim_id: '616'
 notes: ''
 priority: baja
 regions_of_interest:

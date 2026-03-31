@@ -6,6 +6,7 @@ genres:
 - Mongolian Rock
 last_updated: 2026-03-17
 name: The HU
+eventim_id: '568530'
 notes: ''
 priority: baja
 regions_of_interest:

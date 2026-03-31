@@ -6,6 +6,7 @@ genres:
 - Hard Rock
 last_updated: 2026-03-17
 name: Rush
+eventim_id: '557'
 notes: ''
 priority: baja
 regions_of_interest:

@@ -6,6 +6,7 @@ genres:
 - Art Rock
 last_updated: 2026-03-17
 name: Steve Hackett
+eventim_id: '55372'
 notes: ''
 priority: media
 regions_of_interest:

@@ -7,6 +7,7 @@ genres:
 - R&B
 last_updated: 2026-03-17
 name: KC & the Sunshine Band
+eventim_id: null
 notes: ''
 priority: baja
 regions_of_interest:

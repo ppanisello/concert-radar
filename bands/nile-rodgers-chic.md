@@ -7,6 +7,7 @@ genres:
 - R&B
 last_updated: 2026-03-17
 name: Nile Rodgers & Chic
+eventim_id: '11318'
 notes: ''
 priority: media
 regions_of_interest:

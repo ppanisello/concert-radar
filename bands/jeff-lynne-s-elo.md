@@ -7,6 +7,7 @@ genres:
 - Symphonic Rock
 last_updated: 2026-03-17
 name: Jeff Lynne's ELO
+eventim_id: '189'
 notes: ''
 priority: baja
 regions_of_interest:

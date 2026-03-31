@@ -7,6 +7,7 @@ genres:
 - Blues Rock
 last_updated: 2026-03-17
 name: Deep Purple
+eventim_id: '138'
 notes: ''
 priority: media
 regions_of_interest:

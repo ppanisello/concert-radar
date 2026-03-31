@@ -6,6 +6,7 @@ genres:
 - NWOBHM
 last_updated: 2026-03-17
 name: Saxon
+eventim_id: '2429'
 notes: ''
 priority: alta
 regions_of_interest:

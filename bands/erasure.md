@@ -7,6 +7,7 @@ genres:
 - Dance Pop
 last_updated: 2026-03-17
 name: Erasure
+eventim_id: '200'
 notes: ''
 priority: baja
 regions_of_interest:

@@ -7,6 +7,7 @@ genres:
 - Progressive Rock
 last_updated: 2026-03-17
 name: Phil Collins
+eventim_id: '500'
 notes: ''
 priority: alta
 regions_of_interest:

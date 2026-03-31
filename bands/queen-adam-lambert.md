@@ -7,6 +7,7 @@ genres:
 - Glam Rock
 last_updated: 2026-03-17
 name: Queen + Adam Lambert
+eventim_id: '61497'
 notes: ''
 priority: media
 regions_of_interest:

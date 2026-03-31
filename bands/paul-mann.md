@@ -1,5 +1,6 @@
 ---
 name: Paul Mann
+eventim_id: null
 bandsintown_id: Paul%20Mann
 active: true
 priority: baja

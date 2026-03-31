@@ -6,6 +6,7 @@ genres:
 - Pop Rock
 last_updated: 2026-03-17
 name: Roger Hodgson
+eventim_id: '27818'
 notes: ''
 priority: media
 regions_of_interest:

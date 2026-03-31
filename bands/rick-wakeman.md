@@ -6,6 +6,7 @@ genres:
 - Symphonic Rock
 last_updated: 2026-03-17
 name: Rick Wakeman
+eventim_id: '1580'
 notes: ''
 priority: alta
 regions_of_interest:

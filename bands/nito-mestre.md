@@ -6,6 +6,7 @@ genres:
 - Pop Rock
 last_updated: 2026-03-17
 name: Nito Mestre
+eventim_id: null
 notes: ''
 priority: media
 regions_of_interest:

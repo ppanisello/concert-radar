@@ -7,6 +7,7 @@ genres:
 - Punk Blues
 last_updated: 2026-03-17
 name: Seasick Steve
+eventim_id: '18800'
 notes: ''
 priority: baja
 regions_of_interest:

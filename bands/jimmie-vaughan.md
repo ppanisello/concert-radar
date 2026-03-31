@@ -6,6 +6,7 @@ genres:
 - Blues Rock
 last_updated: 2026-03-17
 name: Jimmie Vaughan
+eventim_id: '400341'
 notes: ''
 priority: baja
 regions_of_interest:

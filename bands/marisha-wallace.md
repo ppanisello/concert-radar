@@ -7,6 +7,7 @@ genres:
 - Gospel
 last_updated: 2026-03-17
 name: Marisha Wallace
+eventim_id: '831088'
 notes: ''
 priority: baja
 regions_of_interest:

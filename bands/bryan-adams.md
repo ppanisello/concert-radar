@@ -6,6 +6,7 @@ genres:
 - Pop Rock
 last_updated: 2026-03-17
 name: Bryan Adams
+eventim_id: '93'
 notes: ''
 priority: alta
 regions_of_interest:

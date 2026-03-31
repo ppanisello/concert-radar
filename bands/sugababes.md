@@ -7,6 +7,7 @@ genres:
 - Dance Pop
 last_updated: 2026-03-17
 name: Sugababes
+eventim_id: '751'
 notes: ''
 priority: baja
 regions_of_interest:

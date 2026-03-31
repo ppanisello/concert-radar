@@ -7,6 +7,7 @@ genres:
 - Jazz
 last_updated: 2026-03-17
 name: Jools Holland and His Rhythm & Blues Orchestra
+eventim_id: '448498'
 notes: ''
 priority: baja
 regions_of_interest:

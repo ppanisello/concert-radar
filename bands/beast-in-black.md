@@ -7,6 +7,7 @@ genres:
 - Synthwave
 last_updated: 2026-03-17
 name: Beast in Black
+eventim_id: '559385'
 notes: ''
 priority: baja
 regions_of_interest:

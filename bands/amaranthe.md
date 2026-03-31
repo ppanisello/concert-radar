@@ -7,6 +7,7 @@ genres:
 - Metalcore
 last_updated: 2026-03-17
 name: Amaranthe
+eventim_id: '457482'
 notes: ''
 priority: baja
 regions_of_interest:

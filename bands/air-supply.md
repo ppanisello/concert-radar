@@ -7,6 +7,7 @@ genres:
 - Adult Contemporary
 last_updated: 2026-03-17
 name: Air Supply
+eventim_id: '109938'
 notes: ''
 priority: baja
 regions_of_interest:

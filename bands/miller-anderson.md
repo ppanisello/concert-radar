@@ -6,6 +6,7 @@ genres:
 - Classic Rock
 last_updated: 2026-03-17
 name: Miller Anderson
+eventim_id: '60410'
 notes: ''
 priority: baja
 regions_of_interest:

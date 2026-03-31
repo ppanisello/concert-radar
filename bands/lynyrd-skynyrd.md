@@ -7,6 +7,7 @@ genres:
 - Blues Rock
 last_updated: 2026-03-17
 name: Lynyrd Skynyrd
+eventim_id: '385'
 notes: ''
 priority: baja
 regions_of_interest:

@@ -7,6 +7,7 @@ genres:
 - Groove Metal
 last_updated: 2026-03-17
 name: Soulfly
+eventim_id: '598'
 notes: ''
 priority: baja
 regions_of_interest:

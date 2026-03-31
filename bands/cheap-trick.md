@@ -7,6 +7,7 @@ genres:
 - Classic Rock
 last_updated: 2026-03-17
 name: Cheap Trick
+eventim_id: '105'
 notes: ''
 priority: baja
 regions_of_interest:

@@ -7,6 +7,7 @@ genres:
 - R&B
 last_updated: 2026-03-17
 name: Emeli Sande
+eventim_id: '466266'
 notes: ''
 priority: baja
 regions_of_interest:

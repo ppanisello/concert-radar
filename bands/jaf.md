@@ -6,6 +6,7 @@ genres:
 - Rock Nacional
 last_updated: 2026-03-17
 name: JAF
+eventim_id: null
 notes: ''
 priority: media
 regions_of_interest:

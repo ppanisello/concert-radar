@@ -6,6 +6,7 @@ genres:
 - Britpop
 last_updated: 2026-03-17
 name: Richard Ashcroft
+eventim_id: '1087'
 notes: ''
 priority: baja
 regions_of_interest:

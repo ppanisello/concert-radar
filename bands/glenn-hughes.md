@@ -7,6 +7,7 @@ genres:
 - Funk Rock
 last_updated: 2026-03-17
 name: Glenn Hughes
+eventim_id: '12864'
 notes: ''
 priority: alta
 regions_of_interest:

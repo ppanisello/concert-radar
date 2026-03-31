@@ -6,6 +6,7 @@ genres:
 - Heavy Metal
 last_updated: 2026-03-17
 name: Primal Fear
+eventim_id: '1008'
 notes: ''
 priority: baja
 regions_of_interest:

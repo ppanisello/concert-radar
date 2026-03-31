@@ -1,5 +1,6 @@
 ---
 name: The Cult
+eventim_id: '646'
 bandsintown_id: The%20Cult
 ticketmaster_id: K8vZ917G0YV
 active: true

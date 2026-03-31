@@ -7,6 +7,7 @@ genres:
 - Power Pop
 last_updated: 2026-03-17
 name: Squeeze
+eventim_id: '869072'
 notes: ''
 priority: baja
 regions_of_interest:

@@ -6,6 +6,7 @@ genres:
 - Progressive Metal
 last_updated: 2026-03-17
 name: Angra
+eventim_id: '10457'
 notes: ''
 priority: baja
 regions_of_interest:

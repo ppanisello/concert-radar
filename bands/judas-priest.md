@@ -6,6 +6,7 @@ genres:
 - NWOBHM
 last_updated: 2026-03-17
 name: Judas Priest
+eventim_id: '323'
 notes: ''
 priority: alta
 regions_of_interest:

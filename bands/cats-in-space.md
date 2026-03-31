@@ -7,6 +7,7 @@ genres:
 - Glam Rock
 last_updated: 2026-03-17
 name: Cats in Space
+eventim_id: '567463'
 notes: ''
 priority: baja
 regions_of_interest:

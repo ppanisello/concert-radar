@@ -6,6 +6,7 @@ genres:
 - Power Metal
 last_updated: 2026-03-17
 name: Nightwish
+eventim_id: '462'
 notes: ''
 priority: alta
 regions_of_interest:

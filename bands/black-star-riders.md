@@ -6,6 +6,7 @@ genres:
 - Classic Rock
 last_updated: 2026-03-17
 name: Black Star Riders
+eventim_id: '482638'
 notes: ''
 priority: baja
 regions_of_interest:

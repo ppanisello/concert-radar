@@ -7,6 +7,7 @@ genres:
 - Pop
 last_updated: 2026-03-17
 name: Blondie
+eventim_id: '761'
 notes: ''
 priority: baja
 regions_of_interest:

@@ -7,6 +7,7 @@ genres:
 - R&B
 last_updated: 2026-03-17
 name: The Doobie Brothers
+eventim_id: '446550'
 notes: ''
 priority: baja
 regions_of_interest:

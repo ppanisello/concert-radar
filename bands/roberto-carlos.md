@@ -7,6 +7,7 @@ genres:
 - MPB
 last_updated: 2026-03-17
 name: Roberto Carlos
+eventim_id: '1484'
 notes: ''
 priority: media
 regions_of_interest:

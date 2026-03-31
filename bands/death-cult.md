@@ -6,6 +6,7 @@ genres:
 - Post-Punk
 last_updated: 2026-03-17
 name: Death Cult
+eventim_id: null
 notes: ''
 priority: baja
 regions_of_interest:

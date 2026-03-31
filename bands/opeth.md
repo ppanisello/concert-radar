@@ -7,6 +7,7 @@ genres:
 - Death Metal
 last_updated: 2026-03-17
 name: Opeth
+eventim_id: '2409'
 notes: ''
 priority: baja
 regions_of_interest:

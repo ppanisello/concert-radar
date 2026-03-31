@@ -6,6 +6,7 @@ genres:
 - NWOBHM
 last_updated: 2026-03-17
 name: Iron Maiden
+eventim_id: '293'
 notes: ''
 priority: alta
 regions_of_interest:

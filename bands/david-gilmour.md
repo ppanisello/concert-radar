@@ -7,6 +7,7 @@ genres:
 - Blues Rock
 last_updated: 2026-03-17
 name: David Gilmour
+eventim_id: '136'
 notes: ''
 priority: alta
 regions_of_interest:

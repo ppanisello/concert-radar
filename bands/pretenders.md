@@ -7,6 +7,7 @@ genres:
 - Pop Rock
 last_updated: 2026-03-17
 name: Pretenders
+eventim_id: '15861'
 notes: ''
 priority: baja
 regions_of_interest:

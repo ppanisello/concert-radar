@@ -6,6 +6,7 @@ genres:
 - Glam Metal
 last_updated: 2026-03-17
 name: W.A.S.P.
+eventim_id: '715'
 notes: ''
 priority: baja
 regions_of_interest:

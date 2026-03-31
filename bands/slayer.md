@@ -5,6 +5,7 @@ genres:
 - Thrash Metal
 last_updated: 2026-03-17
 name: Slayer
+eventim_id: '588'
 notes: ''
 priority: media
 regions_of_interest:

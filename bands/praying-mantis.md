@@ -6,6 +6,7 @@ genres:
 - Heavy Metal
 last_updated: 2026-03-17
 name: Praying Mantis
+eventim_id: '448762'
 notes: ''
 priority: baja
 regions_of_interest:

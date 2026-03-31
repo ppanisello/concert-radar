@@ -7,6 +7,7 @@ genres:
 - Glam Metal
 last_updated: 2026-03-17
 name: Bon Jovi
+eventim_id: '82'
 notes: ''
 priority: baja
 regions_of_interest:

@@ -7,6 +7,7 @@ genres:
 - Gospel
 last_updated: 2026-03-17
 name: Beverley Knight
+eventim_id: null
 notes: ''
 priority: baja
 regions_of_interest:

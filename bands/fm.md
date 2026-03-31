@@ -6,6 +6,7 @@ genres:
 - Melodic Rock
 last_updated: 2026-03-17
 name: FM
+eventim_id: '487228'
 notes: ''
 priority: baja
 regions_of_interest:

@@ -6,6 +6,7 @@ genres:
 - Orchestral
 last_updated: 2026-03-17
 name: Royal Philharmonic Orchestra
+eventim_id: '27282'
 notes: ''
 priority: baja
 regions_of_interest:

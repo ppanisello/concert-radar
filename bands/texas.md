@@ -7,6 +7,7 @@ genres:
 - New Wave
 last_updated: 2026-03-17
 name: Texas
+eventim_id: '636'
 notes: ''
 priority: baja
 regions_of_interest:

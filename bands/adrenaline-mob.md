@@ -6,6 +6,7 @@ genres:
 - Heavy Metal
 last_updated: 2026-03-17
 name: Adrenaline Mob
+eventim_id: '468118'
 notes: ''
 priority: baja
 regions_of_interest:

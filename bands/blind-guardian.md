@@ -6,6 +6,7 @@ genres:
 - Speed Metal
 last_updated: 2026-03-17
 name: Blind Guardian
+eventim_id: '73'
 notes: ''
 priority: baja
 regions_of_interest:

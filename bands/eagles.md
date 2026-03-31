@@ -7,6 +7,7 @@ genres:
 - Soft Rock
 last_updated: 2026-03-17
 name: Eagles
+eventim_id: '12103'
 notes: ''
 priority: media
 regions_of_interest:

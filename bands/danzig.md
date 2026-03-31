@@ -7,6 +7,7 @@ genres:
 - Blues Rock
 last_updated: 2026-03-17
 name: Danzig
+eventim_id: '11662'
 notes: ''
 priority: baja
 regions_of_interest:
