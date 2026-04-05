@@ -1,6 +1,7 @@
 ---
 active: true
 bandsintown_id: Rainbow
+musica_premium_id: rainbow
 genres:
 - Hard Rock
 - Heavy Metal

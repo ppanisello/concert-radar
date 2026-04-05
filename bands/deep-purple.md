@@ -1,6 +1,7 @@
 ---
 active: true
 bandsintown_id: Deep%20Purple
+musica_premium_id: deep_purple
 genres:
 - Hard Rock
 - Heavy Metal
